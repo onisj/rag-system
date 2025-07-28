@@ -1,0 +1,7 @@
+{
+  "model_name": "all-MiniLM-L6-v2",
+  "dimension": 384,
+  "num_documents": 148,
+  "index_type": "FlatIP",
+  "gpu_accelerated": false
+}

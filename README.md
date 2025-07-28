@@ -142,20 +142,20 @@ bash run_demo.sh
 
 **Prerequisites for Demo Scripts:**
 
-- ✅ Conda installed and in PATH
-- ✅ `environment.yml` file present
-- ✅ `rag_cli.py` executable
-- ✅ Proper conda paths configured (see troubleshooting section above)
+- Conda installed and in PATH
+- `environment.yml` file present
+- `rag_cli.py` executable
+- Proper conda paths configured (see troubleshooting section above)
 
 **What the Demo Scripts Do:**
 
-1. ✅ Check conda installation and version
-2. ✅ Create `rag-gpu` conda environment (if needed)
-3. ✅ Activate conda environment
-4. ✅ Verify core packages (OpenVINO, Transformers, Sentence-Transformers)
-5. ✅ Initialize RAG system (GPU detection, model loading, vector store)
-6. ✅ Execute demo query with optimized parameters
-7. ✅ Display success message with usage instructions
+1. Check conda installation and version
+2. Create `rag-gpu` conda environment (if needed)
+3. Activate conda environment
+4. Verify core packages (OpenVINO, Transformers, Sentence-Transformers)
+5. Initialize RAG system (GPU detection, model loading, vector store)
+6. Execute demo query with optimized parameters
+7. Display success message with usage instructions
 
 **Expected Demo Output:**
 
@@ -264,9 +264,9 @@ python rag_cli.py convert-model
 python rag_cli.py setup
 
 # Expected output:
-# ✅ PDF processed: 89 chunks created
-# ✅ Vector store built: FAISS index with embeddings
-# ✅ Setup complete!
+# PDF processed: 89 chunks created
+# Vector store built: FAISS index with embeddings
+# Setup complete!
 # Data saved to: ./data/processed_data/
 ```
 
@@ -279,9 +279,9 @@ python rag_cli.py setup
 python rag_cli.py --query "What is Procyon?"
 
 # Expected output:
-# ✅ RAG system initialized
-# ✅ Retrieved relevant chunks
-# ✅ Generated response with context
+# RAG system initialized
+# Retrieved relevant chunks
+# Generated response with context
 ```
 
 ### Step 7: Run Interactive Mode

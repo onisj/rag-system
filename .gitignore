@@ -236,12 +236,9 @@ openvino_cache/
 
 # Models and data
 models/
-processed_data/
-vector_store/
 *.bin
 *.xml
 *.bin
-chunks.json
 
 # Hugging Face cache
 .cache/
