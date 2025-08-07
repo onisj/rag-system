@@ -50,8 +50,26 @@ from dotenv import load_dotenv
 # Load environment variables for configuration
 load_dotenv()
 
-# Configure logging for document processing operations
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Configure logging for document processing operations with logs directory
+import datetime
+
+# Create logs directory if it doesn't exist
+logs_dir = Path("./logs")
+logs_dir.mkdir(exist_ok=True)
+
+# Create timestamped log file for document processor
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+doc_processor_log_file = logs_dir / f"document_processor_{timestamp}.log"
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(doc_processor_log_file),
+        logging.StreamHandler()  # Also output to console
+    ]
+)
 logger = logging.getLogger(__name__)
 
 # Initialize console for rich text output and progress tracking

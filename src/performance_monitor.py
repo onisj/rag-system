@@ -37,17 +37,43 @@ Dependencies:
     - openvino: For GPU monitoring and device property access.
     - threading: For background monitoring.
     - time: For timing and sleep operations.
+    
+Author: Segun Oni
+Version: 1.0.0
 """
 
 import time
 import psutil
 import threading
+import logging
+import datetime
+from pathlib import Path
 from typing import Dict, Any, Optional
 from rich.console import Console
 from rich.table import Table
 from rich.live import Live
 import openvino as ov
 import numpy as np
+
+# Configure logging for performance monitor with logs directory
+# Create logs directory if it doesn't exist
+logs_dir = Path("./logs")
+logs_dir.mkdir(exist_ok=True)
+
+# Create timestamped log file for performance monitor
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+perf_monitor_log_file = logs_dir / f"performance_monitor_{timestamp}.log"
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(perf_monitor_log_file),
+        logging.StreamHandler()  # Also output to console
+    ]
+)
+logger = logging.getLogger(__name__)
 
 console = Console()
 

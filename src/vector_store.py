@@ -89,8 +89,26 @@ from sentence_transformers import SentenceTransformer
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
 
-# Configure logging for vector store operations
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Configure logging for vector store operations with logs directory
+import datetime
+
+# Create logs directory if it doesn't exist
+logs_dir = Path("./logs")
+logs_dir.mkdir(exist_ok=True)
+
+# Create timestamped log file for vector store
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+vector_store_log_file = logs_dir / f"vector_store_{timestamp}.log"
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(vector_store_log_file),
+        logging.StreamHandler()  # Also output to console
+    ]
+)
 logger = logging.getLogger(__name__)
 
 # Initialize console for rich text output and progress tracking
