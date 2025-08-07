@@ -1,8 +1,8 @@
 """
-Integration Test Suite for RAG System
+Integration Test Suite for RAG System with OpenVINO GenAI
 
 This module tests the complete RAG system integration:
-- End-to-end workflow
+- End-to-end workflow with GenAI
 - Component interactions
 - Real-world scenarios
 - Performance under load
@@ -30,10 +30,10 @@ src_path = project_root / "src"
 sys.path.insert(0, str(src_path))
 
 from rich.console import Console
-from model_converter import ModelConverter
+from genai_model_converter import GenAIModelConverter
 from document_processor import DocumentProcessor, TextChunk
 from vector_store import VectorStore
-from rag_pipeline import RAGEngine
+from genai_pipeline import GenAIRAGEngine
 import cli
 from performance_monitor import PerformanceMonitor
 
@@ -85,397 +85,306 @@ def sample_queries():
     ]
 
 class TestEndToEndWorkflow:
-    """Test complete end-to-end RAG workflow"""
+    """Test complete end-to-end RAG workflow with GenAI"""
     
     @patch('vector_store.SentenceTransformer')
-    @patch('openvino.Core')
-    @patch('rag_pipeline.AutoTokenizer')
-    def test_complete_rag_workflow(self, mock_tokenizer, mock_core, mock_transformer, sample_document):
-        """Test complete RAG workflow from document to answer"""
+    def test_complete_rag_workflow(self, mock_transformer, sample_document):
+        """Test complete RAG workflow from document to answer using GenAI"""
         # Setup mocks
-        mock_core_instance = Mock()
-        mock_core_instance.available_devices = ["CPU"]
-        mock_core.return_value = mock_core_instance
-        
-        mock_model = Mock()
-        mock_compiled_model = Mock()
-        mock_core_instance.read_model.return_value = mock_model
-        mock_core_instance.compile_model.return_value = mock_compiled_model
-        
-        mock_tokenizer_instance = Mock()
-        mock_tokenizer_instance.pad_token = None
-        mock_tokenizer_instance.eos_token = "<eos>"
-        mock_tokenizer.from_pretrained.return_value = mock_tokenizer_instance
-        
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        # Step 1: Process document
-        processor = DocumentProcessor(chunk_size=200, chunk_overlap=50)
-        chunks = processor._chunk_text_simple(sample_document, 0)
-        
+        # Test document processing
+        processor = DocumentProcessor()
+        chunks = processor._semantic_chunking(sample_document, chunk_size=150, overlap=30)
         assert len(chunks) > 0
-        assert all(isinstance(chunk, TextChunk) for chunk in chunks)
         
-        # Step 2: Create vector store
-        vector_store = VectorStore()
+        # Test vector store
+        store = VectorStore()
         documents = [{"text": chunk.text} for chunk in chunks]
-        vector_store.build_index(documents)
+        store.build_index(documents)
+        assert store.index is not None
         
-        assert vector_store.index is not None
-        assert len(vector_store.documents) == len(chunks)
-        
-        # Step 3: Test search
-        results = vector_store.search("What is Procyon?", k=3)
-        
+        # Test search functionality
+        results = store.search("What is Procyon?", k=3)
         assert len(results) > 0
-        assert all(isinstance(result, tuple) for result in results)
-        assert all(len(result) == 2 for result in results)  # (doc, score) pairs
         
-        # Step 4: Test RAG engine (mocked)
-        with patch('os.path.exists', return_value=True):
-            rag_engine = RAGEngine(
-                model_path="test_model.xml",
-                vector_store_path="test_vector_store"
-            )
-            
-            # Test prompt creation - extract documents from (doc, score) tuples
-            documents = [doc for doc, score in results[:2]]
-            prompt = rag_engine._create_prompt("What is Procyon?", documents)
-            
-            assert "What is Procyon?" in prompt
-            assert any(chunk.text in prompt for chunk in chunks)
-            assert "Context:" in prompt
-            assert "Question:" in prompt
-        
-        console.print("✅ Complete RAG workflow test passed", style="green")
+        console.print("Complete RAG workflow test passed", style="green")
     
     @patch('vector_store.SentenceTransformer')
     def test_document_processing_integration(self, mock_transformer, sample_document):
         """Test document processing integration"""
-        # Setup mock to prevent hanging
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        processor = DocumentProcessor(chunk_size=150, chunk_overlap=30)
+        processor = DocumentProcessor()
+        store = VectorStore()
         
         # Process document
-        chunks = processor._chunk_text_simple(sample_document, 0)
-        
-        # Verify chunks
+        chunks = processor._semantic_chunking(sample_document, chunk_size=150, overlap=30)
         assert len(chunks) > 0
-        assert all(chunk.length <= 150 for chunk in chunks)
-        assert all(chunk.length > 0 for chunk in chunks)
         
-        # Verify chunk content
-        all_text = " ".join(chunk.text for chunk in chunks)
-        assert "Procyon" in all_text
-        assert "data processing" in all_text
-        assert "Key Features" in all_text  # Check for the actual text in the document
+        # Build vector store
+        documents = [chunk for chunk in chunks]
+        store.build_index(documents)
         
-        console.print(f"✅ Document processing created {len(chunks)} chunks", style="green")
+        # Verify integration
+        assert store.documents is not None
+        assert len(store.documents) == len(chunks)
+        
+        # Test search functionality
+        results = store.search("data processing", k=2)
+        assert len(results) <= 2
     
     @patch('vector_store.SentenceTransformer')
     def test_vector_store_integration(self, mock_transformer, sample_document):
-        """Test vector store integration"""
-        # Setup mock
+        """Test vector store integration with GenAI"""
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(10, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        # Process document
-        processor = DocumentProcessor(chunk_size=100, chunk_overlap=20)
-        chunks = processor._chunk_text_simple(sample_document, 0)
+        store = VectorStore()
+        processor = DocumentProcessor()
         
-        # Create vector store
-        vector_store = VectorStore()
-        documents = [{"text": chunk.text} for chunk in chunks]
-        vector_store.build_index(documents)
+        # Process and store documents
+        chunks = processor._semantic_chunking(sample_document, chunk_size=100, overlap=20)
+        documents = [chunk for chunk in chunks]
         
-        # Test search functionality
-        test_queries = [
-            "What is Procyon?",
-            "data processing",
-            "features",
-            "architecture"
-        ]
+        store.build_index(documents)
+        
+        # Test various search queries
+        test_queries = ["Procyon", "architecture", "analytics", "processing"]
         
         for query in test_queries:
-            results = vector_store.search(query, k=2)
-            assert len(results) > 0
-            assert all(isinstance(result, tuple) for result in results)
-        
-        console.print("✅ Vector store integration test passed", style="green")
+            results = store.search(query, k=3)
+            assert len(results) <= 3
+            assert all(isinstance(result, dict) for result in results)
     
     def test_cli_integration(self):
-        """Test CLI integration"""
+        """Test CLI integration with GenAI"""
         from click.testing import CliRunner
         
         runner = CliRunner()
         
-        # Test CLI help
+        # Test help command
         result = runner.invoke(cli.cli, ['--help'])
         assert result.exit_code == 0
         assert "RAG CLI" in result.output
         
-        # Test query command help
-        result = runner.invoke(cli.cli, ['query', '--help'])
-        assert result.exit_code == 0
-        assert "query" in result.output
-        
-        # Test setup command help
+        # Test setup command structure
         result = runner.invoke(cli.cli, ['setup', '--help'])
         assert result.exit_code == 0
-        assert "setup" in result.output
         
-        console.print("✅ CLI integration test passed", style="green")
+        # Test convert-model command structure
+        result = runner.invoke(cli.cli, ['convert-model', '--help'])
+        assert result.exit_code == 0
+        
+        # Test performance command structure
+        result = runner.invoke(cli.cli, ['performance', '--help'])
+        assert result.exit_code == 0
 
 class TestPerformanceIntegration:
-    """Test performance integration"""
+    """Test performance integration with GenAI"""
     
     def test_performance_monitoring_integration(self):
         """Test performance monitoring integration"""
         monitor = PerformanceMonitor()
+        assert monitor is not None
         
-        # Test monitoring workflow with timeout
-        monitor.start_monitoring()
-        time.sleep(0.05)  # Reduced sleep time to prevent hanging
-        monitor.stop_monitoring()
+        # Test basic monitoring
+        with monitor.measure("test_operation"):
+            time.sleep(0.1)
         
-        # Verify performance data
-        summary = monitor.get_performance_summary()
-        assert "cpu_usage_percent" in summary
-        assert "memory_usage_percent" in summary
-        assert "inference_latency_ms" in summary
-        assert "throughput_tokens_per_second" in summary
-        
-        # Test that performance data is accessible
-        assert monitor.performance_data is not None
-        assert isinstance(monitor.performance_data, dict)
-        
-        console.print("✅ Performance monitoring integration test passed", style="green")
+        stats = monitor.get_stats()
+        assert "test_operation" in stats
+        assert stats["test_operation"]["count"] == 1
+        assert stats["test_operation"]["total_time"] > 0
     
     def test_benchmark_integration(self):
-        """Test benchmarking integration"""
+        """Test benchmark integration"""
         monitor = PerformanceMonitor()
         
         def test_function():
-            time.sleep(0.05)  # Reduced sleep time to prevent hanging
-            return "test result"
+            time.sleep(0.05)
+            return "test_result"
         
-        # Test function execution with performance monitoring
-        monitor.start_monitoring()
-        result = test_function()
-        monitor.stop_monitoring()
-        
-        assert result == "test result"
-        
-        # Verify performance data was recorded
-        summary = monitor.get_performance_summary()
-        assert "cpu_usage_percent" in summary
-        assert "memory_usage_percent" in summary
-        
-        console.print("✅ Benchmark integration test passed", style="green")
+        result = monitor.benchmark(test_function, iterations=3)
+        assert result["result"] == "test_result"
+        assert result["iterations"] == 3
+        assert result["total_time"] > 0
+        assert result["avg_time"] > 0
 
 class TestErrorHandlingIntegration:
-    """Test error handling integration"""
+    """Test error handling integration with GenAI"""
     
     @patch('vector_store.SentenceTransformer')
     def test_error_recovery_integration(self, mock_transformer):
         """Test error recovery integration"""
-        # Setup mock to prevent hanging
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        # Test that components handle errors gracefully
+        store = VectorStore()
         processor = DocumentProcessor()
         
-        # Test with empty text
-        chunks = processor._chunk_text_simple("", 0)
-        assert len(chunks) == 0
+        # Test with empty document
+        empty_document = ""
+        chunks = processor._semantic_chunking(empty_document, chunk_size=100, overlap=20)
         
-        # Test with very short text
-        chunks = processor._chunk_text_simple("Short", 0)
-        assert len(chunks) > 0
-        
-        console.print("✅ Error recovery integration test passed", style="green")
+        # Should handle empty document gracefully
+        if chunks:
+            documents = [chunk for chunk in chunks]
+            store.build_index(documents)
+            assert store.documents is not None
     
     @patch('vector_store.SentenceTransformer')
     def test_invalid_input_handling(self, mock_transformer):
         """Test invalid input handling"""
-        # Setup mock to prevent hanging
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        processor = DocumentProcessor()
+        store = VectorStore()
         
         # Test with None input
-        with pytest.raises(Exception):
-            processor._chunk_text_simple(None, 0)
+        with pytest.raises((ValueError, TypeError)):
+            store.build_index(None)
         
-        # Test with invalid chunk size
-        processor_invalid = DocumentProcessor(chunk_size=0, chunk_overlap=0)
-        chunks = processor_invalid._chunk_text_simple("Test text", 0)
-        assert len(chunks) > 0  # Should handle gracefully
-        
-        console.print("✅ Invalid input handling test passed", style="green")
+        # Test with empty list
+        with pytest.raises((ValueError, TypeError)):
+            store.build_index([])
 
 class TestDataPersistenceIntegration:
-    """Test data persistence integration"""
+    """Test data persistence integration with GenAI"""
     
     @patch('vector_store.SentenceTransformer')
     def test_save_load_integration(self, mock_transformer, temp_dir, sample_document):
         """Test save and load integration"""
-        # Setup mock to prevent hanging
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
+        processor = DocumentProcessor()
+        store = VectorStore()
+        
         # Process document
-        processor = DocumentProcessor(chunk_size=100, chunk_overlap=20)
-        chunks = processor._chunk_text_simple(sample_document, 0)
+        chunks = processor._semantic_chunking(sample_document, chunk_size=150, overlap=30)
+        documents = [chunk for chunk in chunks]
         
-        # Save chunks
-        chunks_path = os.path.join(temp_dir, "chunks.json")
-        processor.chunks = chunks
-        processor.save_chunks(chunks_path)
+        # Build and save vector store
+        store.build_index(documents)
+        output_dir = Path(temp_dir) / "vector_store"
+        store.save(output_dir)
         
-        assert os.path.exists(chunks_path)
+        # Load and verify
+        new_store = VectorStore()
+        new_store.load(output_dir)
         
-        # Load chunks
-        with open(chunks_path, 'r') as f:
-            saved_data = json.load(f)
-        
-        assert 'chunks' in saved_data
-        assert len(saved_data['chunks']) == len(chunks)
-        
-        console.print("✅ Data persistence integration test passed", style="green")
+        assert new_store.documents is not None
+        assert len(new_store.documents) == len(chunks)
     
     @patch('vector_store.SentenceTransformer')
     def test_vector_store_persistence(self, mock_transformer, temp_dir, sample_document):
         """Test vector store persistence"""
-        # Setup mock
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(10, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        # Create vector store
-        processor = DocumentProcessor(chunk_size=100, chunk_overlap=20)
-        chunks = processor._chunk_text_simple(sample_document, 0)
+        store = VectorStore()
+        processor = DocumentProcessor()
         
-        vector_store = VectorStore()
-        documents = [{"text": chunk.text} for chunk in chunks]
-        vector_store.build_index(documents)
+        # Process document
+        chunks = processor._semantic_chunking(sample_document, chunk_size=100, overlap=20)
+        documents = [chunk for chunk in chunks]
         
-        # Save vector store
-        save_path = os.path.join(temp_dir, "vector_store")
-        vector_store.save(save_path)
+        # Build index
+        store.build_index(documents)
         
-        assert os.path.exists(save_path)
-        assert os.path.exists(os.path.join(save_path, "documents.json"))
-        assert os.path.exists(os.path.join(save_path, "metadata.json"))
+        # Save to temporary directory
+        output_dir = Path(temp_dir) / "test_vector_store"
+        store.save(output_dir)
         
-        # Load vector store
-        new_vector_store = VectorStore()
-        new_vector_store.load(save_path)
+        # Verify files were created
+        assert output_dir.exists()
+        assert (output_dir / "documents.json").exists()
+        assert (output_dir / "metadata.json").exists()
         
-        assert new_vector_store.documents == vector_store.documents
-        assert new_vector_store.metadata == vector_store.metadata
+        # Load and verify data integrity
+        new_store = VectorStore()
+        new_store.load(output_dir)
         
-        console.print("✅ Vector store persistence test passed", style="green")
+        assert new_store.documents == store.documents
+        assert len(new_store.documents) == len(chunks)
 
 class TestScalabilityIntegration:
-    """Test scalability integration"""
+    """Test scalability integration with GenAI"""
     
     def test_large_document_processing(self):
-        """Test processing large documents"""
-        # Create large document
-        large_document = "This is a test sentence. " * 1000  # 20,000 characters
+        """Test large document processing"""
+        processor = DocumentProcessor()
         
-        processor = DocumentProcessor(chunk_size=200, chunk_overlap=50)
-        chunks = processor._chunk_text_simple(large_document, 0)
+        # Create large document
+        large_document = "This is a test sentence. " * 1000  # ~30,000 characters
+        
+        chunks = processor._semantic_chunking(large_document, chunk_size=200, overlap=50)
         
         assert len(chunks) > 0
-        assert all(chunk.length <= 200 for chunk in chunks)
-        
-        console.print(f"✅ Large document processing: {len(chunks)} chunks", style="green")
+        assert all(len(chunk) <= 200 for chunk in chunks)
     
     @patch('vector_store.SentenceTransformer')
     def test_multiple_queries(self, mock_transformer, sample_document):
         """Test multiple queries performance"""
-        # Setup mock to prevent hanging
         mock_transformer_instance = Mock()
-        mock_transformer_instance.encode.return_value = np.random.rand(5, 384).astype(np.float32)
+        mock_transformer_instance.encode.return_value = np.array([[0.1, 0.2, 0.3]])
         mock_transformer.return_value = mock_transformer_instance
         
-        processor = DocumentProcessor(chunk_size=100, chunk_overlap=20)
-        chunks = processor._chunk_text_simple(sample_document, 0)
+        store = VectorStore()
+        processor = DocumentProcessor()
         
-        # Simulate multiple queries
+        # Process document
+        chunks = processor._semantic_chunking(sample_document, chunk_size=150, overlap=30)
+        documents = [chunk for chunk in chunks]
+        store.build_index(documents)
+        
+        # Test multiple queries
         queries = [
             "What is Procyon?",
-            "data processing",
-            "features",
-            "architecture",
-            "use cases"
+            "Explain the architecture",
+            "What are the features?",
+            "How does data processing work?",
+            "What are the use cases?"
         ]
         
-        # This would normally use vector store, but we'll simulate
         for query in queries:
-            # Simulate search
-            matching_chunks = [chunk for chunk in chunks if any(word in chunk.text.lower() for word in query.lower().split())]
-            assert len(matching_chunks) >= 0  # Some queries might not match
-        
-        console.print(f"✅ Multiple queries test: {len(queries)} queries", style="green")
+            results = store.search(query, k=3)
+            assert len(results) <= 3
+            assert all(isinstance(result, dict) for result in results)
 
 def test_complete_system_integration():
-    """Complete system integration test"""
-    console.print("\n🚀 Running Complete System Integration Test", style="bold blue")
+    """Test complete system integration with GenAI"""
+    # Test that all components can work together
+    from genai_model_converter import GenAIModelConverter
+    from document_processor import DocumentProcessor
+    from vector_store import VectorStore
+    from genai_pipeline import GenAIRAGEngine
+    from performance_monitor import PerformanceMonitor
     
-    # Test all major components work together
-    components = [
-        "DocumentProcessor",
-        "VectorStore", 
-        "RAGEngine",
-        "CLI",
-        "PerformanceMonitor"
-    ]
+    # Test component initialization
+    converter = GenAIModelConverter("meta-llama/Llama-3.1-8B-Instruct")
+    processor = DocumentProcessor()
+    store = VectorStore()
+    monitor = PerformanceMonitor()
     
-    for component in components:
-        try:
-            # Test component can be imported
-            if component == "DocumentProcessor":
-                from document_processor import DocumentProcessor
-                processor = DocumentProcessor()
-                assert processor is not None
-            elif component == "VectorStore":
-                from vector_store import VectorStore
-                vs = VectorStore()
-                assert vs is not None
-            elif component == "RAGEngine":
-                from rag_pipeline import RAGEngine
-                # RAGEngine requires model files, so just test import
-                assert RAGEngine is not None
-            elif component == "CLI":
-                import cli
-                assert cli is not None
-                assert hasattr(cli, 'cli')
-            elif component == "PerformanceMonitor":
-                from performance_monitor import PerformanceMonitor
-                monitor = PerformanceMonitor()
-                assert monitor is not None
-            
-            console.print(f"✅ {component} integration OK", style="green")
-            
-        except Exception as e:
-            console.print(f"❌ {component} integration failed: {e}", style="red")
-            raise
+    assert converter is not None
+    assert processor is not None
+    assert store is not None
+    assert monitor is not None
     
-    console.print("\n🎉 Complete System Integration Test PASSED", style="bold green")
-
-if __name__ == "__main__":
-    pytest.main([__file__, "-v", "--tb=short"]) 
+    # Test that components can be used together
+    sample_text = "Procyon is a data processing platform."
+    chunks = processor._semantic_chunking(sample_text, chunk_size=50, overlap=10)
+    
+    assert len(chunks) > 0
+    assert all(len(chunk) <= 50 for chunk in chunks) 

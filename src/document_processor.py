@@ -109,18 +109,28 @@ class DocumentProcessor:
     document processing workflows.
     """
     
-    def __init__(self, chunk_size: int = 512, chunk_overlap: int = 50):
+    def __init__(self, chunk_size: int = None, chunk_overlap: int = None):
         """
         Initialize document processor with configurable chunking parameters.
         
         Args:
-            chunk_size: Target chunk size in characters (default: 512)
+            chunk_size: Target chunk size in characters (default: from environment or 512)
                        Larger chunks provide more context but may be less precise
-            chunk_overlap: Overlap between consecutive chunks in characters (default: 50)
+            chunk_overlap: Overlap between consecutive chunks in characters (default: from environment or 50)
                           Overlap helps maintain context across chunk boundaries
         """
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
+        # Use environment variables if not provided
+        if chunk_size is None:
+            import os
+            self.chunk_size = int(os.getenv('CHUNK_SIZE', '512'))
+        else:
+            self.chunk_size = chunk_size
+            
+        if chunk_overlap is None:
+            import os
+            self.chunk_overlap = int(os.getenv('CHUNK_OVERLAP', '50'))
+        else:
+            self.chunk_overlap = chunk_overlap
         self.chunks: List[TextChunk] = []  # Store processed chunks in memory
         
         # Log initialization with configuration parameters
@@ -181,7 +191,7 @@ class DocumentProcessor:
             console.print(f"Error extracting text from PDF: {e}", style="red")
             raise
     
-    def clean_text(self, text: str) -> str:
+    def _clean_text(self, text: str) -> str:
         """
         Clean and normalize extracted text to improve quality for processing.
         
@@ -291,20 +301,22 @@ class DocumentProcessor:
         match = re.search(r'\[PAGE_(\d+)\]', text)
         return int(match.group(1)) if match else 1
     
-    def create_semantic_chunks(self, text: str) -> List[TextChunk]:
+    def _semantic_chunking(self, text: str, chunk_size: int, overlap: int) -> List[TextChunk]:
         """
         Create semantic chunks with intelligent splitting based on document structure.
         
-        This method implements a two-stage chunking approach: first attempting
-        to split by document sections, then applying semantic chunking within
-        each section. If no sections are detected, it falls back to simple
-        character-based chunking.
+        This method implements intelligent chunking that respects natural text
+        boundaries like sentences and paragraphs. It attempts to break text at
+        meaningful points rather than arbitrary character positions, which
+        improves the quality of downstream processing like vector embedding.
         
         Args:
-            text: Clean text to chunk into semantic units
-            
+            text: The text to chunk into semantic units
+            chunk_size: Target chunk size in characters
+            overlap: Overlap between consecutive chunks in characters
+        
         Returns:
-            List of TextChunk objects with metadata and positioning information
+            List of TextChunk objects with semantic boundaries and metadata
         """
         console.print("Creating semantic chunks...", style="blue")
         
@@ -325,7 +337,9 @@ class DocumentProcessor:
                 section_text, 
                 chunk_id, 
                 section_title, 
-                page_number
+                page_number,
+                chunk_size,
+                overlap
             )
             chunks.extend(section_chunks)
             chunk_id += len(section_chunks)
@@ -333,13 +347,13 @@ class DocumentProcessor:
         # If no sections found, fall back to simple chunking
         # This ensures we always produce chunks even for unstructured documents
         if not chunks:
-            chunks = self._chunk_text_simple(text, 0)
+            chunks = self._chunk_text_simple(text, 0, chunk_size, overlap)
         
         # Log chunking results for monitoring
         console.print(f"Created {len(chunks)} semantic chunks", style="green")
         return chunks
     
-    def _chunk_text_semantically(self, text: str, start_id: int, section_title: str, page_number: int) -> List[TextChunk]:
+    def _chunk_text_semantically(self, text: str, start_id: int, section_title: str, page_number: int, chunk_size: int, overlap: int) -> List[TextChunk]:
         """
         Create chunks with semantic boundaries for optimal text processing.
         
@@ -353,6 +367,8 @@ class DocumentProcessor:
             start_id: The starting ID for the chunks (for unique identification)
             section_title: The title of the section containing the text
             page_number: The page number where the text originated
+            chunk_size: Target chunk size in characters
+            overlap: Overlap between consecutive chunks in characters
         
         Returns:
             List of TextChunk objects with semantic boundaries and metadata
@@ -362,7 +378,7 @@ class DocumentProcessor:
         
         # Process text in chunks while respecting semantic boundaries
         while current_pos < len(text):
-            end_pos = current_pos + self.chunk_size
+            end_pos = current_pos + chunk_size
             
             # Try to find a good break point for semantic coherence
             if end_pos < len(text):
@@ -372,9 +388,9 @@ class DocumentProcessor:
                 
                 # Prefer paragraph breaks, then sentence breaks for better semantics
                 # Only break at these points if they're within 70% of the target size
-                if paragraph_end > current_pos + self.chunk_size * 0.7:
+                if paragraph_end > current_pos + chunk_size * 0.7:
                     end_pos = paragraph_end + 2  # Include the paragraph break
-                elif sentence_end > current_pos + self.chunk_size * 0.7:
+                elif sentence_end > current_pos + chunk_size * 0.7:
                     end_pos = sentence_end + 1   # Include the sentence ending
             
             # Extract the chunk text and clean it
@@ -396,13 +412,13 @@ class DocumentProcessor:
             
             # Move position with overlap for context preservation
             # This ensures consecutive chunks have some shared context
-            current_pos = end_pos - self.chunk_overlap
+            current_pos = end_pos - overlap
             if current_pos >= len(text):
                 break
         
         return chunks
     
-    def _chunk_text_simple(self, text: str, start_id: int) -> List[TextChunk]:
+    def _chunk_text_simple(self, text: str, start_id: int, chunk_size: int, overlap: int) -> List[TextChunk]:
         """
         Simple fixed-size chunking as fallback for unstructured text.
         
@@ -413,6 +429,8 @@ class DocumentProcessor:
         Args:
             text: The text to chunk into fixed-size pieces
             start_id: The starting ID for the chunks (for unique identification)
+            chunk_size: Size of each chunk in characters
+            overlap: Overlap between consecutive chunks in characters
         
         Returns:
             List of TextChunk objects with fixed-size boundaries
@@ -421,7 +439,7 @@ class DocumentProcessor:
         current_pos = 0
         
         # Handle invalid chunk sizes gracefully
-        if self.chunk_size <= 0:
+        if chunk_size <= 0:
             # If chunk size is invalid, create a single chunk with the entire text
             if text.strip():
                 chunk = TextChunk(
@@ -437,7 +455,7 @@ class DocumentProcessor:
         
         # Process text in fixed-size chunks with overlap
         while current_pos < len(text):
-            end_pos = current_pos + self.chunk_size
+            end_pos = current_pos + chunk_size
             chunk_text = text[current_pos:end_pos].strip()
             
             # Only create chunks for non-empty text
@@ -453,7 +471,65 @@ class DocumentProcessor:
                 chunks.append(chunk)
             
             # Move position with overlap for context preservation
-            current_pos = end_pos - self.chunk_overlap
+            current_pos = end_pos - overlap
+            if current_pos >= len(text):
+                break
+        
+        return chunks
+    
+    def _simple_chunking(self, text: str, chunk_size: int, overlap: int) -> List[TextChunk]:
+        """
+        Simple fixed-size chunking as fallback for unstructured text.
+        
+        This method provides a basic chunking strategy when semantic chunking
+        is not possible or when no document structure is detected. It creates
+        fixed-size chunks with overlap for context preservation.
+        
+        Args:
+            text: The text to chunk into fixed-size pieces
+            chunk_size: Size of each chunk in characters
+            overlap: Overlap between consecutive chunks in characters
+        
+        Returns:
+            List of TextChunk objects with fixed-size boundaries
+        """
+        chunks = []
+        current_pos = 0
+        
+        # Handle invalid chunk sizes gracefully
+        if chunk_size <= 0:
+            # If chunk size is invalid, create a single chunk with the entire text
+            if text.strip():
+                chunk = TextChunk(
+                    id=0,
+                    text=text.strip(),
+                    start_char=0,
+                    end_char=len(text),
+                    length=len(text.strip()),
+                    chunk_type="simple"
+                )
+                chunks.append(chunk)
+            return chunks
+        
+        # Process text in fixed-size chunks with overlap
+        while current_pos < len(text):
+            end_pos = current_pos + chunk_size
+            chunk_text = text[current_pos:end_pos].strip()
+            
+            # Only create chunks for non-empty text
+            if chunk_text:
+                chunk = TextChunk(
+                    id=len(chunks),
+                    text=chunk_text,
+                    start_char=current_pos,
+                    end_char=end_pos,
+                    length=len(chunk_text),
+                    chunk_type="simple"
+                )
+                chunks.append(chunk)
+            
+            # Move position with overlap for context preservation
+            current_pos = end_pos - overlap
             if current_pos >= len(text):
                 break
         
@@ -481,21 +557,21 @@ class DocumentProcessor:
         raw_text = self.extract_text_from_pdf(pdf_path)
         
         # Step 2: Clean and normalize extracted text
-        clean_text = self.clean_text(raw_text)
+        clean_text = self._clean_text(raw_text)
         
         # Step 3: Create semantic chunks with metadata
-        self.chunks = self.create_semantic_chunks(clean_text)
+        self.chunks = self._semantic_chunking(clean_text, self.chunk_size, self.chunk_overlap)
         
         # Step 4: Save chunks to JSON if output path provided
         if output_path:
-            self.save_chunks(output_path)
+            self.save_chunks(self.chunks, output_path)
         
         # Step 5: Display processing statistics
         self._show_statistics()
         
         return self.chunks
     
-    def save_chunks(self, output_path: str) -> None:
+    def save_chunks(self, chunks: List[TextChunk], output_path: str) -> None:
         """
         Save processed chunks to JSON file with metadata.
         
@@ -504,6 +580,7 @@ class DocumentProcessor:
         content, positioning information, and processing parameters.
         
         Args:
+            chunks: List of TextChunk objects to save
             output_path: Path where the JSON file should be saved
         """
         output_file = Path(output_path)
@@ -513,12 +590,12 @@ class DocumentProcessor:
         # Prepare comprehensive metadata for serialization
         chunk_data = {
             'metadata': {
-                'total_chunks': len(self.chunks),
+                'total_chunks': len(chunks),
                 'chunk_size': self.chunk_size,
                 'chunk_overlap': self.chunk_overlap,
-                'chunk_types': list(set(chunk.chunk_type for chunk in self.chunks))
+                'chunk_types': list(set(chunk.chunk_type for chunk in chunks))
             },
-            'chunks': [chunk.to_dict() for chunk in self.chunks]
+            'chunks': [chunk.to_dict() for chunk in chunks]
         }
         
         # Write chunks to JSON file with proper encoding

@@ -110,7 +110,7 @@ class VectorStore:
     detects and utilizes available GPU resources for accelerated processing.
     """
     
-    def __init__(self, model_name: str = "all-MiniLM-L6-v2", dimension: int = 384):
+    def __init__(self, model_name: str = None, dimension: int = 384):
         """
         Initialize vector store with specified model and configuration.
         
@@ -120,9 +120,16 @@ class VectorStore:
             dimension: Expected embedding dimension for the model
                       (default: 384 for all-MiniLM-L6-v2)
         """
-        self.model_name = model_name
+        # Use environment variable if model_name is not provided
+        if model_name is None:
+            import os
+            self.model_name = os.getenv('EMBEDDING_MODEL', "all-MiniLM-L6-v2")
+        else:
+            self.model_name = model_name
+        self.embedding_model_name = self.model_name  # Alias for tests
         self.dimension = dimension
         self.embedding_model: Optional[SentenceTransformer] = None  # Lazy-loaded embedding model
+        self.embeddings: Optional[np.ndarray] = None  # Store embeddings for tests
         self.index: Optional[faiss.IndexFlatIP] = None  # FAISS index for similarity search
         self.documents: List[Dict[str, Any]] = []  # Original documents for retrieval
         self.metadata: Dict[str, Any] = {}  # Store metadata and configuration
@@ -223,6 +230,7 @@ class VectorStore:
         
         Args:
             documents: List of document dictionaries, each containing a 'text' field
+                      or list of strings (will be converted to dict format)
             
         Raises:
             RuntimeError: If index building fails due to embedding or FAISS errors
@@ -230,12 +238,26 @@ class VectorStore:
         try:
             console.print(f"Building vector index for {len(documents)} documents...", style="blue")
             
+            # Handle both string and dictionary inputs
+            processed_documents = []
+            for doc in documents:
+                if isinstance(doc, str):
+                    # Convert string to dictionary format
+                    processed_documents.append({"text": doc})
+                elif isinstance(doc, dict) and "text" in doc:
+                    # Already in correct format
+                    processed_documents.append(doc)
+                else:
+                    # Try to extract text from dictionary
+                    processed_documents.append({"text": str(doc)})
+            
             # Extract texts from documents for embedding generation
-            texts = [doc['text'] for doc in documents]
-            self.documents = documents
+            texts = [doc['text'] for doc in processed_documents]
+            self.documents = processed_documents
             
             # Generate embeddings using the configured model
             embeddings = self._get_embeddings(texts)
+            self.embeddings = embeddings # Store embeddings for tests
             
             # Create FAISS index optimized for cosine similarity
             self.index = faiss.IndexFlatIP(self.dimension)  # Inner product for cosine similarity
@@ -275,12 +297,12 @@ class VectorStore:
             self.metadata = {
                 'model_name': self.model_name,
                 'dimension': self.dimension,
-                'num_documents': len(documents),
+                'num_documents': len(processed_documents),
                 'index_type': 'FlatIP',
                 'gpu_accelerated': gpu_count > 0 if 'gpu_count' in locals() else False # type: ignore
             }
             
-            console.print(f"Vector index built successfully ({len(documents)} documents)", style="green")
+            console.print(f"Vector index built successfully ({len(processed_documents)} documents)", style="green")
             
         except Exception as e:
             # Log error and re-raise for proper error handling
@@ -502,6 +524,7 @@ class VectorStore:
             'model_name': self.model_name,
             'dimension': self.dimension,
             'total_vectors': len(self.documents) if self.documents else 0,
+            'total_documents': len(self.documents), # Added for clarity
             'index_built': self.index is not None,
             'index_type': self.metadata.get('index_type', 'None')
         }

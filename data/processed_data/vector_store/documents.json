@@ -1,1482 +1,446 @@
 [
   {
-    "id": 0,
-    "text": "Testing PC performance can be complex and time-consuming. As an IT professional, you face unique challenges each day. You likely need to know how to:  Standardize PC purchasing decisions based on performance.  Validate new hardware and Windows conﬁgurations to determine system stability.  Quantify the performance impact of OS image changes and application updates.  Identify poorly performing systems.  Test and measure the real-world performance of PCs against baselines. Standardizing your performance testin",
-    "start_char": 0,
-    "end_char": 512,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 1,
-    "text": "t baselines. Standardizing your performance testing and reporting can help simplify these tasks and processes. Thats where benchmarks come in A benchmark tests how well a product performs a speciﬁc function and how that performance compares across similar products. Benchmarks provide a quantitative differentiator for PC performance testing. A computer benchmarking program runs a series of well-deﬁned tests to measure PC performance. A benchmarking program scores a PC systems performance of common tasks: the",
-    "start_char": 462,
-    "end_char": 974,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 2,
-    "text": "ores a PC systems performance of common tasks: the higher the score, the better the performance. Comparing benchmark scores is easier than comparing complex technical speciﬁcations, allowing for informed, rapid decisions to deliver PC performance, cut hardware costs and save testing time. A good benchmark has three important qualities Accuracy: Consistently produces true and precise results. Relevance: Measures the most important performance elements. Neutrality: Is free of any product or vendor bias. Bench",
-    "start_char": 924,
-    "end_char": 1436,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 3,
-    "text": "lity: Is free of any product or vendor bias. Benchmarks at the enterprise IT level Benchmarks support every stage in the life cycle of your PC assets, easing PC lifecycle management for IT teams. Benchmarks provide support for:  Planning and procurement o Simplify PC performance comparison and cost justiﬁcation  Validation and standardization o Test and compare the performance of new PCs against user-deﬁned baselines.  Operations and management o Efficiently automate remote performance testing to provide re",
-    "start_char": 1386,
-    "end_char": 1898,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 4,
-    "text": "automate remote performance testing to provide reliable insights and reporting  Optimization or replacement o Make informed PC life-cycle decisions based on benchmark results stored in your central database Which benchmark should I use? Benchmark tests are typically designed for a speciﬁc setting (home or office) and a certain class of device (desktop PC, laptop, tablet or smartphone). Choose a benchmark that best matches the needs of your end users. For PCs for general office use, choose a benchmark that",
-    "start_char": 1848,
-    "end_char": 2360,
-    "length": 510,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 5,
-    "text": "s for general office use, choose a benchmark that measures PC performance with a comprehensive set of tests that covers the wide variety of tasks performed in the modern workplace. You can evaluate the overall performance with the benchmark score, while sub-scores focus on performance for speciﬁc activities. Common tests measure performance and battery life for everyday office productivity tasks and such digital content activities as: web browsing, video conferencing, time to start apps, working with docume",
-    "start_char": 2310,
-    "end_char": 2822,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 6,
-    "text": "ferencing, time to start apps, working with documents and spreadsheets and video editing Choosing a reference benchmark score for RFPs Setting a minimum benchmark score in a request for proposal (RFP) helps you judge the relative performance and value of different systems and compare competing offers from your suppliers. Specifying performance with a benchmark score rather than a reference system gives your suppliers more freedom to conﬁgure cost-effective alternatives that you might not have otherwise cons",
-    "start_char": 2772,
-    "end_char": 3284,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 7,
-    "text": "lternatives that you might not have otherwise considered. But what factors decide an appropriate minimum score? Start by testing your existing systems. The Procyon user guide will help you produce accurate results. Benchmark old PCs that are ready to be replaced along with the new systems replacing them. The score comparisons provide good baselines. If youre still shopping, ask a supplier to benchmark their systems to see if they meet your performance needs and expectations. Procyon User Guide: UL Procyon i",
-    "start_char": 3234,
-    "end_char": 3746,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 8,
-    "text": "and expectations. Procyon User Guide: UL Procyon is a growing suite of benchmark tests for professional users in industry, enterprise, government, retail and press roles. Each Procyon benchmark shares a common approach to design, user experience and features to better meet the needs of professional users. Each benchmark is designed for a speciﬁc use case and uses real applications where possible. UL works closely with its industry partners to ensure that every Procyon benchmark is accurate, relevant and imp",
-    "start_char": 3696,
-    "end_char": 4208,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 9,
-    "text": "ry Procyon benchmark is accurate, relevant and impartial. UL Procyon benchmarks combine the relevance of real apps with the convenience of a standardized test that produces consistent, repeatable results every time. Whats more, the UL Procyon benchmarks are also easy to install and run from the UL Procyon app or the command line with no complicated conﬁguration required. Each benchmark produces a score, with higher scores indicating better performance. You also get a sub-score for each test and ﬁne-grained",
-    "start_char": 4158,
-    "end_char": 4670,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 10,
-    "text": "lso get a sub-score for each test and ﬁne-grained workload metrics. You can compare up to four results side by side in the app. You can export result ﬁles to PDF for reporting or as XML ﬁles for integration with other analysis tools. The UL Procyon benchmark suite has ﬂexible licensing that lets you pick and choose the individual benchmarks that best meet your needs. You can buy just one benchmark or add more in any combination. Start benchmarking with UL Procyon  UL Procyon AI Computer Vision Benchmark for",
-    "start_char": 4620,
-    "end_char": 5132,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 11,
-    "text": "ocyon  UL Procyon AI Computer Vision Benchmark for Windows  UL Procyon Battery Life Benchmark  UL Procyon Office Productivity Benchmark  UL Procyon Photo Editing Benchmark  UL Procyon Video Editing Benchmark  UL Procyon AI Inference Benchmark for Android  UL Procyon AI Image Generation Benchmark Activate a Procyon benchmark license key In the application You must add a valid Procyon benchmark license key to the application before you can start benchmarking. Your license key is provided with your purchase. I",
-    "start_char": 5082,
-    "end_char": 5594,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 12,
-    "text": "Your license key is provided with your purchase. If you have misplaced your license key, please contact our sales team for assistance. 1. Install the UL Procyon application on your PC. 2. Open the app. 3. Click on the gear icon to open the Options screen. 4. Enter your license key then click on the Register button. From the command line You can also install the application and activate your license from the command line. My Suite screen The My suite screen is the default view in the UL Procyon application.",
-    "start_char": 5544,
-    "end_char": 6056,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 13,
-    "text": "s the default view in the UL Procyon application. From here, you can see which Procyon benchmarks are installed and available to run with your license. Choose a benchmark Click on a benchmark to open its benchmark details screen. Options Click on the gear icon in the top-right corner to open the Options screen. Results Database The Results database screen shows a table of benchmark results saved on the current system. View a result There are several ways to view a result.  Double-click on a result to open t",
-    "start_char": 6006,
-    "end_char": 6518,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 14,
-    "text": "view a result.  Double-click on a result to open the Result screen.  Click on the checkbox in the leftmost column to select the result. Then select \"View result\" from the \"Choose an action\" menu.  Click on the icon with the three dots in the rightmost column, then click on \"View result.\" Export a result You can export your benchmark results in several formats:  XMLfor further analysis or reporting in other tools.  PDFfor reporting and recordkeeping.  Procyon result ﬁleoptionally choosing a new ﬁle name and",
-    "start_char": 6468,
-    "end_char": 6980,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 15,
-    "text": "result ﬁleoptionally choosing a new ﬁle name and ﬁle location. Compare results Click on the checkbox in the leftmost column to select two or more results, (four maximum). Then choose \"Compare\" from the \"Choose an action\" menu to view the results on the Result Comparison screen. You can compare up to four results side by side in the UL Procyon app. Import results Click on the Import button to add a saved resultsuch as a result from another system, for exampleto the table. Remove results Click on the checkbo",
-    "start_char": 6930,
-    "end_char": 7442,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 16,
-    "text": "eto the table. Remove results Click on the checkbox in the leftmost column to select the result. Then select \"Delete\" from the \"Choose an action\" menu. Alternatively, click on the icon with the three dots in the rightmost column, then click on \"Delete.\" Note that these actions only remove the result from the table view. The result ﬁle is not deleted from the system and can still be imported again if needed. Result screen The Result screen shows your benchmark score, detailed workload scores, hardware monito",
-    "start_char": 7392,
-    "end_char": 7904,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 17,
-    "text": "k score, detailed workload scores, hardware monitoring charts and system details. Benchmark score In the top-left corner panel of the result screen, you see your benchmark score. The higher the score, the better the performance. Beneath that are the model names of the CPU and GPU in the system under test. Application versions The Application versions panel shows which versions of the third-party applications were used in the benchmark. There can be signiﬁcant performance differences between releases of appl",
-    "start_char": 7854,
-    "end_char": 8366,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 18,
-    "text": "t performance differences between releases of applications. When comparing benchmark scores from two or more systems, make sure all the results were obtained with the same application version. Detailed scores This section shows the sub-scores from the benchmark workload(s). Buttons Back Return to the main screen to choose and run another benchmark. Save to cloud Save the result to the online results service on 3DMark.com. Your results are private by default and will not visible to other users. Show log Show",
-    "start_char": 8316,
-    "end_char": 8828,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 19,
-    "text": "and will not visible to other users. Show log Show the activity log for the benchmark run for troubleshooting. Export as ﬁle Save the current benchmark result optionally choosing a new ﬁle name and ﬁle location. Export as PDF Save the current benchmark result in a formatted PDF document for record-keeping or reporting. Export as XML Save the current benchmark result as an XML ﬁle for further analysis or reporting in other tools. Hardware monitoring Below the benchmark scores, you will ﬁnd the monitoring sec",
-    "start_char": 8778,
-    "end_char": 9290,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 20,
-    "text": "benchmark scores, you will ﬁnd the monitoring section. The charts in this section show how CPU and GPU load, clock frequency and temperature changed during the benchmark run. Click on the chart legend to see different measurements. Hover the mouse over the chart to see the measured value. Markers Use this toggle to show or hide the lines that mark the start of each workload. Show details Use this toggle to expand or collapse the monitoring section. System information This section of the result screen shows",
-    "start_char": 9240,
-    "end_char": 9752,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 21,
-    "text": "nformation This section of the result screen shows the hardware speciﬁcation and other relevant information from the system under test. Some parts, such as drive details, can be expanded and collapsed by clicking on the arrow icon. Result comparison screen You can compare up to four results from the same benchmark side by side in the app. In addition to the benchmark scores, test scores and workload metrics, you can also compare the hardware monitoring charts and the system information from each benchmark r",
-    "start_char": 9702,
-    "end_char": 10214,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 22,
-    "text": "s and the system information from each benchmark result. You can expand and collapse each section as needed. Highlight differences Use this toggle to display or hide the effect that highlights the differences between the results. Export results Click an export option to save the individual results in the chosen format together in a ZIP ﬁle. Options screen To open the Options screen, click on the gear icon in the top right corner of the app. General Write detailed log This setting enables detailed logging wh",
-    "start_char": 10164,
-    "end_char": 10676,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 23,
-    "text": "ailed log This setting enables detailed logging while the benchmark is running. It is disabled by default. Since detailed logging can affect your benchmark score, you should only use this setting when requested to resolve a customer support request. Scan SystemInfo SystemInfo is a component used in UL benchmarks to identify the hardware in your system or device. It does not collect any personally identiﬁable information. This option is selected by default. SystemInfo hardware monitoring This option controls",
-    "start_char": 10626,
-    "end_char": 11138,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 24,
-    "text": "ystemInfo hardware monitoring This option controls whether SystemInfo monitors your CPU temperature, clock speed and other hardware information during the benchmark run. This option is selected by default. Support Write detailed log This option is disabled by default since it can affect performance. You should only use this option when instructed as part of resolving a support request. Version details This section shows the version number of the application, SystemInfo and the benchmarks. Check for updates",
-    "start_char": 11088,
-    "end_char": 11600,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 25,
-    "text": "SystemInfo and the benchmarks. Check for updates Click the button to see if there are updates available for the application and the benchmark tests. If a new version is available, you will be able to download and install it from this screen. License You must register a valid license key before you can use the benchmark. Enter your license key into the box and press the Register button. Show key Click the button to show your license key. Click the button again to hide your key. Unregister Click the Unregist",
-    "start_char": 11550,
-    "end_char": 12062,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 26,
-    "text": "in to hide your key. Unregister Click the Unregister button to remove your license key, for example, to move a single-seat license to a different system. Proxy Settings UL Procyon v2.6.1059 adds support for UL Procyon application to connect to the internet through proxy to conﬁrm licenses, update, and submit benchmark results. You can ﬁnd ﬁnd the proxy settings section in the bottom left corner of the UI options page. Setting proxy credentials for the ﬁrst time Enter the credentials as prompted by the text",
-    "start_char": 12012,
-    "end_char": 12524,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 27,
-    "text": "ime Enter the credentials as prompted by the text ﬁelds  you should be greeted with a success message upon successful application of the proxy settings. Changing proxy credentials Please note that if you decide to change the proxy credentials. you must restart the application in order for the new settings to take effect. How to report UL Procyon benchmark scores Each UL Procyon benchmark produces a score, which you can use to compare similar devices or systems. Scores from different Procyon benchmarks, such",
-    "start_char": 12474,
-    "end_char": 12986,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 28,
-    "text": "ms. Scores from different Procyon benchmarks, such as Office Productivity and Photo Editing, are not comparable. P \"The laptop computer scored 5,000 in the UL Procyon Office Productivity Benchmark.\" Í \"The laptop computer scored 5,000 in the UL Procyon benchmark.\" Always include details of the hardware setup you used to obtain the score. Be sure to include the operating system, system hardware, and the version numbers of the relevant third-party applications. You can ﬁnd this information on the benchmark re",
-    "start_char": 12936,
-    "end_char": 13448,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 29,
-    "text": ". You can ﬁnd this information on the benchmark result screen. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. Using UL Procyon benchmark scores in marketing material You must not disclose or publish UL Procyon benchmark results, nor may you use the UL logo or other UL assets in your sales and marketing materials, with",
-    "start_char": 13398,
-    "end_char": 13910,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 30,
-    "text": "assets in your sales and marketing materials, without prior, written permission from UL. Please contact UL.BenchmarkSalesul.com for details. Using UL Procyon benchmark scores in media reviews We provide complimentary UL Procyon licenses to members of the press working for established and reputable publications. Contact us at UL.BenchmarkPressul.com to request a license for your publication. Press can use our benchmark scores in their hardware reviews. We kindly ask you to include a link to https:benchmarks.",
-    "start_char": 13860,
-    "end_char": 14372,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 31,
-    "text": "dly ask you to include a link to https:benchmarks.ul.com whenever you use our benchmarks in a review, feature or news story. UL Procyon trademark On the ﬁrst mention of UL Procyon in marketing text, such as an advertisement or product brochure, please write \"UL Procyon benchmarks\" to protect our trademark. For example: \"We recommend UL Procyon benchmarks.\" Please include our legal text in your small print. Procyon is a registered trademark of Futuremark Corporation, a UL Solutions company. UL Procyon Office",
-    "start_char": 14322,
-    "end_char": 14834,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 32,
-    "text": "oration, a UL Solutions company. UL Procyon Office Productivity Benchmark User Guide Overview of UL Procyon Office Productivity Benchmark The UL Procyon Office Productivity Benchmark uses Microsoft Office apps to measure Windows PC and Apple Mac computer performance for office productivity work. The benchmark workloads feature relevant, real-world tasks using Microsoft Word, Excel, PowerPoint and Outlook. This multi-platform benchmark combines the relevance of testing performance with the same apps that off",
-    "start_char": 14784,
-    "end_char": 15296,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 33,
-    "text": "of testing performance with the same apps that office workers use every day with the convenience of a standardized test that produces consistent, repeatable results. The Office Productivity Benchmark is simple to set up and run. The Windows PC benchmark can be run from the UL Procyon app or the command line. The Apple Mac benchmark can be installed and run from the Testdriver Cloud UI or the command line. The Office Productivity Benchmark is designed around common tasks from a typical day at the office. The",
-    "start_char": 15246,
-    "end_char": 15758,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 34,
-    "text": "common tasks from a typical day at the office. The benchmark opens Excel sheets, PowerPoint presentations, Word documents and Outlook emails. These applications are running simultaneously as the focus moves from one task to another. For example, the benchmark copies a chart from Excel and adds it to a PowerPoint slide. It takes text from one Word document and adds it to another. The benchmark focuses on measuring aspects of performance that affect the user experience, such as providing smooth interactions a",
-    "start_char": 15708,
-    "end_char": 16220,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 35,
-    "text": "xperience, such as providing smooth interactions and processing large tasks quickly. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. UL Procyon Office Productivity Benchmark system requirements Here are the minimum system requirements for the UL Procyon Office Productivity Benchmark for Windows PC and Apple Mac compute",
-    "start_char": 16170,
-    "end_char": 16682,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 36,
-    "text": "ity Benchmark for Windows PC and Apple Mac computers. Please note that the storage requirement does not include the space needed to install the Microsoft applications used in the benchmark. Windows PC system requirements OS Windows 10, 64-bit, version 2004 or later Processor 2 GHz dual-core CPU Memory 4 GB Graphics DirectX 12 Storage 5 GB Apple Mac computer system requirements OS macOS Monterey or later Memory 4 GB Storage 5 GB Required applications The UL Procyon Office Productivity Benchmark uses Microsof",
-    "start_char": 16632,
-    "end_char": 17144,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 37,
-    "text": "rocyon Office Productivity Benchmark uses Microsoft Office applications to test and measure PC and Mac performance. The applications are not included with the benchmark. You must install and activate licensed versions of the required applications on every system you plan to test. The UL Procyon Office Productivity Benchmark is compatible with Microsoft Office 2019 (retail versions only), Microsoft Office 2021 and Microsoft 365 (including trial accounts). Please note that volume licensed versions of Office 2",
-    "start_char": 17094,
-    "end_char": 17606,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 38,
-    "text": "ase note that volume licensed versions of Office 2019, such as Office Professional Plus 2019, are not compatible with the UL Procyon Office Productivity Benchmark. Microsoft Word Microsoft Excel Microsoft PowerPoint Microsoft Outlook Ready for Windows 11 UL Procyon benchmarks are compatible with Windows 11. The Office Productivity Benchmark is compatible with Microsoft Office 2021. Word test The Word test simulates a sales manager writing marketing material for the sales team. The workload features common t",
-    "start_char": 17556,
-    "end_char": 18068,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 39,
-    "text": "for the sales team. The workload features common tasks such as loading and saving, cutting, copying, pasting and editing content and images, ﬁnding and replacing text, inserting graphs from Excel, and comparing documents. This test is available on both Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Add Watermark  Convert from PDF  Embed ﬁle  Export to PDF  Image effect Office Productivity Word score The Word test produces an Office Productivity Word score. A highe",
-    "start_char": 18018,
-    "end_char": 18530,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 40,
-    "text": "roduces an Office Productivity Word score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Word score  3900  geometric mean of Measures loading of the source and destination documents. Repeated 3 times. The source document has 12 pages and is 252 KB in size. The destination document has 75 pages and is 971 KB in size. OfficeProductivityWordLoad result  geometric mean of OfficeProductivityW",
-    "start_char": 18480,
-    "end_char": 18992,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 41,
-    "text": "Load result  geometric mean of OfficeProductivityWordSave Measures saving of a document. Some of the save operations are repeated. Save sizes are from 1.4 MB to 55 MB. Saving happens:  After adding the table of contents and ﬁrst edits.  After a new image is added.  After data has been copied from Excel and other edits. OfficeProductivityWordSave result  geometric mean of OfficeProductivityWordCopyPaste Measures copy-pasting between documents. Copying 12 pages of text. Repeated 7 times. OfficeProductivityWor",
-    "start_char": 18942,
-    "end_char": 19454,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 42,
-    "text": "s of text. Repeated 7 times. OfficeProductivityWordCopyPaste result  geometric mean of OfficeProductivityWordCutPaste Measures cut pasting inside of a document. Copying from 4 to 10 pages per repeat. Repeated 7 times. OfficeProductivityWordCutPaste result  geometric mean of OfficeProductivityWordAddWatermark Measures the adding of a watermark to a document. Repeated 5 times. The image resolution is 4167  3334 OfficeProductivityWordAddWatermark result  geometric mean of OfficeProductivityWordTableOfContents",
-    "start_char": 19404,
-    "end_char": 19916,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 43,
-    "text": "ric mean of OfficeProductivityWordTableOfContents Measures creating and updating the table of content. Both creating and updating are repeated 5 times. Table of contents contains 168 entries. OfficeProductivityWordTableOfContents result  geometric mean of OfficeProductivityWordAddImage Measures inserting an image into a document. New image for every measurement. Image resolutions are:  3746  5617  2922  3899  3712  5568  3640  5464  3646  5568 OfficeProductivityWordAddImage result  geometric mean of OfficeP",
-    "start_char": 19866,
-    "end_char": 20378,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 44,
-    "text": "vityWordAddImage result  geometric mean of OfficeProductivityWordImageScale Measures scaling the 5 new images to the correct size for the page. OfficeProductivityWordImageScale result  geometric mean of OfficeProductivityWordImageEffect Measures applying different effects to the 5 new images.  Blur  Color temperature  Film grain  Pencil grayscale  Texturizer  Watercolor sponge OfficeProductivityWordImageEffect result  geometric mean of OfficeProductivityWordEmbedFile Measures embedding other documents into",
-    "start_char": 20328,
-    "end_char": 20840,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 45,
-    "text": "EmbedFile Measures embedding other documents into the Word document. Adds an Excel ﬁle of about 6.0 MB in size and a PowerPoint ﬁle of around 32 MB in size. OfficeProductivityWordEmbedFile result  geometric mean of OfficeProductivityWordCopyFromExcel Measures time taken to copy data from Excel to the Word document. 5 copies are done. OfficeProductivityWordCopyFromExcel result  geometric mean of OfficeProductivityWordExportToPdf Measures the time taken to export a PDF of the document. The output PDF size is",
-    "start_char": 20790,
-    "end_char": 21302,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 46,
-    "text": "ort a PDF of the document. The output PDF size is 3.2 MB. OfficeProductivityWordExportToPdf result  time to taken to export to PDF OfficeProductivityWordConvertFromPdf Measures time taken to convert a PDF document to a.docx document format. The new Word document size is 4.5 MB. OfficeProductivityWordConvertFromPdf result  time taken to convert PDF to.docx OfficeProductivityWordFind Find and highlight 4 different words or parts of words. Then ﬁnd and replace 4 other words. OfficeProductivityWordFind result",
-    "start_char": 21252,
-    "end_char": 21764,
-    "length": 510,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 47,
-    "text": "4 other words. OfficeProductivityWordFind result  geometric mean of OfficeProductivityWordCompareDocuments Measures time taken to compare two documents. Where one document is the original and the other document is a modiﬁed version of the original. Both documents are 494 pages and around 1.2 MB in size. OfficeProductivityWordCompareDocuments result  time taken to compare two documents OfficeProductivityWordAcceptComparison Measures time taken to accept all the changes resulting from the comparison. OfficePr",
-    "start_char": 21714,
-    "end_char": 22226,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 48,
-    "text": "he changes resulting from the comparison. OfficeProductivityWordAcceptComparison result  time taken to accept changes Excel test The Excel test simulates a ﬁnancial officer performing calculations with several Excel worksheets. The workload features typical spreadsheet tasks like loading and saving, auto- calculation, inserting data, copy and paste, sorting, using a pivot table, exporting to CSV and PDF, and using common formulas. This test is available on both Windows PC and Apple Mac computers. Not includ",
-    "start_char": 22176,
-    "end_char": 22688,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 49,
-    "text": "oth Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Export to PDF  Solve Equations  Format Table Office Productivity Excel score The Excel test produces an Office Productivity Excel score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Excel score  7900  geometric mean of OfficeProductivityExcelEditCells, OfficeProductivityExcelSortColumn, Office",
-    "start_char": 22638,
-    "end_char": 23150,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 50,
-    "text": "itCells, OfficeProductivityExcelSortColumn, OfficeProductivityExcelVoterAnalysis, OfficeProductivityExcelUniquePairs, OfficeProductivityExcelSolveEquations, OfficeProductivityExcelPivotTable, OfficeProductivityExcelCopyPaste, OfficeProductivityExcelSave, OfficeProductivityExcelLoad, OfficeProductivityExcelFormatTable, OfficeProductivityExcelLoadMortgage, OfficeProductivityExcelModifyMortgage, OfficeProductivityExcelVlookup, OfficeProductivityExcelExportToPdf, OfficeProductivityExcelSaveAsCsv OfficeProductiv",
-    "start_char": 23100,
-    "end_char": 23612,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 51,
-    "text": ", OfficeProductivityExcelSaveAsCsv OfficeProductivityExcelEditCells Measure how long it takes to make minor manual changes to the worksheet. OfficeProductivityExcelSortColumn Measures sorting the Excel sheet by one column that is not a numerical column. The worksheet has 150k rows. OfficeProductivityExcelVoterAnalysis Measures the time taken to fully recalculate the VoterAnalysis-complete worksheet that contains large amount of data and its analysis. The worksheet consists mostly of simple formulas. It has",
-    "start_char": 23562,
-    "end_char": 24074,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 52,
-    "text": "ksheet consists mostly of simple formulas. It has 400k rows. OfficeProductivityExcelUniquePairs Performs calculation on a sheet that involves 60000 rows of IF(COUNTIFS()) formula. OfficeProductivityExcelSolveEquations The Evaluate workbook is tested by launching a linear optimization problem solver that is deﬁned in the workbooks macro. It solves the set of linear equations. The solve process is ﬁrst performed with 2 workbooks open in the background, This is repeated four times, with the ﬁrst result dropped",
-    "start_char": 24024,
-    "end_char": 24536,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 53,
-    "text": "repeated four times, with the ﬁrst result dropped from the result calculation. Then all background workbooks are closed and the solve process is performed again. This is repeated four times, with the ﬁrst result dropped from the result calculation. OfficeProductivityExcelPivotTable A pivot table is deﬁned and created from a datasheet with several dozen rows and coumns. The data entries for the pivot table are selected based on Excels suggestions. OfficeProductivityExcelCopyPaste Additional data is copied a",
-    "start_char": 24486,
-    "end_char": 24998,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 54,
-    "text": "uctivityExcelCopyPaste Additional data is copied and pasted to the end of the open worksheet. After that, the workbook is saved, closed, then opened again. This cycle repeats 5 times, increasing the amount of data being appended. The worksheet has 400k rows. OfficeProductivityExcelSave This score measures how long it takes to save the ﬁle. The score is the geomean of 5 save iterations of a worksheet with 400k rows. OfficeProductivityExcelLoad This score measures how long it takes to load a large data ﬁle. T",
-    "start_char": 24948,
-    "end_char": 25460,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 55,
-    "text": "ures how long it takes to load a large data ﬁle. The score is the geomean of 5 load iterations using a worksheet with 400k rows. OfficeProductivityExcelFormatTable Measuring the time taken to format 400k rows of plain data as a table with headings. OfficeProductivityExcelLoadMortgage Measures much time it takes to open and recalculate the cal_mortgage_30x.xlsm ﬁle. It contains a rather small amount of data (1050 rows by 200 columns) but involves a lot of complex formulas that calculate all the variables for",
-    "start_char": 25410,
-    "end_char": 25922,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 56,
-    "text": "plex formulas that calculate all the variables for a mortgage for every month based on the starting conditions. OfficeProductivityExcelModifyMortgage Performs copy-paste of data between Excel worksheets that results in reevaluating the formulas. The worksheet is 1050 rows by 200 columns. OfficeProductivityExcelVlookup Performs one million VLOOKUP operations on rows of data. The data is taken from one worksheet to another inside of a single workbook. OfficeProductivityExcelExportToPdf Measures how long it ta",
-    "start_char": 25872,
-    "end_char": 26384,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 57,
-    "text": "oductivityExcelExportToPdf Measures how long it takes to export an Excel worksheet with charts to PDF format with common settings. The worksheet is not large and can ﬁt on a single screen, but it is visually heavy, which results in a suitable load for the PDF renderer. OfficeProductivityExcelSaveAsCsv Measures how long it takes to export and save an Excel workbook with 400k rows and charts as CSV ﬁle. PowerPoint test The PowerPoint test simulates a product manager making a project status presentation. The w",
-    "start_char": 26334,
-    "end_char": 26846,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 58,
-    "text": "anager making a project status presentation. The workload loads a document, adds images, copies images and text, adds and previews animations, merges content from other ﬁles, saves the ﬁle, and exports to PDF and video. This test is available on both Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Add animation  Export video  Merge Office Productivity PowerPoint score The PowerPoint test produces an Office Productivity PowerPoint score. A higher score indicates bet",
-    "start_char": 26796,
-    "end_char": 27308,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 59,
-    "text": "ity PowerPoint score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. PowerPoint score  3200  geometric mean of OfficeProductivityPowerpointLoad OfficeProductivityPowerpointCopyFromWord OfficeProductivityPowerpointAddImage OfficeProductivityPowerpointAddAnimation OfficeProductivityPowerpointSave OfficeProductivityPowerpointMerge OfficeProductivityPowerpointExportToPdf OfficeProductivityPow",
-    "start_char": 27258,
-    "end_char": 27770,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 60,
-    "text": "ctivityPowerpointExportToPdf OfficeProductivityPowerpointExportVideo OfficeProductivityPowerpointAddVideo OfficeProductivityPowerpointLoad Measures the loading of a presentation. It has 27 slides and the size is around 88 MB. Repeated 6 times. The maximum value is dropped from the result calculation. OfficeProductivityPowerpointLoad result  geometric mean of where the maximum value is dropped from the calculation. OfficeProductivityPowerpointCopyFromWord Measures copying of one paragraph of text from Word t",
-    "start_char": 27720,
-    "end_char": 28232,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 61,
-    "text": "sures copying of one paragraph of text from Word to a presentation. 9 times copied text over. OfficeProductivityPowerpointCopyFromWord result  geometric mean of OfficeProductivityPowerpointAddImage Measures adding of an image to a presentation. Repeated 4 times. The image resolution is 5669  3896. OfficeProductivityPowerpointAddImage result  geometric mean of where the maximum value is dropped from the calculation. OfficeProductivityPowerpointAddAnimation Measures adding of animation to a presentation. Repe",
-    "start_char": 28182,
-    "end_char": 28694,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 62,
-    "text": "asures adding of animation to a presentation. Repeated 4 times. Animations added are:  PpEntryEffect.ppEffectRandomBarsHorizontal  PpEntryEffect.ppEffectFlyFromBottom OfficeProductivityPowerpointAddAnimation result  geometric mean of OfficeProductivityPowerpointSave Measures saving of a presentation to a different location. The presentation is saved:  After adding animation, size 82 MB  After doing merge, size 5.9 MB  After adding video, size 98 MB Each save is repeated three times. OfficeProductivityPowerp",
-    "start_char": 28644,
-    "end_char": 29156,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 63,
-    "text": "is repeated three times. OfficeProductivityPowerpointSave result  geometric mean of where the maximum value from each of the three saves is dropped from the calculation. OfficeProductivityPowerpointMerge Measures merging of two presentations that have a common base and no conﬂicts. OfficeProductivityPowerpointMerge result  geometric mean of OfficeProductivityPowerpointExportToPdf Measures exporting of presentation to PDF. Size of the output PDF is 1.0 MB OfficeProductivityPowerpointExportToPdf result  time",
-    "start_char": 29106,
-    "end_char": 29618,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 64,
-    "text": "ficeProductivityPowerpointExportToPdf result  time taken to export to PDF OfficeProductivityPowerpointExportVideo Measures creating a video of the presentation. The size of the output video is 14 MB. Video is 3s per slide, includes some animations, transitions. Vertical resolution: 720, frame rate: 30fps, quality: 85 OfficeProductivityPowerpointExportVideo result  time taken to export the video OfficeProductivityPowerpointAddVideo Measures adding video to a presentation. Repeated 4 times. Duration: 10s, res",
-    "start_char": 29568,
-    "end_char": 30080,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 65,
-    "text": "presentation. Repeated 4 times. Duration: 10s, resolution 3840  2160, frame rate: 23.98fps, data rate: 58423kbps OfficeProductivityPowerpointAddVideo result  geometric mean of where the maximum value is dropped from the calculation. Outlook test The Outlook test simulates a project manager using email. The workload includes tasks such as creating emails, moving emails, searching for text within an email, saving attachments, making appointments, and backing up folders. This test is currently available on Win",
-    "start_char": 30030,
-    "end_char": 30542,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 66,
-    "text": "p folders. This test is currently available on Windows PC. The Outlook data ﬁle is 154 MB in size. It has 128 emails in the Inbox and 8 emails in Sent Items. Some emails include attachments:  79 jpg images with sizes from 32 KB to 2.6 MB and a total size of 27.3 MB  Excel document that is 7.3 MB  PowerPoint document that is 4.4 MB  Word document that is 8.5 MB The Outlook test does not use the network. Office Productivity Outlook score The Outlook test produces an Office Productivity Outlook score. A higher",
-    "start_char": 30492,
-    "end_char": 31004,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 67,
-    "text": "ces an Office Productivity Outlook score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Outlook score  4300  geometric mean of OfficeProductivityOutlookMoveMails OfficeProductivityOutlookNewAppointment OfficeProductivityOutlookSearchMails OfficeProductivityOutlookBackup OfficeProductivityOutlookWriteMail OfficeProductivityOutlookSaveAttachments OfficeProductivityOutlookMoveMails Measures",
-    "start_char": 30954,
-    "end_char": 31466,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 68,
-    "text": "hments OfficeProductivityOutlookMoveMails Measures moving 136 emails from imported dataﬁle to empty proﬁle. Repeated 7 times. OfficeProductivityOutlookMoveMails result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookNewAppointment Measures adding a new appointment with 3 attachments (Excel, PowerPoint and Word documents). Repeated 7 times. OfficeProductivityOutlookNewAppointment result  geometric mean of where the maximum and minimum values",
-    "start_char": 31416,
-    "end_char": 31928,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 69,
-    "text": "tric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookSearchMails Measures searching string from emails. Repeated 7 times. OfficeProductivityOutlookSearchMails result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookBackup Measures data archiving. Copies 128 mails and results in a 150MB data ﬁle. Repeated 7 times. OfficeProductivityOutlookBackup result  geometric mean of where the maximum",
-    "start_char": 31878,
-    "end_char": 32390,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 70,
-    "text": "Backup result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookWriteMail Measures creating an email with 3 attachments (Excel, PowerPoint and Word documents). Repeated 7 times. OfficeProductivityOutlookWriteMail result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookSaveAttachments Measures saving attachments from all emails. Writes out 82 ﬁles with a total size of 45MB. Repea",
-    "start_char": 32340,
-    "end_char": 32852,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 71,
-    "text": "rites out 82 ﬁles with a total size of 45MB. Repeated 7 times. OfficeProductivityOutlookSaveAttachments result  geometric mean of Measurements often contain variable number of high outliers. We eliminate them by applying k- means clustering to 3 clusters and dropping the highest cluster. How is the Office Productivity Benchmark score calculated? The UL Procyon Office Productivity Benchmark is designed around common tasks from a typical day at the office. The benchmark opens Excel sheets, PowerPoint presenta",
-    "start_char": 32802,
-    "end_char": 33314,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 72,
-    "text": "benchmark opens Excel sheets, PowerPoint presentations, Word documents and Outlook emails. These applications are running simultaneously as the focus moves from one task to another. For example, the benchmark copies a chart from Excel and adds it to a PowerPoint slide. It takes text from one Word document and adds it to another. The benchmark focuses on measuring aspects of performance that directly affect the user experience, such as providing smooth interactions and processing large tasks quickly. On Sys",
-    "start_char": 33264,
-    "end_char": 33776,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 73,
-    "text": "actions and processing large tasks quickly. On Systems running Microsoft Windows, the Procyon office productivity benchmark produces two scores: an MP Score allowing comparison between systems running Windows and macOS, and a Windows-only score that is also compatible with scores from Procyon office productivity versions 1.0 and 1.1. These two scores are not compatible with each other. Office Productivity Benchmark MP scoring (systems running Windows and macOS) Running the office productivity benchmark on m",
-    "start_char": 33726,
-    "end_char": 34238,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 74,
-    "text": "OS) Running the office productivity benchmark on macOS will only generate an MP score. Running the office productivity benchmark on Windows will generate two scores, one of which is an MP score. The Office Productivity MP score is a geometric mean of the scores from each workload. Office Productivity MP score  ﬂoor_to_thousands(geometric mean(Excel MP score, Word MP score, PowerPoint MP score)) Office Productivity Benchmark scoring (only systems running Microsoft Windows) The UL Procyon Office Productivity",
-    "start_char": 34188,
-    "end_char": 34700,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 75,
-    "text": "osoft Windows) The UL Procyon Office Productivity Benchmark produces an Office Productivity score. A higher score indicates better performance. The Office Productivity score is a geometric mean of the results from the Word, Excel, PowerPoint and Outlook tests with weights applieddouble weight is indicated by including a score twice in the score formula. Office Productivity score  geometric mean( Excel score, Excel score, Word score, Word score, PowerPoint score, PowerPoint score, Outlook score) The test sco",
-    "start_char": 34650,
-    "end_char": 35162,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 76,
-    "text": "ore, PowerPoint score, Outlook score) The test score formulas are calibrated to produce an Office Productivity score of 5000 on the reference PC, which is a laptop computer with an 11th Generation Intel Core i5-1135G7 2400 MHz processor. Benchmark scores Each benchmark run produces a high-level benchmark score, mid-level test scores, and low- level workload metrics. The precision of UL Procyon benchmark scores is usually better than 3 when following the steps outlined in this guide. This means that running",
-    "start_char": 35112,
-    "end_char": 35624,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 77,
-    "text": "s outlined in this guide. This means that running the benchmark repeatedly on a consistently performing system in a controlled environment will produce scores that fall within a 3 range. A score may occasionally fall outside the margin of error since there are factors in modern, multitasking operating systems that cannot be controlled completely. There are also devices that simply do not offer consistent performance due to their design. In these cases, you should run the benchmark multiple times, and take a",
-    "start_char": 35574,
-    "end_char": 36086,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 78,
-    "text": "hould run the benchmark multiple times, and take an average or a mode of the results. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. UL Procyon Office Productivity Benchmark workload version history A benchmark version number is speciﬁc to a test. Benchmark version numbers change rarely and only when absolutely necess",
-    "start_char": 36036,
-    "end_char": 36548,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 79,
-    "text": "bers change rarely and only when absolutely necessary to accommodate changes in third-party applications or bug ﬁxes. UL Procyon Office Productivity Benchmark v1.2 May 2, 2023  Added compatibility for systems running Apple macOS. The Procyon Office Productivity Benchmark on macOS uses workloads for Microsoft PowerPoint, Word, and Excel to measure performance.  On Systems running Microsoft Windows, the Procyon Office Productivity Benchmark now produces two scores: a Windows-only score that is compatible with",
-    "start_char": 36498,
-    "end_char": 37010,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 80,
-    "text": "ores: a Windows-only score that is compatible with scores from previous versions of Procyon Office Productivity, and an MP Score for comparison between systems running Windows and macOS. UL Procyon Office Productivity Benchmark v1.1 March 7, 2023  Updated to target.NET 4.8 and Visual Studio C 2022.  This benchmark will no longer run in an elevated state. This may reduce scores on systems using 9th generation Intel CPUs or older. UL Procyon Office Productivity Benchmark v1.0 October 4, 2021  Launch version H",
-    "start_char": 36960,
-    "end_char": 37472,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 81,
-    "text": "y Benchmark v1.0 October 4, 2021  Launch version How to run the Procyon Office Productivity Benchmark on macOS Installing required software Make sure you are connected to the Internet. Updating macOS 1. Ensure you are running the latest version of macOS. You can check the latest versions of macOS on the Apple website. Installing Microsoft Office software 1. Install Microsoft Office 365 or Microsoft Office 2019 (or newer). 2. Open any Microsoft Office application and activate the license by either logging in",
-    "start_char": 37422,
-    "end_char": 37934,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 82,
-    "text": "tion and activate the license by either logging in with a suitable account or by entering a license key. 3. Open the Microsoft Excel, Word and PowerPoint apps at least once, then clear any popups or activation dialogs to prevent them from interfering with the Procyon office productivity Benchmark. Installing the UL Procyon Office Productivity Benchmark 1. Install Procyon: Procyon-macos-installer-x64-OfficeProductivity-version.pkg 2. You may be prompted to install Rosetta to continue the installation unless",
-    "start_char": 37884,
-    "end_char": 38396,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 83,
-    "text": "stall Rosetta to continue the installation unless Rosetta is already installed in the system. It can be installed with the command: softwareupdate --install-rosetta 3. Follow the prompts to complete the installation. Note: UL Procyon is installed in the LibraryULProcyonOfficeProductivity folder. Registering your Procyon license 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOfficeProductivity 3. Register your license:.UL_Procyon --register license key First ti",
-    "start_char": 38346,
-    "end_char": 38858,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 84,
-    "text": "icense:.UL_Procyon --register license key First time Procyon setup We recommend that in order to correctly set up the required macOS security permissions, you ﬁrst run the Office Productivity ﬁrst time setup process, then accept the requests for security permissions that appear in the ﬁrst few minutes of the process. Usually on a system that has not any special permissions conﬁgured the Office Productivity ﬁrst time setup process goes as follows: 1. Using Terminal, run the conﬁguration tool in the Procyon i",
-    "start_char": 38808,
-    "end_char": 39320,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 85,
-    "text": "rminal, run the conﬁguration tool in the Procyon install directory:.UL_Procyon -d office_productivity_ﬁrst_time_setup.def 2. Accept the macOS permission requests that appear during the ﬁrst-time process. 3. The last prompt will take you to Security  Permissions in Settings app. 4. Check the box next to java (on macOS Monterey) or Terminal (on macOS Ventura) 5. The ﬁrst-time setup will end and show a prompt to retry the ﬁrst-run setup if it did not have all necessary security permissions. 6. Click Retry in t",
-    "start_char": 39270,
-    "end_char": 39782,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 86,
-    "text": "ecessary security permissions. 6. Click Retry in the ﬁrst-time setup dialog. 7. Accept any more permission requests that appear. 8. Necessary security permissions will have been set up once the ﬁrst-time setup ends successfully. You may have to run the setup several times to achieve this. Notes:  In case you accidentally deny a permission instead of accepting it, you can go to Security  Permissions in Settings app to check boxes in Accessibility and Automation tabs  If it all fails, you can start over by re",
-    "start_char": 39732,
-    "end_char": 40244,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 87,
-    "text": "on tabs  If it all fails, you can start over by resetting all permissions by issuing the following command in Terminal: tccutil reset All  Some enterprise security systems may require you to ﬁrst add Terminal app to have Full disk access in Security  Permissions Required Permissions MacOS 12 Monterey On macOS 12 Monterey, the required permissions are: Accessibility:  LibraryULProcyonjdk8u292-b10-jreContentsHomebinjava Automation:  LibraryULProcyon jdk8u292-b10-jreContentsHomebinjava  Microsoft Word  Microso",
-    "start_char": 40194,
-    "end_char": 40706,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 88,
-    "text": "10-jreContentsHomebinjava  Microsoft Word  Microsoft PowerPoint  Microsoft Excel  System Events MacOS 13 Ventura On macOS 13 Ventura, the required permissions are: Accessibility:  Terminal Automation:  Terminal  Microsoft Word  Microsoft PowerPoint  Microsoft Excel  System Events Run the office productivity benchmark Once the benchmark is installed and permissions conﬁgured properly, it can be run as follows: 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOffi",
-    "start_char": 40656,
-    "end_char": 41168,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 89,
-    "text": "installation folder with: cd LibraryULProcyonOfficeProductivity 3. To run the office productivity benchmark:.UL_Procyon -d office_productivity.def -o output pathoutput ﬁle.procyon-result Example:.UL_Procyon -d office_productivity.def -o UsersProcyonTestUserProcyonresultsOfficeProductivityResult.procyon-result Viewing your results The best method to process benchmark result data is to use the Office Productivity benchmark with Testdriver Cloud. If you chose to not use Testdriver Cloud, you can extract the i",
-    "start_char": 41118,
-    "end_char": 41630,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 90,
-    "text": "to not use Testdriver Cloud, you can extract the information from the results ﬁle using either of the following processes. Exporting with command line switch Option 1: 1. Use -export-csv or -export-xml command line switch to export results as an XML or CSV ﬁle:.UL_Procyon -d office_productivity.def -o Export File Name.zip --export-csv Result File Name.csv Example:.UL_Procyon -d office_productivity.def -o ZipOfficeProductivityResult --export-csv OfficeProductivityResult.csv Option 2: 1. Use the -export-simpl",
-    "start_char": 41580,
-    "end_char": 42092,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 91,
-    "text": "ivityResult.csv Option 2: 1. Use the -export-simple-CSV command line switch to export results as a single CSV ﬁle:.UL_Procyon -d office_productivity.def -o Export File Name.zip -l 2 --export-simple-csv CSV File Name.csv Example:.UL_Procyon -d office_productivity.def -o ZipOfficeProductivityResult.zip -l 2 --export-simple- csv OfficeProductivityResult.csv Extracting Result.xml from the.procyon-result ﬁle. (This is essentially the same as using -export-xml command) 1. Unzip the.procyon-result ﬁle to extract t",
-    "start_char": 42042,
-    "end_char": 42554,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 92,
-    "text": "mand) 1. Unzip the.procyon-result ﬁle to extract the contents. Your benchmark results are available in the Result.xml ﬁle. Once you have the CSV or XML ﬁle, you can process the data with your preferred tools. Uninstalling UL Procyon Office Productivity The benchmark can be uninstalled as follows: 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOfficeProductivity 3. Run the uninstallation script: sudo.uninstall.sh Note: It is not recommended to uninstall just by",
-    "start_char": 42504,
-    "end_char": 43016,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 93,
-    "text": "h Note: It is not recommended to uninstall just by removing the installation folder, as it will leave the Procyon app installed in the operating system registers. This can cause issues when installing Procyon again later. Procyon Scores The following interactive graph shows a distribution of PCs tested by UL Solutions as part of our Benchmarks Data for Retailers service for Elkjop  A major European consumer electronics retailer. Along the X-axis are ranges of scores for tested devices, while along the y-axi",
-    "start_char": 42966,
-    "end_char": 43478,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 94,
-    "text": "f scores for tested devices, while along the y-axis represents is the percentage of devices that fall within that score range. Computers are further grouped into ﬁve colored performance tiers for each benchmark based on their suitability for the use-case being tested. You can interact with the graph to view the representative hardware and usage scenario for each level. Score Range  Distribution of PC's Tested by UL Solutions Procyon benchmarks measure performance in real-world tasks using industry standard",
-    "start_char": 43428,
-    "end_char": 43940,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 95,
-    "text": "mance in real-world tasks using industry standard software, helping achieve up-to-date understanding of a systems performance. This distribution is based on a sample of approximately 250 devices should not be considered a representative sample of PCs and laptops sold by Elkjop, nor is it a representative sample of PCs and laptops sold globally. Procyon AI Benchmarks offering Procyon AI Image Generation Benchmark GPU AI Image Generation Performance The Procyon AI Image Generation Benchmark provides a consist",
-    "start_char": 43890,
-    "end_char": 44402,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 96,
-    "text": "n AI Image Generation Benchmark provides a consistent, accurate, and understandable workload for measuring the inference performance of on-device AI accelerators. This benchmark was developed in partnership with multiple key industry members to ensure it produces fair and comparable results across all supported hardware. The benchmark includes three tests for measuring the performance from low power NPUs to high-end discrete graphics cards. The Stable Diffusion XL (FP16) test is our most demanding AI infere",
-    "start_char": 44352,
-    "end_char": 44864,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 97,
-    "text": "ion XL (FP16) test is our most demanding AI inference workload, and only the latest high-end GPUs meet the minimum requirements to run it. For moderately powerful discrete GPUs, we recommend the Stable Diffusion 1.5 (FP16) test. Finally, we designed the Stable Diffusion 1.5 (INT8) test for low power devices using NPUs for AI workloads. The Procyon AI Image Generation Benchmark can be conﬁgured to use a selection of different inference engines, and by default uses the recommended optimal inference engine for",
-    "start_char": 44814,
-    "end_char": 45326,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 98,
-    "text": "uses the recommended optimal inference engine for the systems hardware. Features  A range of tests built around an image generation workload, using state-of-the-art neural networks.  Designed to measure the inference performance of a wide range of AI accelerators.  Benchmark with NVIDIA TensorRT, Intel OpenVINO, and ONNX with DirectML.  Verify inference engine implementation and compatibility.  Simple to set up and use via the Procyon application or via command-line.  Test with multiple versions of the Sta",
-    "start_char": 45276,
-    "end_char": 45788,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 99,
-    "text": "mand-line.  Test with multiple versions of the Stable Diffusion AI model.  Compare up to 4 results side-by-side in the app. Benchmark details  Stable diffusion, released in 2022, made using AI for text-to-image generation on their own hardware accessible for the everyday consumer. Given its ease of access, wide usage, and creative aspect, text-to-image generation quickly became one of the most memorable AI use cases for the public.  The AI Image Generation Benchmark uses a set of standardized text prompts f",
-    "start_char": 45738,
-    "end_char": 46250,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 100,
-    "text": "enchmark uses a set of standardized text prompts for a reliable and consistent AI image generation workload. Results provide an overall score for easy comparison, as well as further detailed scores and the generated images for closer inspections of performance and quality. Test Workload Image resolution Batch size Steps Stable Diffusion XL (FP16) Heavy 1024 x 1024 1 100 Stable Diffusion 1.5 (FP16) Medium 512 x 512 4 100 Stable Diffusion 1.5 (INT8) Light 512 x 512 1 50 Results and insights Benchmark scores C",
-    "start_char": 46200,
-    "end_char": 46712,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 101,
-    "text": "x 512 1 50 Results and insights Benchmark scores Compare AI Inference performance with two different versions of the Stable Diffusion model. Detailed scores Inspect generated images, and get detailed scores for each image generation batch. Hardware monitoring Get detailed metrics on how CPU and GPU temperatures, clock speeds and usage change during the benchmark run. Developed with Industry expertise Procyon benchmarks are designed for industry, enterprise, and press use, with tests and features created spe",
-    "start_char": 46662,
-    "end_char": 47174,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 102,
-    "text": "and press use, with tests and features created speciﬁcally for professional users. The Procyon AI Image Generation Benchmark was designed and developed with industry partners through the UL Benchmark Development Program (BDP). The BDP is an initiative from UL Solutions that aims to create relevant and impartial benchmarks by working in close cooperation with program members. Inference Engine Performance With the Procyon AI Image Generation Benchmark, you can measure the performance of dedicated AI processin",
-    "start_char": 47124,
-    "end_char": 47636,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 103,
-    "text": "measure the performance of dedicated AI processing hardware and verify inference engine implementation quality with tests based on a heavy AI image generation workload. Designed for Professionals We created our Procyon AI Inference Benchmarks for engineering teams who need independent, standardized tools for assessing the general AI performance of inference engine implementations and dedicated hardware. Fast and easy to use The benchmark is easy to install and runno complicated conﬁguration is required. Ru",
-    "start_char": 47586,
-    "end_char": 48098,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 104,
-    "text": "and runno complicated conﬁguration is required. Run the benchmark using the Procyon application or via command-line. View benchmark scores and charts or export detailed result ﬁles for further analysis. Procyon AI Inference Benchmark for Android Benchmark AI performance and quality using NNAPI Machine learning is powering exciting new features in mobile apps. Many devices now have dedicated hardware to accelerate the computationally intensive operations required for on- device inferencing. The Android Neura",
-    "start_char": 48048,
-    "end_char": 48560,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 105,
-    "text": "ired for on- device inferencing. The Android Neural Networks API (NNAPI) provides a base layer for machine learning frameworks to access the dedicated AI processing hardware in a device. The Procyon AI Inference Benchmark for Android measures the AI performance of Android devices using NNAPI. The benchmark score reﬂects both the speed and the accuracy of on- device inferencing operations. With the Procyon AI Inference Benchmark for Android, not only can you measure the performance of dedicated AI processing",
-    "start_char": 48510,
-    "end_char": 49022,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 106,
-    "text": "measure the performance of dedicated AI processing hardware in Android devices, you can also verify NNAPI implementation quality. The benchmark uses a range of popular, state-of-the-art neural networks running on the device to perform common machine-vision tasks. The benchmark runs on the device's dedicated AI- processing hardware via NNAPI. The benchmark also runs each test directly on the GPU andor the CPU for comparison. Features  Tests based on common machine-vision tasks using state-of-the-art neural n",
-    "start_char": 48972,
-    "end_char": 49484,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 107,
-    "text": "chine-vision tasks using state-of-the-art neural networks.  Measures both inference performance and output quality.  Compare NNAPI, CPU and GPU performance.  Verify NNAPI implementation and compatibility.  Optimize drivers for hardware accelerators.  Compare ﬂoat- and integer-optimized model performance.  Simple to setup and use on a device or via ADB. NNAPI performance and quality With the Procyon AI Inference Benchmark for Android, you can measure the performance of dedicated AI processing hardware and ve",
-    "start_char": 49434,
-    "end_char": 49946,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 108,
-    "text": "ormance of dedicated AI processing hardware and verify NNAPI implementation quality with tests based on common machine-vision tasks. Designed for professionals We created the Procyon AI Inference Benchmark for Android for engineering teams who need independent, standardized tools for assessing the general AI performance of NNAPI implementations and dedicated mobile hardware. Fast and easy to use The benchmark is easy to install and runno complicated conﬁguration required. Run the benchmark on the device or",
-    "start_char": 49896,
-    "end_char": 50408,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 109,
-    "text": "tion required. Run the benchmark on the device or via ADB. View benchmark scores, charts and rankings in the app or export detailed result ﬁles for further analysis. Neural network models MobileNet V3 MobileNet V3 is a compact visual recognition model that was created speciﬁcally for mobile devices. The benchmark uses MobileNet V3 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content in the image. The benchmark uses the large minimalistic va",
-    "start_char": 50358,
-    "end_char": 50870,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 110,
-    "text": "mage. The benchmark uses the large minimalistic variant of MobileNet V3. Inception V4 Inception V4 is a state-of-the-art model for image classiﬁcation tasks. Designed for accuracy, it is a much wider and deeper model than MobileNet. The benchmark uses Inception V4 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content identiﬁed in the image. SSDLite MobileNet V3 SSDLite is an object detection model that aims to produce bounding boxes around o",
-    "start_char": 50820,
-    "end_char": 51332,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 111,
-    "text": "model that aims to produce bounding boxes around objects in an image. SSDLite uses MobileNet for feature extraction to enable real-time object detection on mobile devices. In the benchmark, the ﬂoat version of SSDLite uses the small minimalistic MobileNet V3 variant. The integer version uses the EdgeTPU variant of MobileNet V3. DeepLab V3 DeepLab is an image segmentation model that aims to cluster the pixels of an image that belong to the same object class. Semantic image segmentation labels each region of",
-    "start_char": 51282,
-    "end_char": 51794,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 112,
-    "text": "Semantic image segmentation labels each region of the image with a class of object. The benchmark uses MobileNet V2 for feature extraction enabling fast inference with little difference in quality compared with larger models. Custom CNN The benchmark includes a custom Convolutional Neural Network (CNN) based on the AlexNet architecture. It is designed to test the performance of basic CNN operations and is trained on randomly generated training data. It contains two Convolutional layers, which are followed b",
-    "start_char": 51744,
-    "end_char": 52256,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 113,
-    "text": "ins two Convolutional layers, which are followed by Max Pooling and Dropout layers, and one fully connected layer. Integer and ﬂoat models The benchmark includes both ﬂoat- and integer-optimized versions of each model. Each model runs in turn on all compatible hardware in the device. With NNAPI, the benchmark will use the device's dedicated AI-processing hardware, if supported. Float models use NNAPI or run directly on the CPU or GPU. Integer models use NNAPI or run directly on the CPU. Procyon AI Computer",
-    "start_char": 52206,
-    "end_char": 52718,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 114,
-    "text": "I or run directly on the CPU. Procyon AI Computer Vision Benchmark Benchmark AI performance using various inference engines Machine learning applications are rapidly growing as it becomes more accessible to integrate and deploy AI solutions into everyday applications. With the demand for faster machine learning performance, major hardware vendors have been optimizing their inference engines to provide the best possible performance on their hardware. The Procyon AI Computer Vision Benchmark gives insights in",
-    "start_char": 52668,
-    "end_char": 53180,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 115,
-    "text": "yon AI Computer Vision Benchmark gives insights into how AI inference engines perform on your Windows PC or Apple Mac, helping you decide which engines to support to achieve the best performance. The benchmark features several AI inference engines from different vendors, with benchmark scores reﬂecting the performance of on-device inferencing operations. In the benchmark, common machine-vision tasks are executed using a range of popular, state- of-the-art neural networks. Measure AI accelerator performance",
-    "start_char": 53130,
-    "end_char": 53642,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 116,
-    "text": "ural networks. Measure AI accelerator performance by comparing it with the same operations run on the CPU or GPU. Features  Tests based on common machine-vision tasks using state-of-the-art neural networks.  Measure inference performance using the CPU, GPU or dedicated AI accelerators.  Benchmark with NVIDIA TensorRT, Intel OpenVINO, Qualcomm SNPE, Microsoft Windows ML, and Apple Core ML.  Verify inference engine implementation and compatibility.  Optimize drivers for hardware accelerators.  Compare ﬂoat an",
-    "start_char": 53592,
-    "end_char": 54104,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 117,
-    "text": "rivers for hardware accelerators.  Compare ﬂoat and integer-optimized model performance.  Simple to set up and use via the Procyon application or via command-line. Inference engine performance  With the Procyon AI Computer Vision Benchmark, you can measure the performance of dedicated AI processing hardware and verify inference engine implementation quality with tests based on common machine-vision tasks. Designed for professionals  We created the Procyon AI Computer Vision Benchmark for engineering teams w",
-    "start_char": 54054,
-    "end_char": 54566,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 118,
-    "text": "Computer Vision Benchmark for engineering teams who need independent, standardized tools for assessing the general AI performance of inference engine implementations and dedicated hardware. Fast and easy to use  The benchmark is easy to install and runno complicated conﬁguration is required. Run the benchmark using the Procyon application or via command-line. View benchmark scores and charts or export detailed result ﬁles for further analysis. Neural network models MobileNet V3  MobileNet V3 is a compact v",
-    "start_char": 54516,
-    "end_char": 55028,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 119,
-    "text": "k models MobileNet V3  MobileNet V3 is a compact visual recognition model that was created specifically for mobile devices. The benchmark uses MobileNet V3 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content in the image. The benchmark uses the large minimalistic variant of MobileNet V3. Inception V4  Inception V4 is a state-of-the-art model for image classification tasks. Designed for accuracy, it is a much wider and deeper model than Mob",
-    "start_char": 54978,
-    "end_char": 55490,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 120,
-    "text": "racy, it is a much wider and deeper model than MobileNet. The benchmark uses Inception V4 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content identified in the image. YOLO V3  YOLO, which stands for You Only Look Once, is an object detection model that aims to identify the location of objects in an image. The benchmark uses YOLO V3 to produce bounding boxes around objects with probabilities on the confidence of each detection. DeepLab V3",
-    "start_char": 55440,
-    "end_char": 55952,
-    "length": 510,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 121,
-    "text": "on the confidence of each detection. DeepLab V3  DeepLab is an image segmentation model that aims to cluster the pixels of an image that belong to the same object class. Semantic image segmentation labels each region of the image with a class of object. The benchmark uses MobileNet V2 for feature extraction enabling fast inference with little difference in quality compared with larger models. Real-ESRGAN  Real-ESRGAN is a super-resolution model trained on synthetic data for increasing the resolution of an",
-    "start_char": 55902,
-    "end_char": 56414,
-    "length": 510,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 122,
-    "text": "ynthetic data for increasing the resolution of an image, reconstructing a higher resolution image from a lower resolution counterpart. The model used in the benchmark is the general image variant of Real-ERSGAN, and upscales a 250x250 image to an 1000x1000 image. ResNet 50  ResNet 50 is an image classification model that provides a novel way of adding more convolutional layers with the use of residual blocks. Its release enabled the training of deep neural networks previously not possible. The benchmark use",
-    "start_char": 56364,
-    "end_char": 56876,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 123,
-    "text": "etworks previously not possible. The benchmark uses ResNet 50 to identify image subjects, outputting a list of probabilities for the content identified in the image. Integer and float models  The benchmark includes both float- and integer-optimized versions of each model. Each model runs in turn on all compatible hardware in the device. Select the device and inference precision for each runtime to compare performance between integer and float models. Results and insights Benchmark scores Compare AI Inferenc",
-    "start_char": 56826,
-    "end_char": 57338,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 124,
-    "text": "and insights Benchmark scores Compare AI Inference performance with integer and ﬂoat models using a CPU, GPU or dedicated AI accelerator. Detailed scores See inference times for each neural network test when using your selected inference engine and processing unit. Hardware monitoring Get detailed metrics on how CPU and GPU temperatures, clock speeds and usage changes during the benchmark run. UL Benchmarks for retailers PC performance data for retailers When shopping for a Windows PC or Mac computer, cons",
-    "start_char": 57288,
-    "end_char": 57800,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 125,
-    "text": "en shopping for a Windows PC or Mac computer, consumers can get overwhelmed by the multitude of available choices. Complex speciﬁcations indicate each computers strengths and capabilities, but such technical information can prove difficult to understand, especially when comparing multiple computers. The challenge is to demonstrate a computers actual performance in an instantly meaningful way. At UL Solutions, we offer industry-leading benchmarks that make it easier for everyone to understand the performance",
-    "start_char": 57750,
-    "end_char": 58262,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 126,
-    "text": "easier for everyone to understand the performance of a PC or Mac computer. A benchmark tests how well a product performs a function and how that performance compares across similar products. UL Solutions custom benchmarks test computers and reduce a computers speciﬁcation sheet to an easily understood numbered score. The higher the score, the better the performance. Its that simple. Simplifying complex speciﬁcations into user-friendly statistics UL Solutions began developing industry-standard computer benc",
-    "start_char": 58212,
-    "end_char": 58724,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 127,
-    "text": "s began developing industry-standard computer benchmarks in the 1990s. Since then, our benchmarks have evolved to perform accurate assessments of PCs and Macs as well as notebooks, tablets and smartphones. Millions of people around the world trust our benchmarks; they are accurate and user-friendly and they come from UL Solutions, a trusted industry partner with more than 120 years of experience in product testing, certiﬁcation and veriﬁcation services. UL Solutions benchmarks cover a variety of performance",
-    "start_char": 58674,
-    "end_char": 59186,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 128,
-    "text": "olutions benchmarks cover a variety of performance capabilities for computers and smart devices used at the office and in the home, for work and for play. Customers can easily understand our benchmark data because sales associates can easily explain it. Even nontechnical customers can feel empowered to understand how a computer will perform the tasks speciﬁc to their needs. Will it run smoothly while multitasking or handling large ﬁles? Will a laptop battery last throughout the day? Consumers who understand",
-    "start_char": 59136,
-    "end_char": 59648,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 129,
-    "text": "last throughout the day? Consumers who understand computer performance make better purchasing decisions. How can UL Solutions benchmarks help your business? For retail businesses, our easily understood benchmarks can help increase sales, reduce returns and improve customer satisfaction. We already work with many international consumer electronics retailers, helping them achieve their goals and maximize customer experience. Our Benchmark team can create custom benchmarks to ﬁt your business needs. We can th",
-    "start_char": 59598,
-    "end_char": 60110,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 130,
-    "text": "om benchmarks to ﬁt your business needs. We can thoroughly test and assess your products under controlled conditions in dedicated laboratories, or we can help you set up and run your own testing facilities with processes that deliver accurate, repeatable test results. Our benchmark data comes in tailored packages, making it much easier for your customers to conﬁdently choose and buy a new PC, Mac, tablet or smartphone and allowing your sales staff to recommend and sell devices with greater information and i",
-    "start_char": 60060,
-    "end_char": 60572,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 131,
-    "text": "nd and sell devices with greater information and insight into each product on the shelf. Your customers can also download our complimentary benchmarking software to test an existing device or computer at home before coming into a store, which can highlight the value of an upgrade or replacement. What benchmark services do we offer? As electronics retailers already know, gamers are a huge part of the consumer computer market, and game performance depends heavily on computer and processor capabilities. Our mo",
-    "start_char": 60522,
-    "end_char": 61034,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 132,
-    "text": "ily on computer and processor capabilities. Our most popular benchmark measures and tests video game performance. PC performance is incredibly important for gamers, and new games constantly raise the bar for visually rich, immersive experiences. We conduct game performance testing on a broad selection of hardware that covers the range of popular CPUs and GPUs found in modern gaming computers. To date, our dedicated laboratories have assessed more than 50 of the worlds newest, most popular games on a variety",
-    "start_char": 60984,
-    "end_char": 61496,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 133,
-    "text": "the worlds newest, most popular games on a variety of computers. We test each game at different resolution settings, from 1080p medium and 1080p ultra to 1440p ultra, 4K UHD medium and 4K UHD ultra, pushing each game and computer system to its technical limits. In your retail store, you can explain this performance data and demonstrate the expected frame rates for each gaming computer. Gaming categorization Gamers fear that a new PC wont be able to play the latest games or deliver the experiences they want,",
-    "start_char": 61446,
-    "end_char": 61958,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 134,
-    "text": "latest games or deliver the experiences they want, but how do they know for sure? Even expert consumers may struggle to understand complex technical speciﬁcations, confusing naming schemes and manufacturer jargon. Measuring and grading computer and game speciﬁcations according to speciﬁc categories can help clear the air. Product categories can help your customers ﬁnd the gaming computers that best meet their needs and budgets. Gaming computer benchmarks slot performance into different categories, from abil",
-    "start_char": 61908,
-    "end_char": 62420,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 135,
-    "text": "t performance into different categories, from abilities adequate to basic computing needs or full-blown artistic creation to meeting the needs of a casual or elite gamer. Color-coded categories and numbered scores give consumers and sales associates a good idea of which platforms work best for speciﬁc games, enabling improved in- store presentation by grouping products with similar performance. You can guide consumers to what they really need and want rather than what is simply technically possible. Beyond",
-    "start_char": 62370,
-    "end_char": 62882,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 136,
-    "text": "than what is simply technically possible. Beyond the gaming world We designed our benchmarks to be accurate, neutral and relevant, and they extend beyond gaming to the many uses of both home and office computers. Our benchmarking capabilities include real-world scenario testing on professional applications like Microsoft 365 and Adobe. Our multiplatform Procyon benchmark suite, for example, runs benchmark tests focusing on office productivity, photo and video editing, battery life, AI inference and more. W",
-    "start_char": 62832,
-    "end_char": 63344,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 137,
-    "text": "eo editing, battery life, AI inference and more. We designed our benchmarks and performance around common activities and real-world applications. We can provide data on everyday device usage as well as gaming-speciﬁc statistics. Our performance data combined with categorization gives your customers a more accessible way to choose a PC or Apple Mac computer. Instead of trying to compare complicated speciﬁcations, consumers can choose a device based on the activities that are most important to them, and its a",
-    "start_char": 63294,
-    "end_char": 63806,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 138,
-    "text": "ivities that are most important to them, and its all summed up in a simple score. Office Productivity Score Guide Office Productivity Score Level 1  Range  3000 Representative hardware: Low end Celerons and Ryzens Intel Celeron Processor N4500, Intel UHD Graphics Typical usage: Light document editing and web browsing Office Productivity Score Level 2  Range 3000 - 4500 Representative hardware: U and G-CPUs with iGPU AMD Ryzen 3 7320U, AMD Radeon 610M Typical usage: Light office productivity, comfortable web",
-    "start_char": 63756,
-    "end_char": 64268,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 139,
-    "text": "usage: Light office productivity, comfortable web experience Office Productivity Score Level 3  Range 4500 - 5500 Representative hardware: P-CPUs with lower end dGPUs Intel Core i7-1355U Processor, Intel Iris Xe Graphics Typical usage: Suits most Office productivity needs Office Productivity Score Level 4  Range 5500 - 7000 Representative hardware: desktop and H-CPUs; dGPUs; AMD Ryzen 7 7840HS, AMD Radeon 780M, NVDIA GeForce RTX 4060 Laptop GPU Typical usage: Heavy Excel computations and solvers Office Pro",
-    "start_char": 64218,
-    "end_char": 64730,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 140,
-    "text": "e: Heavy Excel computations and solvers Office Productivity Score Level 5  Range 7000  Representative hardware: High-end CPU  high-end GPU Intel Core i9-13900KF Processor, NVDIA GeForce RTX 4090 Typical usage: High end workstations Office Productivity MP Score Guide Office Productivity MP Score Level 1  Range  100000 Representative hardware: Low end Celerons and Ryzens Intel Celeron Processor N4500, Intel UHD Graphics Typical usage: Light document editing and web browsing Office Productivity MP Score Level",
-    "start_char": 64680,
-    "end_char": 65192,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 141,
-    "text": "d web browsing Office Productivity MP Score Level 2  Range 100000 - 150000 Representative hardware: U and G-CPUs with iGPU AMD Ryzen 5 7520U, AMD Radeon 610M Typical usage: Light office productivity, comfortable web experience Office Productivity MP Score Level 3  Range 150000 - 180000 Representative hardware: P-CPUs with lower end dGPUs Intel Core i5-12450H Processor, Intel UHD Graphics Typical usage: Suits most Office productivity needs Office Productivity MP Score Level 4  Range 180000 - 220000 Represent",
-    "start_char": 65142,
-    "end_char": 65654,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 142,
-    "text": "MP Score Level 4  Range 180000 - 220000 Representative hardware: desktop and H-CPUs; dGPUs; AMD Ryzen 7 7840HS, AMD Radeon 780M, NVDIA GeForce RTX 4060 Laptop GPU Typical usage: Heavy Excel computations and solvers Office Productivity MP Score Level 5  Range 220000  Representative hardware: High-end CPU  high-end GPU Intel Core i9-13900KF Processor, NVDIA GeForce RTX 4090 Typical usage: High end workstations Please note that Procyon scores and categories are not static and will change year-on-year based on",
-    "start_char": 65604,
-    "end_char": 66116,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 143,
-    "text": "e not static and will change year-on-year based on hardware and the application versions being tested. Four categories for Photo Editing: Level 1  Range 2400 - 4100 Representative hardware: Intel Core i7-1355U Processor, Intel Iris Xe Graphics Typical usage: Simple photo editing - e.g., Image ﬁlters for social media, cropping, color adjustments. Level 2  Range 4101 - 5100 Representative hardware: AMD Ryzen 5 7530U, AMD Radeon Graphics Typical usage: Casual photo editing - e.g., Light photo manipulation, sma",
-    "start_char": 66066,
-    "end_char": 66578,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 144,
-    "text": "hoto editing - e.g., Light photo manipulation, small-scale batch editing of photos. Level 3  Range 5101 - 6400 Representative hardware: Intel Core i7-13700H Processor, NVDIA GeForce RTX 4050 Laptop GPU Typical usage: Enthusiast content creation - e.g., heavy image manipulation, GPU accelerated image processing, large-scale batch editing of RAW photos. Level 4  Range 6401 - 8000 Representative hardware: Intel Core i7-13700HX Processor, NVDIA GeForce RTX 4070 Laptop GPU Typical usage: Professional content cre",
-    "start_char": 66528,
-    "end_char": 67040,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 145,
-    "text": "Laptop GPU Typical usage: Professional content creation Level 5  Range 8000 - onwards Representative hardware: AMD Ryzen 7 7700X, AMD Radeon RX 7900 XT Typical usage: Next-generation hardware. Five categories for Video Editing: Level 1  Range 1-2200 Representative hardware: Intel Core i5-1335U Processor, Intel Iris Xe Graphics Typical usage: Light video editing, MP4 editing. Level 2  Range 2201-3500 Representative hardware: AMD Ryzen 7 7840U, AMD Radeon 780M Typical usage: Full HD video editing H.265HEVC ed",
-    "start_char": 66990,
-    "end_char": 67502,
-    "length": 512,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 146,
-    "text": "Typical usage: Full HD video editing H.265HEVC editing. Level 3  Range 3501-5200 Representative hardware: Intel Core i7-13620H Processor, NVDIA GeForce RTX 4050 Laptop GPU Typical usage: Enthusiast 4K video editing H.265HEVC editing. Level 4  Range 5200-6500 Representative hardware: AMD Ryzen 9 7940HS, NVDIA GeForce RTX 4070 Laptop GPU Typical usage: High-resolution real time video editing up to 8K resolution Level 5  Range 6500 - onwards Representative hardware: Intel Core i9-13900HX Processor, NVDIA GeFo",
-    "start_char": 67452,
-    "end_char": 67964,
-    "length": 511,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
-  },
-  {
-    "id": 147,
-    "text": "dware: Intel Core i9-13900HX Processor, NVDIA GeForce RTX 4090 Laptop GPU Typical usage: Movies and professional videography projects up to 12K resolution",
-    "start_char": 67914,
-    "end_char": 68426,
-    "length": 154,
-    "page_number": null,
-    "section_title": null,
-    "chunk_type": "simple"
+    "text": "Testing PC performance can be complex and time-consuming. As an IT professional, you face unique challenges each day. You likely need to know how to:  Standardize PC purchasing decisions based on performance.  Validate new hardware and Windows conﬁgurations to determine system stability.  Quantify the performance impact of OS image changes and application updates.  Identify poorly performing systems.  Test and measure the real-world performance of PCs against baselines. Standardizing your performance testin"
+  },
+  {
+    "text": "t baselines. Standardizing your performance testing and reporting can help simplify these tasks and processes. Thats where benchmarks come in A benchmark tests how well a product performs a speciﬁc function and how that performance compares across similar products. Benchmarks provide a quantitative differentiator for PC performance testing. A computer benchmarking program runs a series of well-deﬁned tests to measure PC performance. A benchmarking program scores a PC systems performance of common tasks: the"
+  },
+  {
+    "text": "ores a PC systems performance of common tasks: the higher the score, the better the performance. Comparing benchmark scores is easier than comparing complex technical speciﬁcations, allowing for informed, rapid decisions to deliver PC performance, cut hardware costs and save testing time. A good benchmark has three important qualities Accuracy: Consistently produces true and precise results. Relevance: Measures the most important performance elements. Neutrality: Is free of any product or vendor bias. Bench"
+  },
+  {
+    "text": "lity: Is free of any product or vendor bias. Benchmarks at the enterprise IT level Benchmarks support every stage in the life cycle of your PC assets, easing PC lifecycle management for IT teams. Benchmarks provide support for:  Planning and procurement o Simplify PC performance comparison and cost justiﬁcation  Validation and standardization o Test and compare the performance of new PCs against user-deﬁned baselines.  Operations and management o Efficiently automate remote performance testing to provide re"
+  },
+  {
+    "text": "automate remote performance testing to provide reliable insights and reporting  Optimization or replacement o Make informed PC life-cycle decisions based on benchmark results stored in your central database Which benchmark should I use? Benchmark tests are typically designed for a speciﬁc setting (home or office) and a certain class of device (desktop PC, laptop, tablet or smartphone). Choose a benchmark that best matches the needs of your end users. For PCs for general office use, choose a benchmark that"
+  },
+  {
+    "text": "s for general office use, choose a benchmark that measures PC performance with a comprehensive set of tests that covers the wide variety of tasks performed in the modern workplace. You can evaluate the overall performance with the benchmark score, while sub-scores focus on performance for speciﬁc activities. Common tests measure performance and battery life for everyday office productivity tasks and such digital content activities as: web browsing, video conferencing, time to start apps, working with docume"
+  },
+  {
+    "text": "ferencing, time to start apps, working with documents and spreadsheets and video editing Choosing a reference benchmark score for RFPs Setting a minimum benchmark score in a request for proposal (RFP) helps you judge the relative performance and value of different systems and compare competing offers from your suppliers. Specifying performance with a benchmark score rather than a reference system gives your suppliers more freedom to conﬁgure cost-effective alternatives that you might not have otherwise cons"
+  },
+  {
+    "text": "lternatives that you might not have otherwise considered. But what factors decide an appropriate minimum score? Start by testing your existing systems. The Procyon user guide will help you produce accurate results. Benchmark old PCs that are ready to be replaced along with the new systems replacing them. The score comparisons provide good baselines. If youre still shopping, ask a supplier to benchmark their systems to see if they meet your performance needs and expectations. Procyon User Guide: UL Procyon i"
+  },
+  {
+    "text": "and expectations. Procyon User Guide: UL Procyon is a growing suite of benchmark tests for professional users in industry, enterprise, government, retail and press roles. Each Procyon benchmark shares a common approach to design, user experience and features to better meet the needs of professional users. Each benchmark is designed for a speciﬁc use case and uses real applications where possible. UL works closely with its industry partners to ensure that every Procyon benchmark is accurate, relevant and imp"
+  },
+  {
+    "text": "ry Procyon benchmark is accurate, relevant and impartial. UL Procyon benchmarks combine the relevance of real apps with the convenience of a standardized test that produces consistent, repeatable results every time. Whats more, the UL Procyon benchmarks are also easy to install and run from the UL Procyon app or the command line with no complicated conﬁguration required. Each benchmark produces a score, with higher scores indicating better performance. You also get a sub-score for each test and ﬁne-grained"
+  },
+  {
+    "text": "lso get a sub-score for each test and ﬁne-grained workload metrics. You can compare up to four results side by side in the app. You can export result ﬁles to PDF for reporting or as XML ﬁles for integration with other analysis tools. The UL Procyon benchmark suite has ﬂexible licensing that lets you pick and choose the individual benchmarks that best meet your needs. You can buy just one benchmark or add more in any combination. Start benchmarking with UL Procyon  UL Procyon AI Computer Vision Benchmark for"
+  },
+  {
+    "text": "ocyon  UL Procyon AI Computer Vision Benchmark for Windows  UL Procyon Battery Life Benchmark  UL Procyon Office Productivity Benchmark  UL Procyon Photo Editing Benchmark  UL Procyon Video Editing Benchmark  UL Procyon AI Inference Benchmark for Android  UL Procyon AI Image Generation Benchmark Activate a Procyon benchmark license key In the application You must add a valid Procyon benchmark license key to the application before you can start benchmarking. Your license key is provided with your purchase. I"
+  },
+  {
+    "text": "Your license key is provided with your purchase. If you have misplaced your license key, please contact our sales team for assistance. 1. Install the UL Procyon application on your PC. 2. Open the app. 3. Click on the gear icon to open the Options screen. 4. Enter your license key then click on the Register button. From the command line You can also install the application and activate your license from the command line. My Suite screen The My suite screen is the default view in the UL Procyon application."
+  },
+  {
+    "text": "s the default view in the UL Procyon application. From here, you can see which Procyon benchmarks are installed and available to run with your license. Choose a benchmark Click on a benchmark to open its benchmark details screen. Options Click on the gear icon in the top-right corner to open the Options screen. Results Database The Results database screen shows a table of benchmark results saved on the current system. View a result There are several ways to view a result.  Double-click on a result to open t"
+  },
+  {
+    "text": "view a result.  Double-click on a result to open the Result screen.  Click on the checkbox in the leftmost column to select the result. Then select \"View result\" from the \"Choose an action\" menu.  Click on the icon with the three dots in the rightmost column, then click on \"View result.\" Export a result You can export your benchmark results in several formats:  XMLfor further analysis or reporting in other tools.  PDFfor reporting and recordkeeping.  Procyon result ﬁleoptionally choosing a new ﬁle name and"
+  },
+  {
+    "text": "result ﬁleoptionally choosing a new ﬁle name and ﬁle location. Compare results Click on the checkbox in the leftmost column to select two or more results, (four maximum). Then choose \"Compare\" from the \"Choose an action\" menu to view the results on the Result Comparison screen. You can compare up to four results side by side in the UL Procyon app. Import results Click on the Import button to add a saved resultsuch as a result from another system, for exampleto the table. Remove results Click on the checkbo"
+  },
+  {
+    "text": "eto the table. Remove results Click on the checkbox in the leftmost column to select the result. Then select \"Delete\" from the \"Choose an action\" menu. Alternatively, click on the icon with the three dots in the rightmost column, then click on \"Delete.\" Note that these actions only remove the result from the table view. The result ﬁle is not deleted from the system and can still be imported again if needed. Result screen The Result screen shows your benchmark score, detailed workload scores, hardware monito"
+  },
+  {
+    "text": "k score, detailed workload scores, hardware monitoring charts and system details. Benchmark score In the top-left corner panel of the result screen, you see your benchmark score. The higher the score, the better the performance. Beneath that are the model names of the CPU and GPU in the system under test. Application versions The Application versions panel shows which versions of the third-party applications were used in the benchmark. There can be signiﬁcant performance differences between releases of appl"
+  },
+  {
+    "text": "t performance differences between releases of applications. When comparing benchmark scores from two or more systems, make sure all the results were obtained with the same application version. Detailed scores This section shows the sub-scores from the benchmark workload(s). Buttons Back Return to the main screen to choose and run another benchmark. Save to cloud Save the result to the online results service on 3DMark.com. Your results are private by default and will not visible to other users. Show log Show"
+  },
+  {
+    "text": "and will not visible to other users. Show log Show the activity log for the benchmark run for troubleshooting. Export as ﬁle Save the current benchmark result optionally choosing a new ﬁle name and ﬁle location. Export as PDF Save the current benchmark result in a formatted PDF document for record-keeping or reporting. Export as XML Save the current benchmark result as an XML ﬁle for further analysis or reporting in other tools. Hardware monitoring Below the benchmark scores, you will ﬁnd the monitoring sec"
+  },
+  {
+    "text": "benchmark scores, you will ﬁnd the monitoring section. The charts in this section show how CPU and GPU load, clock frequency and temperature changed during the benchmark run. Click on the chart legend to see different measurements. Hover the mouse over the chart to see the measured value. Markers Use this toggle to show or hide the lines that mark the start of each workload. Show details Use this toggle to expand or collapse the monitoring section. System information This section of the result screen shows"
+  },
+  {
+    "text": "nformation This section of the result screen shows the hardware speciﬁcation and other relevant information from the system under test. Some parts, such as drive details, can be expanded and collapsed by clicking on the arrow icon. Result comparison screen You can compare up to four results from the same benchmark side by side in the app. In addition to the benchmark scores, test scores and workload metrics, you can also compare the hardware monitoring charts and the system information from each benchmark r"
+  },
+  {
+    "text": "s and the system information from each benchmark result. You can expand and collapse each section as needed. Highlight differences Use this toggle to display or hide the effect that highlights the differences between the results. Export results Click an export option to save the individual results in the chosen format together in a ZIP ﬁle. Options screen To open the Options screen, click on the gear icon in the top right corner of the app. General Write detailed log This setting enables detailed logging wh"
+  },
+  {
+    "text": "ailed log This setting enables detailed logging while the benchmark is running. It is disabled by default. Since detailed logging can affect your benchmark score, you should only use this setting when requested to resolve a customer support request. Scan SystemInfo SystemInfo is a component used in UL benchmarks to identify the hardware in your system or device. It does not collect any personally identiﬁable information. This option is selected by default. SystemInfo hardware monitoring This option controls"
+  },
+  {
+    "text": "ystemInfo hardware monitoring This option controls whether SystemInfo monitors your CPU temperature, clock speed and other hardware information during the benchmark run. This option is selected by default. Support Write detailed log This option is disabled by default since it can affect performance. You should only use this option when instructed as part of resolving a support request. Version details This section shows the version number of the application, SystemInfo and the benchmarks. Check for updates"
+  },
+  {
+    "text": "SystemInfo and the benchmarks. Check for updates Click the button to see if there are updates available for the application and the benchmark tests. If a new version is available, you will be able to download and install it from this screen. License You must register a valid license key before you can use the benchmark. Enter your license key into the box and press the Register button. Show key Click the button to show your license key. Click the button again to hide your key. Unregister Click the Unregist"
+  },
+  {
+    "text": "in to hide your key. Unregister Click the Unregister button to remove your license key, for example, to move a single-seat license to a different system. Proxy Settings UL Procyon v2.6.1059 adds support for UL Procyon application to connect to the internet through proxy to conﬁrm licenses, update, and submit benchmark results. You can ﬁnd ﬁnd the proxy settings section in the bottom left corner of the UI options page. Setting proxy credentials for the ﬁrst time Enter the credentials as prompted by the text"
+  },
+  {
+    "text": "ime Enter the credentials as prompted by the text ﬁelds  you should be greeted with a success message upon successful application of the proxy settings. Changing proxy credentials Please note that if you decide to change the proxy credentials. you must restart the application in order for the new settings to take effect. How to report UL Procyon benchmark scores Each UL Procyon benchmark produces a score, which you can use to compare similar devices or systems. Scores from different Procyon benchmarks, such"
+  },
+  {
+    "text": "ms. Scores from different Procyon benchmarks, such as Office Productivity and Photo Editing, are not comparable. P \"The laptop computer scored 5,000 in the UL Procyon Office Productivity Benchmark.\" Í \"The laptop computer scored 5,000 in the UL Procyon benchmark.\" Always include details of the hardware setup you used to obtain the score. Be sure to include the operating system, system hardware, and the version numbers of the relevant third-party applications. You can ﬁnd this information on the benchmark re"
+  },
+  {
+    "text": ". You can ﬁnd this information on the benchmark result screen. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. Using UL Procyon benchmark scores in marketing material You must not disclose or publish UL Procyon benchmark results, nor may you use the UL logo or other UL assets in your sales and marketing materials, with"
+  },
+  {
+    "text": "assets in your sales and marketing materials, without prior, written permission from UL. Please contact UL.BenchmarkSalesul.com for details. Using UL Procyon benchmark scores in media reviews We provide complimentary UL Procyon licenses to members of the press working for established and reputable publications. Contact us at UL.BenchmarkPressul.com to request a license for your publication. Press can use our benchmark scores in their hardware reviews. We kindly ask you to include a link to https:benchmarks."
+  },
+  {
+    "text": "dly ask you to include a link to https:benchmarks.ul.com whenever you use our benchmarks in a review, feature or news story. UL Procyon trademark On the ﬁrst mention of UL Procyon in marketing text, such as an advertisement or product brochure, please write \"UL Procyon benchmarks\" to protect our trademark. For example: \"We recommend UL Procyon benchmarks.\" Please include our legal text in your small print. Procyon is a registered trademark of Futuremark Corporation, a UL Solutions company. UL Procyon Office"
+  },
+  {
+    "text": "oration, a UL Solutions company. UL Procyon Office Productivity Benchmark User Guide Overview of UL Procyon Office Productivity Benchmark The UL Procyon Office Productivity Benchmark uses Microsoft Office apps to measure Windows PC and Apple Mac computer performance for office productivity work. The benchmark workloads feature relevant, real-world tasks using Microsoft Word, Excel, PowerPoint and Outlook. This multi-platform benchmark combines the relevance of testing performance with the same apps that off"
+  },
+  {
+    "text": "of testing performance with the same apps that office workers use every day with the convenience of a standardized test that produces consistent, repeatable results. The Office Productivity Benchmark is simple to set up and run. The Windows PC benchmark can be run from the UL Procyon app or the command line. The Apple Mac benchmark can be installed and run from the Testdriver Cloud UI or the command line. The Office Productivity Benchmark is designed around common tasks from a typical day at the office. The"
+  },
+  {
+    "text": "common tasks from a typical day at the office. The benchmark opens Excel sheets, PowerPoint presentations, Word documents and Outlook emails. These applications are running simultaneously as the focus moves from one task to another. For example, the benchmark copies a chart from Excel and adds it to a PowerPoint slide. It takes text from one Word document and adds it to another. The benchmark focuses on measuring aspects of performance that affect the user experience, such as providing smooth interactions a"
+  },
+  {
+    "text": "xperience, such as providing smooth interactions and processing large tasks quickly. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. UL Procyon Office Productivity Benchmark system requirements Here are the minimum system requirements for the UL Procyon Office Productivity Benchmark for Windows PC and Apple Mac compute"
+  },
+  {
+    "text": "ity Benchmark for Windows PC and Apple Mac computers. Please note that the storage requirement does not include the space needed to install the Microsoft applications used in the benchmark. Windows PC system requirements OS Windows 10, 64-bit, version 2004 or later Processor 2 GHz dual-core CPU Memory 4 GB Graphics DirectX 12 Storage 5 GB Apple Mac computer system requirements OS macOS Monterey or later Memory 4 GB Storage 5 GB Required applications The UL Procyon Office Productivity Benchmark uses Microsof"
+  },
+  {
+    "text": "rocyon Office Productivity Benchmark uses Microsoft Office applications to test and measure PC and Mac performance. The applications are not included with the benchmark. You must install and activate licensed versions of the required applications on every system you plan to test. The UL Procyon Office Productivity Benchmark is compatible with Microsoft Office 2019 (retail versions only), Microsoft Office 2021 and Microsoft 365 (including trial accounts). Please note that volume licensed versions of Office 2"
+  },
+  {
+    "text": "ase note that volume licensed versions of Office 2019, such as Office Professional Plus 2019, are not compatible with the UL Procyon Office Productivity Benchmark. Microsoft Word Microsoft Excel Microsoft PowerPoint Microsoft Outlook Ready for Windows 11 UL Procyon benchmarks are compatible with Windows 11. The Office Productivity Benchmark is compatible with Microsoft Office 2021. Word test The Word test simulates a sales manager writing marketing material for the sales team. The workload features common t"
+  },
+  {
+    "text": "for the sales team. The workload features common tasks such as loading and saving, cutting, copying, pasting and editing content and images, ﬁnding and replacing text, inserting graphs from Excel, and comparing documents. This test is available on both Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Add Watermark  Convert from PDF  Embed ﬁle  Export to PDF  Image effect Office Productivity Word score The Word test produces an Office Productivity Word score. A highe"
+  },
+  {
+    "text": "roduces an Office Productivity Word score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Word score  3900  geometric mean of Measures loading of the source and destination documents. Repeated 3 times. The source document has 12 pages and is 252 KB in size. The destination document has 75 pages and is 971 KB in size. OfficeProductivityWordLoad result  geometric mean of OfficeProductivityW"
+  },
+  {
+    "text": "Load result  geometric mean of OfficeProductivityWordSave Measures saving of a document. Some of the save operations are repeated. Save sizes are from 1.4 MB to 55 MB. Saving happens:  After adding the table of contents and ﬁrst edits.  After a new image is added.  After data has been copied from Excel and other edits. OfficeProductivityWordSave result  geometric mean of OfficeProductivityWordCopyPaste Measures copy-pasting between documents. Copying 12 pages of text. Repeated 7 times. OfficeProductivityWor"
+  },
+  {
+    "text": "s of text. Repeated 7 times. OfficeProductivityWordCopyPaste result  geometric mean of OfficeProductivityWordCutPaste Measures cut pasting inside of a document. Copying from 4 to 10 pages per repeat. Repeated 7 times. OfficeProductivityWordCutPaste result  geometric mean of OfficeProductivityWordAddWatermark Measures the adding of a watermark to a document. Repeated 5 times. The image resolution is 4167  3334 OfficeProductivityWordAddWatermark result  geometric mean of OfficeProductivityWordTableOfContents"
+  },
+  {
+    "text": "ric mean of OfficeProductivityWordTableOfContents Measures creating and updating the table of content. Both creating and updating are repeated 5 times. Table of contents contains 168 entries. OfficeProductivityWordTableOfContents result  geometric mean of OfficeProductivityWordAddImage Measures inserting an image into a document. New image for every measurement. Image resolutions are:  3746  5617  2922  3899  3712  5568  3640  5464  3646  5568 OfficeProductivityWordAddImage result  geometric mean of OfficeP"
+  },
+  {
+    "text": "vityWordAddImage result  geometric mean of OfficeProductivityWordImageScale Measures scaling the 5 new images to the correct size for the page. OfficeProductivityWordImageScale result  geometric mean of OfficeProductivityWordImageEffect Measures applying different effects to the 5 new images.  Blur  Color temperature  Film grain  Pencil grayscale  Texturizer  Watercolor sponge OfficeProductivityWordImageEffect result  geometric mean of OfficeProductivityWordEmbedFile Measures embedding other documents into"
+  },
+  {
+    "text": "EmbedFile Measures embedding other documents into the Word document. Adds an Excel ﬁle of about 6.0 MB in size and a PowerPoint ﬁle of around 32 MB in size. OfficeProductivityWordEmbedFile result  geometric mean of OfficeProductivityWordCopyFromExcel Measures time taken to copy data from Excel to the Word document. 5 copies are done. OfficeProductivityWordCopyFromExcel result  geometric mean of OfficeProductivityWordExportToPdf Measures the time taken to export a PDF of the document. The output PDF size is"
+  },
+  {
+    "text": "ort a PDF of the document. The output PDF size is 3.2 MB. OfficeProductivityWordExportToPdf result  time to taken to export to PDF OfficeProductivityWordConvertFromPdf Measures time taken to convert a PDF document to a.docx document format. The new Word document size is 4.5 MB. OfficeProductivityWordConvertFromPdf result  time taken to convert PDF to.docx OfficeProductivityWordFind Find and highlight 4 different words or parts of words. Then ﬁnd and replace 4 other words. OfficeProductivityWordFind result"
+  },
+  {
+    "text": "4 other words. OfficeProductivityWordFind result  geometric mean of OfficeProductivityWordCompareDocuments Measures time taken to compare two documents. Where one document is the original and the other document is a modiﬁed version of the original. Both documents are 494 pages and around 1.2 MB in size. OfficeProductivityWordCompareDocuments result  time taken to compare two documents OfficeProductivityWordAcceptComparison Measures time taken to accept all the changes resulting from the comparison. OfficePr"
+  },
+  {
+    "text": "he changes resulting from the comparison. OfficeProductivityWordAcceptComparison result  time taken to accept changes Excel test The Excel test simulates a ﬁnancial officer performing calculations with several Excel worksheets. The workload features typical spreadsheet tasks like loading and saving, auto- calculation, inserting data, copy and paste, sorting, using a pivot table, exporting to CSV and PDF, and using common formulas. This test is available on both Windows PC and Apple Mac computers. Not includ"
+  },
+  {
+    "text": "oth Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Export to PDF  Solve Equations  Format Table Office Productivity Excel score The Excel test produces an Office Productivity Excel score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Excel score  7900  geometric mean of OfficeProductivityExcelEditCells, OfficeProductivityExcelSortColumn, Office"
+  },
+  {
+    "text": "itCells, OfficeProductivityExcelSortColumn, OfficeProductivityExcelVoterAnalysis, OfficeProductivityExcelUniquePairs, OfficeProductivityExcelSolveEquations, OfficeProductivityExcelPivotTable, OfficeProductivityExcelCopyPaste, OfficeProductivityExcelSave, OfficeProductivityExcelLoad, OfficeProductivityExcelFormatTable, OfficeProductivityExcelLoadMortgage, OfficeProductivityExcelModifyMortgage, OfficeProductivityExcelVlookup, OfficeProductivityExcelExportToPdf, OfficeProductivityExcelSaveAsCsv OfficeProductiv"
+  },
+  {
+    "text": ", OfficeProductivityExcelSaveAsCsv OfficeProductivityExcelEditCells Measure how long it takes to make minor manual changes to the worksheet. OfficeProductivityExcelSortColumn Measures sorting the Excel sheet by one column that is not a numerical column. The worksheet has 150k rows. OfficeProductivityExcelVoterAnalysis Measures the time taken to fully recalculate the VoterAnalysis-complete worksheet that contains large amount of data and its analysis. The worksheet consists mostly of simple formulas. It has"
+  },
+  {
+    "text": "ksheet consists mostly of simple formulas. It has 400k rows. OfficeProductivityExcelUniquePairs Performs calculation on a sheet that involves 60000 rows of IF(COUNTIFS()) formula. OfficeProductivityExcelSolveEquations The Evaluate workbook is tested by launching a linear optimization problem solver that is deﬁned in the workbooks macro. It solves the set of linear equations. The solve process is ﬁrst performed with 2 workbooks open in the background, This is repeated four times, with the ﬁrst result dropped"
+  },
+  {
+    "text": "repeated four times, with the ﬁrst result dropped from the result calculation. Then all background workbooks are closed and the solve process is performed again. This is repeated four times, with the ﬁrst result dropped from the result calculation. OfficeProductivityExcelPivotTable A pivot table is deﬁned and created from a datasheet with several dozen rows and coumns. The data entries for the pivot table are selected based on Excels suggestions. OfficeProductivityExcelCopyPaste Additional data is copied a"
+  },
+  {
+    "text": "uctivityExcelCopyPaste Additional data is copied and pasted to the end of the open worksheet. After that, the workbook is saved, closed, then opened again. This cycle repeats 5 times, increasing the amount of data being appended. The worksheet has 400k rows. OfficeProductivityExcelSave This score measures how long it takes to save the ﬁle. The score is the geomean of 5 save iterations of a worksheet with 400k rows. OfficeProductivityExcelLoad This score measures how long it takes to load a large data ﬁle. T"
+  },
+  {
+    "text": "ures how long it takes to load a large data ﬁle. The score is the geomean of 5 load iterations using a worksheet with 400k rows. OfficeProductivityExcelFormatTable Measuring the time taken to format 400k rows of plain data as a table with headings. OfficeProductivityExcelLoadMortgage Measures much time it takes to open and recalculate the cal_mortgage_30x.xlsm ﬁle. It contains a rather small amount of data (1050 rows by 200 columns) but involves a lot of complex formulas that calculate all the variables for"
+  },
+  {
+    "text": "plex formulas that calculate all the variables for a mortgage for every month based on the starting conditions. OfficeProductivityExcelModifyMortgage Performs copy-paste of data between Excel worksheets that results in reevaluating the formulas. The worksheet is 1050 rows by 200 columns. OfficeProductivityExcelVlookup Performs one million VLOOKUP operations on rows of data. The data is taken from one worksheet to another inside of a single workbook. OfficeProductivityExcelExportToPdf Measures how long it ta"
+  },
+  {
+    "text": "oductivityExcelExportToPdf Measures how long it takes to export an Excel worksheet with charts to PDF format with common settings. The worksheet is not large and can ﬁt on a single screen, but it is visually heavy, which results in a suitable load for the PDF renderer. OfficeProductivityExcelSaveAsCsv Measures how long it takes to export and save an Excel workbook with 400k rows and charts as CSV ﬁle. PowerPoint test The PowerPoint test simulates a product manager making a project status presentation. The w"
+  },
+  {
+    "text": "anager making a project status presentation. The workload loads a document, adds images, copies images and text, adds and previews animations, merges content from other ﬁles, saves the ﬁle, and exports to PDF and video. This test is available on both Windows PC and Apple Mac computers. Not included in scoring on Mac as opposed to Windows:  Add animation  Export video  Merge Office Productivity PowerPoint score The PowerPoint test produces an Office Productivity PowerPoint score. A higher score indicates bet"
+  },
+  {
+    "text": "ity PowerPoint score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. PowerPoint score  3200  geometric mean of OfficeProductivityPowerpointLoad OfficeProductivityPowerpointCopyFromWord OfficeProductivityPowerpointAddImage OfficeProductivityPowerpointAddAnimation OfficeProductivityPowerpointSave OfficeProductivityPowerpointMerge OfficeProductivityPowerpointExportToPdf OfficeProductivityPow"
+  },
+  {
+    "text": "ctivityPowerpointExportToPdf OfficeProductivityPowerpointExportVideo OfficeProductivityPowerpointAddVideo OfficeProductivityPowerpointLoad Measures the loading of a presentation. It has 27 slides and the size is around 88 MB. Repeated 6 times. The maximum value is dropped from the result calculation. OfficeProductivityPowerpointLoad result  geometric mean of where the maximum value is dropped from the calculation. OfficeProductivityPowerpointCopyFromWord Measures copying of one paragraph of text from Word t"
+  },
+  {
+    "text": "sures copying of one paragraph of text from Word to a presentation. 9 times copied text over. OfficeProductivityPowerpointCopyFromWord result  geometric mean of OfficeProductivityPowerpointAddImage Measures adding of an image to a presentation. Repeated 4 times. The image resolution is 5669  3896. OfficeProductivityPowerpointAddImage result  geometric mean of where the maximum value is dropped from the calculation. OfficeProductivityPowerpointAddAnimation Measures adding of animation to a presentation. Repe"
+  },
+  {
+    "text": "asures adding of animation to a presentation. Repeated 4 times. Animations added are:  PpEntryEffect.ppEffectRandomBarsHorizontal  PpEntryEffect.ppEffectFlyFromBottom OfficeProductivityPowerpointAddAnimation result  geometric mean of OfficeProductivityPowerpointSave Measures saving of a presentation to a different location. The presentation is saved:  After adding animation, size 82 MB  After doing merge, size 5.9 MB  After adding video, size 98 MB Each save is repeated three times. OfficeProductivityPowerp"
+  },
+  {
+    "text": "is repeated three times. OfficeProductivityPowerpointSave result  geometric mean of where the maximum value from each of the three saves is dropped from the calculation. OfficeProductivityPowerpointMerge Measures merging of two presentations that have a common base and no conﬂicts. OfficeProductivityPowerpointMerge result  geometric mean of OfficeProductivityPowerpointExportToPdf Measures exporting of presentation to PDF. Size of the output PDF is 1.0 MB OfficeProductivityPowerpointExportToPdf result  time"
+  },
+  {
+    "text": "ficeProductivityPowerpointExportToPdf result  time taken to export to PDF OfficeProductivityPowerpointExportVideo Measures creating a video of the presentation. The size of the output video is 14 MB. Video is 3s per slide, includes some animations, transitions. Vertical resolution: 720, frame rate: 30fps, quality: 85 OfficeProductivityPowerpointExportVideo result  time taken to export the video OfficeProductivityPowerpointAddVideo Measures adding video to a presentation. Repeated 4 times. Duration: 10s, res"
+  },
+  {
+    "text": "presentation. Repeated 4 times. Duration: 10s, resolution 3840  2160, frame rate: 23.98fps, data rate: 58423kbps OfficeProductivityPowerpointAddVideo result  geometric mean of where the maximum value is dropped from the calculation. Outlook test The Outlook test simulates a project manager using email. The workload includes tasks such as creating emails, moving emails, searching for text within an email, saving attachments, making appointments, and backing up folders. This test is currently available on Win"
+  },
+  {
+    "text": "p folders. This test is currently available on Windows PC. The Outlook data ﬁle is 154 MB in size. It has 128 emails in the Inbox and 8 emails in Sent Items. Some emails include attachments:  79 jpg images with sizes from 32 KB to 2.6 MB and a total size of 27.3 MB  Excel document that is 7.3 MB  PowerPoint document that is 4.4 MB  Word document that is 8.5 MB The Outlook test does not use the network. Office Productivity Outlook score The Outlook test produces an Office Productivity Outlook score. A higher"
+  },
+  {
+    "text": "ces an Office Productivity Outlook score. A higher score indicates better performance. The scaling constant in the score formula is used to bring the score in line with the traditional range for UL benchmarks. Outlook score  4300  geometric mean of OfficeProductivityOutlookMoveMails OfficeProductivityOutlookNewAppointment OfficeProductivityOutlookSearchMails OfficeProductivityOutlookBackup OfficeProductivityOutlookWriteMail OfficeProductivityOutlookSaveAttachments OfficeProductivityOutlookMoveMails Measures"
+  },
+  {
+    "text": "hments OfficeProductivityOutlookMoveMails Measures moving 136 emails from imported dataﬁle to empty proﬁle. Repeated 7 times. OfficeProductivityOutlookMoveMails result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookNewAppointment Measures adding a new appointment with 3 attachments (Excel, PowerPoint and Word documents). Repeated 7 times. OfficeProductivityOutlookNewAppointment result  geometric mean of where the maximum and minimum values"
+  },
+  {
+    "text": "tric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookSearchMails Measures searching string from emails. Repeated 7 times. OfficeProductivityOutlookSearchMails result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookBackup Measures data archiving. Copies 128 mails and results in a 150MB data ﬁle. Repeated 7 times. OfficeProductivityOutlookBackup result  geometric mean of where the maximum"
+  },
+  {
+    "text": "Backup result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookWriteMail Measures creating an email with 3 attachments (Excel, PowerPoint and Word documents). Repeated 7 times. OfficeProductivityOutlookWriteMail result  geometric mean of where the maximum and minimum values are dropped from the calculation. OfficeProductivityOutlookSaveAttachments Measures saving attachments from all emails. Writes out 82 ﬁles with a total size of 45MB. Repea"
+  },
+  {
+    "text": "rites out 82 ﬁles with a total size of 45MB. Repeated 7 times. OfficeProductivityOutlookSaveAttachments result  geometric mean of Measurements often contain variable number of high outliers. We eliminate them by applying k- means clustering to 3 clusters and dropping the highest cluster. How is the Office Productivity Benchmark score calculated? The UL Procyon Office Productivity Benchmark is designed around common tasks from a typical day at the office. The benchmark opens Excel sheets, PowerPoint presenta"
+  },
+  {
+    "text": "benchmark opens Excel sheets, PowerPoint presentations, Word documents and Outlook emails. These applications are running simultaneously as the focus moves from one task to another. For example, the benchmark copies a chart from Excel and adds it to a PowerPoint slide. It takes text from one Word document and adds it to another. The benchmark focuses on measuring aspects of performance that directly affect the user experience, such as providing smooth interactions and processing large tasks quickly. On Sys"
+  },
+  {
+    "text": "actions and processing large tasks quickly. On Systems running Microsoft Windows, the Procyon office productivity benchmark produces two scores: an MP Score allowing comparison between systems running Windows and macOS, and a Windows-only score that is also compatible with scores from Procyon office productivity versions 1.0 and 1.1. These two scores are not compatible with each other. Office Productivity Benchmark MP scoring (systems running Windows and macOS) Running the office productivity benchmark on m"
+  },
+  {
+    "text": "OS) Running the office productivity benchmark on macOS will only generate an MP score. Running the office productivity benchmark on Windows will generate two scores, one of which is an MP score. The Office Productivity MP score is a geometric mean of the scores from each workload. Office Productivity MP score  ﬂoor_to_thousands(geometric mean(Excel MP score, Word MP score, PowerPoint MP score)) Office Productivity Benchmark scoring (only systems running Microsoft Windows) The UL Procyon Office Productivity"
+  },
+  {
+    "text": "osoft Windows) The UL Procyon Office Productivity Benchmark produces an Office Productivity score. A higher score indicates better performance. The Office Productivity score is a geometric mean of the results from the Word, Excel, PowerPoint and Outlook tests with weights applieddouble weight is indicated by including a score twice in the score formula. Office Productivity score  geometric mean( Excel score, Excel score, Word score, Word score, PowerPoint score, PowerPoint score, Outlook score) The test sco"
+  },
+  {
+    "text": "ore, PowerPoint score, Outlook score) The test score formulas are calibrated to produce an Office Productivity score of 5000 on the reference PC, which is a laptop computer with an 11th Generation Intel Core i5-1135G7 2400 MHz processor. Benchmark scores Each benchmark run produces a high-level benchmark score, mid-level test scores, and low- level workload metrics. The precision of UL Procyon benchmark scores is usually better than 3 when following the steps outlined in this guide. This means that running"
+  },
+  {
+    "text": "s outlined in this guide. This means that running the benchmark repeatedly on a consistently performing system in a controlled environment will produce scores that fall within a 3 range. A score may occasionally fall outside the margin of error since there are factors in modern, multitasking operating systems that cannot be controlled completely. There are also devices that simply do not offer consistent performance due to their design. In these cases, you should run the benchmark multiple times, and take a"
+  },
+  {
+    "text": "hould run the benchmark multiple times, and take an average or a mode of the results. UL Procyon benchmarks use real applications whenever possible. Updates to those applications can affect your benchmark score. When comparing two or more systems, be sure to use the same version of each application on every system you test. UL Procyon Office Productivity Benchmark workload version history A benchmark version number is speciﬁc to a test. Benchmark version numbers change rarely and only when absolutely necess"
+  },
+  {
+    "text": "bers change rarely and only when absolutely necessary to accommodate changes in third-party applications or bug ﬁxes. UL Procyon Office Productivity Benchmark v1.2 May 2, 2023  Added compatibility for systems running Apple macOS. The Procyon Office Productivity Benchmark on macOS uses workloads for Microsoft PowerPoint, Word, and Excel to measure performance.  On Systems running Microsoft Windows, the Procyon Office Productivity Benchmark now produces two scores: a Windows-only score that is compatible with"
+  },
+  {
+    "text": "ores: a Windows-only score that is compatible with scores from previous versions of Procyon Office Productivity, and an MP Score for comparison between systems running Windows and macOS. UL Procyon Office Productivity Benchmark v1.1 March 7, 2023  Updated to target.NET 4.8 and Visual Studio C 2022.  This benchmark will no longer run in an elevated state. This may reduce scores on systems using 9th generation Intel CPUs or older. UL Procyon Office Productivity Benchmark v1.0 October 4, 2021  Launch version H"
+  },
+  {
+    "text": "y Benchmark v1.0 October 4, 2021  Launch version How to run the Procyon Office Productivity Benchmark on macOS Installing required software Make sure you are connected to the Internet. Updating macOS 1. Ensure you are running the latest version of macOS. You can check the latest versions of macOS on the Apple website. Installing Microsoft Office software 1. Install Microsoft Office 365 or Microsoft Office 2019 (or newer). 2. Open any Microsoft Office application and activate the license by either logging in"
+  },
+  {
+    "text": "tion and activate the license by either logging in with a suitable account or by entering a license key. 3. Open the Microsoft Excel, Word and PowerPoint apps at least once, then clear any popups or activation dialogs to prevent them from interfering with the Procyon office productivity Benchmark. Installing the UL Procyon Office Productivity Benchmark 1. Install Procyon: Procyon-macos-installer-x64-OfficeProductivity-version.pkg 2. You may be prompted to install Rosetta to continue the installation unless"
+  },
+  {
+    "text": "stall Rosetta to continue the installation unless Rosetta is already installed in the system. It can be installed with the command: softwareupdate --install-rosetta 3. Follow the prompts to complete the installation. Note: UL Procyon is installed in the LibraryULProcyonOfficeProductivity folder. Registering your Procyon license 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOfficeProductivity 3. Register your license:.UL_Procyon --register license key First ti"
+  },
+  {
+    "text": "icense:.UL_Procyon --register license key First time Procyon setup We recommend that in order to correctly set up the required macOS security permissions, you ﬁrst run the Office Productivity ﬁrst time setup process, then accept the requests for security permissions that appear in the ﬁrst few minutes of the process. Usually on a system that has not any special permissions conﬁgured the Office Productivity ﬁrst time setup process goes as follows: 1. Using Terminal, run the conﬁguration tool in the Procyon i"
+  },
+  {
+    "text": "rminal, run the conﬁguration tool in the Procyon install directory:.UL_Procyon -d office_productivity_ﬁrst_time_setup.def 2. Accept the macOS permission requests that appear during the ﬁrst-time process. 3. The last prompt will take you to Security  Permissions in Settings app. 4. Check the box next to java (on macOS Monterey) or Terminal (on macOS Ventura) 5. The ﬁrst-time setup will end and show a prompt to retry the ﬁrst-run setup if it did not have all necessary security permissions. 6. Click Retry in t"
+  },
+  {
+    "text": "ecessary security permissions. 6. Click Retry in the ﬁrst-time setup dialog. 7. Accept any more permission requests that appear. 8. Necessary security permissions will have been set up once the ﬁrst-time setup ends successfully. You may have to run the setup several times to achieve this. Notes:  In case you accidentally deny a permission instead of accepting it, you can go to Security  Permissions in Settings app to check boxes in Accessibility and Automation tabs  If it all fails, you can start over by re"
+  },
+  {
+    "text": "on tabs  If it all fails, you can start over by resetting all permissions by issuing the following command in Terminal: tccutil reset All  Some enterprise security systems may require you to ﬁrst add Terminal app to have Full disk access in Security  Permissions Required Permissions MacOS 12 Monterey On macOS 12 Monterey, the required permissions are: Accessibility:  LibraryULProcyonjdk8u292-b10-jreContentsHomebinjava Automation:  LibraryULProcyon jdk8u292-b10-jreContentsHomebinjava  Microsoft Word  Microso"
+  },
+  {
+    "text": "10-jreContentsHomebinjava  Microsoft Word  Microsoft PowerPoint  Microsoft Excel  System Events MacOS 13 Ventura On macOS 13 Ventura, the required permissions are: Accessibility:  Terminal Automation:  Terminal  Microsoft Word  Microsoft PowerPoint  Microsoft Excel  System Events Run the office productivity benchmark Once the benchmark is installed and permissions conﬁgured properly, it can be run as follows: 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOffi"
+  },
+  {
+    "text": "installation folder with: cd LibraryULProcyonOfficeProductivity 3. To run the office productivity benchmark:.UL_Procyon -d office_productivity.def -o output pathoutput ﬁle.procyon-result Example:.UL_Procyon -d office_productivity.def -o UsersProcyonTestUserProcyonresultsOfficeProductivityResult.procyon-result Viewing your results The best method to process benchmark result data is to use the Office Productivity benchmark with Testdriver Cloud. If you chose to not use Testdriver Cloud, you can extract the i"
+  },
+  {
+    "text": "to not use Testdriver Cloud, you can extract the information from the results ﬁle using either of the following processes. Exporting with command line switch Option 1: 1. Use -export-csv or -export-xml command line switch to export results as an XML or CSV ﬁle:.UL_Procyon -d office_productivity.def -o Export File Name.zip --export-csv Result File Name.csv Example:.UL_Procyon -d office_productivity.def -o ZipOfficeProductivityResult --export-csv OfficeProductivityResult.csv Option 2: 1. Use the -export-simpl"
+  },
+  {
+    "text": "ivityResult.csv Option 2: 1. Use the -export-simple-CSV command line switch to export results as a single CSV ﬁle:.UL_Procyon -d office_productivity.def -o Export File Name.zip -l 2 --export-simple-csv CSV File Name.csv Example:.UL_Procyon -d office_productivity.def -o ZipOfficeProductivityResult.zip -l 2 --export-simple- csv OfficeProductivityResult.csv Extracting Result.xml from the.procyon-result ﬁle. (This is essentially the same as using -export-xml command) 1. Unzip the.procyon-result ﬁle to extract t"
+  },
+  {
+    "text": "mand) 1. Unzip the.procyon-result ﬁle to extract the contents. Your benchmark results are available in the Result.xml ﬁle. Once you have the CSV or XML ﬁle, you can process the data with your preferred tools. Uninstalling UL Procyon Office Productivity The benchmark can be uninstalled as follows: 1. Open Terminal. 2. In Terminal, navigate to the installation folder with: cd LibraryULProcyonOfficeProductivity 3. Run the uninstallation script: sudo.uninstall.sh Note: It is not recommended to uninstall just by"
+  },
+  {
+    "text": "h Note: It is not recommended to uninstall just by removing the installation folder, as it will leave the Procyon app installed in the operating system registers. This can cause issues when installing Procyon again later. Procyon Scores The following interactive graph shows a distribution of PCs tested by UL Solutions as part of our Benchmarks Data for Retailers service for Elkjop  A major European consumer electronics retailer. Along the X-axis are ranges of scores for tested devices, while along the y-axi"
+  },
+  {
+    "text": "f scores for tested devices, while along the y-axis represents is the percentage of devices that fall within that score range. Computers are further grouped into ﬁve colored performance tiers for each benchmark based on their suitability for the use-case being tested. You can interact with the graph to view the representative hardware and usage scenario for each level. Score Range  Distribution of PC's Tested by UL Solutions Procyon benchmarks measure performance in real-world tasks using industry standard"
+  },
+  {
+    "text": "mance in real-world tasks using industry standard software, helping achieve up-to-date understanding of a systems performance. This distribution is based on a sample of approximately 250 devices should not be considered a representative sample of PCs and laptops sold by Elkjop, nor is it a representative sample of PCs and laptops sold globally. Procyon AI Benchmarks offering Procyon AI Image Generation Benchmark GPU AI Image Generation Performance The Procyon AI Image Generation Benchmark provides a consist"
+  },
+  {
+    "text": "n AI Image Generation Benchmark provides a consistent, accurate, and understandable workload for measuring the inference performance of on-device AI accelerators. This benchmark was developed in partnership with multiple key industry members to ensure it produces fair and comparable results across all supported hardware. The benchmark includes three tests for measuring the performance from low power NPUs to high-end discrete graphics cards. The Stable Diffusion XL (FP16) test is our most demanding AI infere"
+  },
+  {
+    "text": "ion XL (FP16) test is our most demanding AI inference workload, and only the latest high-end GPUs meet the minimum requirements to run it. For moderately powerful discrete GPUs, we recommend the Stable Diffusion 1.5 (FP16) test. Finally, we designed the Stable Diffusion 1.5 (INT8) test for low power devices using NPUs for AI workloads. The Procyon AI Image Generation Benchmark can be conﬁgured to use a selection of different inference engines, and by default uses the recommended optimal inference engine for"
+  },
+  {
+    "text": "uses the recommended optimal inference engine for the systems hardware. Features  A range of tests built around an image generation workload, using state-of-the-art neural networks.  Designed to measure the inference performance of a wide range of AI accelerators.  Benchmark with NVIDIA TensorRT, Intel OpenVINO, and ONNX with DirectML.  Verify inference engine implementation and compatibility.  Simple to set up and use via the Procyon application or via command-line.  Test with multiple versions of the Sta"
+  },
+  {
+    "text": "mand-line.  Test with multiple versions of the Stable Diffusion AI model.  Compare up to 4 results side-by-side in the app. Benchmark details  Stable diffusion, released in 2022, made using AI for text-to-image generation on their own hardware accessible for the everyday consumer. Given its ease of access, wide usage, and creative aspect, text-to-image generation quickly became one of the most memorable AI use cases for the public.  The AI Image Generation Benchmark uses a set of standardized text prompts f"
+  },
+  {
+    "text": "enchmark uses a set of standardized text prompts for a reliable and consistent AI image generation workload. Results provide an overall score for easy comparison, as well as further detailed scores and the generated images for closer inspections of performance and quality. Test Workload Image resolution Batch size Steps Stable Diffusion XL (FP16) Heavy 1024 x 1024 1 100 Stable Diffusion 1.5 (FP16) Medium 512 x 512 4 100 Stable Diffusion 1.5 (INT8) Light 512 x 512 1 50 Results and insights Benchmark scores C"
+  },
+  {
+    "text": "x 512 1 50 Results and insights Benchmark scores Compare AI Inference performance with two different versions of the Stable Diffusion model. Detailed scores Inspect generated images, and get detailed scores for each image generation batch. Hardware monitoring Get detailed metrics on how CPU and GPU temperatures, clock speeds and usage change during the benchmark run. Developed with Industry expertise Procyon benchmarks are designed for industry, enterprise, and press use, with tests and features created spe"
+  },
+  {
+    "text": "and press use, with tests and features created speciﬁcally for professional users. The Procyon AI Image Generation Benchmark was designed and developed with industry partners through the UL Benchmark Development Program (BDP). The BDP is an initiative from UL Solutions that aims to create relevant and impartial benchmarks by working in close cooperation with program members. Inference Engine Performance With the Procyon AI Image Generation Benchmark, you can measure the performance of dedicated AI processin"
+  },
+  {
+    "text": "measure the performance of dedicated AI processing hardware and verify inference engine implementation quality with tests based on a heavy AI image generation workload. Designed for Professionals We created our Procyon AI Inference Benchmarks for engineering teams who need independent, standardized tools for assessing the general AI performance of inference engine implementations and dedicated hardware. Fast and easy to use The benchmark is easy to install and runno complicated conﬁguration is required. Ru"
+  },
+  {
+    "text": "and runno complicated conﬁguration is required. Run the benchmark using the Procyon application or via command-line. View benchmark scores and charts or export detailed result ﬁles for further analysis. Procyon AI Inference Benchmark for Android Benchmark AI performance and quality using NNAPI Machine learning is powering exciting new features in mobile apps. Many devices now have dedicated hardware to accelerate the computationally intensive operations required for on- device inferencing. The Android Neura"
+  },
+  {
+    "text": "ired for on- device inferencing. The Android Neural Networks API (NNAPI) provides a base layer for machine learning frameworks to access the dedicated AI processing hardware in a device. The Procyon AI Inference Benchmark for Android measures the AI performance of Android devices using NNAPI. The benchmark score reﬂects both the speed and the accuracy of on- device inferencing operations. With the Procyon AI Inference Benchmark for Android, not only can you measure the performance of dedicated AI processing"
+  },
+  {
+    "text": "measure the performance of dedicated AI processing hardware in Android devices, you can also verify NNAPI implementation quality. The benchmark uses a range of popular, state-of-the-art neural networks running on the device to perform common machine-vision tasks. The benchmark runs on the device's dedicated AI- processing hardware via NNAPI. The benchmark also runs each test directly on the GPU andor the CPU for comparison. Features  Tests based on common machine-vision tasks using state-of-the-art neural n"
+  },
+  {
+    "text": "chine-vision tasks using state-of-the-art neural networks.  Measures both inference performance and output quality.  Compare NNAPI, CPU and GPU performance.  Verify NNAPI implementation and compatibility.  Optimize drivers for hardware accelerators.  Compare ﬂoat- and integer-optimized model performance.  Simple to setup and use on a device or via ADB. NNAPI performance and quality With the Procyon AI Inference Benchmark for Android, you can measure the performance of dedicated AI processing hardware and ve"
+  },
+  {
+    "text": "ormance of dedicated AI processing hardware and verify NNAPI implementation quality with tests based on common machine-vision tasks. Designed for professionals We created the Procyon AI Inference Benchmark for Android for engineering teams who need independent, standardized tools for assessing the general AI performance of NNAPI implementations and dedicated mobile hardware. Fast and easy to use The benchmark is easy to install and runno complicated conﬁguration required. Run the benchmark on the device or"
+  },
+  {
+    "text": "tion required. Run the benchmark on the device or via ADB. View benchmark scores, charts and rankings in the app or export detailed result ﬁles for further analysis. Neural network models MobileNet V3 MobileNet V3 is a compact visual recognition model that was created speciﬁcally for mobile devices. The benchmark uses MobileNet V3 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content in the image. The benchmark uses the large minimalistic va"
+  },
+  {
+    "text": "mage. The benchmark uses the large minimalistic variant of MobileNet V3. Inception V4 Inception V4 is a state-of-the-art model for image classiﬁcation tasks. Designed for accuracy, it is a much wider and deeper model than MobileNet. The benchmark uses Inception V4 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content identiﬁed in the image. SSDLite MobileNet V3 SSDLite is an object detection model that aims to produce bounding boxes around o"
+  },
+  {
+    "text": "model that aims to produce bounding boxes around objects in an image. SSDLite uses MobileNet for feature extraction to enable real-time object detection on mobile devices. In the benchmark, the ﬂoat version of SSDLite uses the small minimalistic MobileNet V3 variant. The integer version uses the EdgeTPU variant of MobileNet V3. DeepLab V3 DeepLab is an image segmentation model that aims to cluster the pixels of an image that belong to the same object class. Semantic image segmentation labels each region of"
+  },
+  {
+    "text": "Semantic image segmentation labels each region of the image with a class of object. The benchmark uses MobileNet V2 for feature extraction enabling fast inference with little difference in quality compared with larger models. Custom CNN The benchmark includes a custom Convolutional Neural Network (CNN) based on the AlexNet architecture. It is designed to test the performance of basic CNN operations and is trained on randomly generated training data. It contains two Convolutional layers, which are followed b"
+  },
+  {
+    "text": "ins two Convolutional layers, which are followed by Max Pooling and Dropout layers, and one fully connected layer. Integer and ﬂoat models The benchmark includes both ﬂoat- and integer-optimized versions of each model. Each model runs in turn on all compatible hardware in the device. With NNAPI, the benchmark will use the device's dedicated AI-processing hardware, if supported. Float models use NNAPI or run directly on the CPU or GPU. Integer models use NNAPI or run directly on the CPU. Procyon AI Computer"
+  },
+  {
+    "text": "I or run directly on the CPU. Procyon AI Computer Vision Benchmark Benchmark AI performance using various inference engines Machine learning applications are rapidly growing as it becomes more accessible to integrate and deploy AI solutions into everyday applications. With the demand for faster machine learning performance, major hardware vendors have been optimizing their inference engines to provide the best possible performance on their hardware. The Procyon AI Computer Vision Benchmark gives insights in"
+  },
+  {
+    "text": "yon AI Computer Vision Benchmark gives insights into how AI inference engines perform on your Windows PC or Apple Mac, helping you decide which engines to support to achieve the best performance. The benchmark features several AI inference engines from different vendors, with benchmark scores reﬂecting the performance of on-device inferencing operations. In the benchmark, common machine-vision tasks are executed using a range of popular, state- of-the-art neural networks. Measure AI accelerator performance"
+  },
+  {
+    "text": "ural networks. Measure AI accelerator performance by comparing it with the same operations run on the CPU or GPU. Features  Tests based on common machine-vision tasks using state-of-the-art neural networks.  Measure inference performance using the CPU, GPU or dedicated AI accelerators.  Benchmark with NVIDIA TensorRT, Intel OpenVINO, Qualcomm SNPE, Microsoft Windows ML, and Apple Core ML.  Verify inference engine implementation and compatibility.  Optimize drivers for hardware accelerators.  Compare ﬂoat an"
+  },
+  {
+    "text": "rivers for hardware accelerators.  Compare ﬂoat and integer-optimized model performance.  Simple to set up and use via the Procyon application or via command-line. Inference engine performance  With the Procyon AI Computer Vision Benchmark, you can measure the performance of dedicated AI processing hardware and verify inference engine implementation quality with tests based on common machine-vision tasks. Designed for professionals  We created the Procyon AI Computer Vision Benchmark for engineering teams w"
+  },
+  {
+    "text": "Computer Vision Benchmark for engineering teams who need independent, standardized tools for assessing the general AI performance of inference engine implementations and dedicated hardware. Fast and easy to use  The benchmark is easy to install and runno complicated conﬁguration is required. Run the benchmark using the Procyon application or via command-line. View benchmark scores and charts or export detailed result ﬁles for further analysis. Neural network models MobileNet V3  MobileNet V3 is a compact v"
+  },
+  {
+    "text": "k models MobileNet V3  MobileNet V3 is a compact visual recognition model that was created specifically for mobile devices. The benchmark uses MobileNet V3 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content in the image. The benchmark uses the large minimalistic variant of MobileNet V3. Inception V4  Inception V4 is a state-of-the-art model for image classification tasks. Designed for accuracy, it is a much wider and deeper model than Mob"
+  },
+  {
+    "text": "racy, it is a much wider and deeper model than MobileNet. The benchmark uses Inception V4 to identify the subject of an image, taking an image as the input and outputting a list of probabilities for the content identified in the image. YOLO V3  YOLO, which stands for You Only Look Once, is an object detection model that aims to identify the location of objects in an image. The benchmark uses YOLO V3 to produce bounding boxes around objects with probabilities on the confidence of each detection. DeepLab V3"
+  },
+  {
+    "text": "on the confidence of each detection. DeepLab V3  DeepLab is an image segmentation model that aims to cluster the pixels of an image that belong to the same object class. Semantic image segmentation labels each region of the image with a class of object. The benchmark uses MobileNet V2 for feature extraction enabling fast inference with little difference in quality compared with larger models. Real-ESRGAN  Real-ESRGAN is a super-resolution model trained on synthetic data for increasing the resolution of an"
+  },
+  {
+    "text": "ynthetic data for increasing the resolution of an image, reconstructing a higher resolution image from a lower resolution counterpart. The model used in the benchmark is the general image variant of Real-ERSGAN, and upscales a 250x250 image to an 1000x1000 image. ResNet 50  ResNet 50 is an image classification model that provides a novel way of adding more convolutional layers with the use of residual blocks. Its release enabled the training of deep neural networks previously not possible. The benchmark use"
+  },
+  {
+    "text": "etworks previously not possible. The benchmark uses ResNet 50 to identify image subjects, outputting a list of probabilities for the content identified in the image. Integer and float models  The benchmark includes both float- and integer-optimized versions of each model. Each model runs in turn on all compatible hardware in the device. Select the device and inference precision for each runtime to compare performance between integer and float models. Results and insights Benchmark scores Compare AI Inferenc"
+  },
+  {
+    "text": "and insights Benchmark scores Compare AI Inference performance with integer and ﬂoat models using a CPU, GPU or dedicated AI accelerator. Detailed scores See inference times for each neural network test when using your selected inference engine and processing unit. Hardware monitoring Get detailed metrics on how CPU and GPU temperatures, clock speeds and usage changes during the benchmark run. UL Benchmarks for retailers PC performance data for retailers When shopping for a Windows PC or Mac computer, cons"
+  },
+  {
+    "text": "en shopping for a Windows PC or Mac computer, consumers can get overwhelmed by the multitude of available choices. Complex speciﬁcations indicate each computers strengths and capabilities, but such technical information can prove difficult to understand, especially when comparing multiple computers. The challenge is to demonstrate a computers actual performance in an instantly meaningful way. At UL Solutions, we offer industry-leading benchmarks that make it easier for everyone to understand the performance"
+  },
+  {
+    "text": "easier for everyone to understand the performance of a PC or Mac computer. A benchmark tests how well a product performs a function and how that performance compares across similar products. UL Solutions custom benchmarks test computers and reduce a computers speciﬁcation sheet to an easily understood numbered score. The higher the score, the better the performance. Its that simple. Simplifying complex speciﬁcations into user-friendly statistics UL Solutions began developing industry-standard computer benc"
+  },
+  {
+    "text": "s began developing industry-standard computer benchmarks in the 1990s. Since then, our benchmarks have evolved to perform accurate assessments of PCs and Macs as well as notebooks, tablets and smartphones. Millions of people around the world trust our benchmarks; they are accurate and user-friendly and they come from UL Solutions, a trusted industry partner with more than 120 years of experience in product testing, certiﬁcation and veriﬁcation services. UL Solutions benchmarks cover a variety of performance"
+  },
+  {
+    "text": "olutions benchmarks cover a variety of performance capabilities for computers and smart devices used at the office and in the home, for work and for play. Customers can easily understand our benchmark data because sales associates can easily explain it. Even nontechnical customers can feel empowered to understand how a computer will perform the tasks speciﬁc to their needs. Will it run smoothly while multitasking or handling large ﬁles? Will a laptop battery last throughout the day? Consumers who understand"
+  },
+  {
+    "text": "last throughout the day? Consumers who understand computer performance make better purchasing decisions. How can UL Solutions benchmarks help your business? For retail businesses, our easily understood benchmarks can help increase sales, reduce returns and improve customer satisfaction. We already work with many international consumer electronics retailers, helping them achieve their goals and maximize customer experience. Our Benchmark team can create custom benchmarks to ﬁt your business needs. We can th"
+  },
+  {
+    "text": "om benchmarks to ﬁt your business needs. We can thoroughly test and assess your products under controlled conditions in dedicated laboratories, or we can help you set up and run your own testing facilities with processes that deliver accurate, repeatable test results. Our benchmark data comes in tailored packages, making it much easier for your customers to conﬁdently choose and buy a new PC, Mac, tablet or smartphone and allowing your sales staff to recommend and sell devices with greater information and i"
+  },
+  {
+    "text": "nd and sell devices with greater information and insight into each product on the shelf. Your customers can also download our complimentary benchmarking software to test an existing device or computer at home before coming into a store, which can highlight the value of an upgrade or replacement. What benchmark services do we offer? As electronics retailers already know, gamers are a huge part of the consumer computer market, and game performance depends heavily on computer and processor capabilities. Our mo"
+  },
+  {
+    "text": "ily on computer and processor capabilities. Our most popular benchmark measures and tests video game performance. PC performance is incredibly important for gamers, and new games constantly raise the bar for visually rich, immersive experiences. We conduct game performance testing on a broad selection of hardware that covers the range of popular CPUs and GPUs found in modern gaming computers. To date, our dedicated laboratories have assessed more than 50 of the worlds newest, most popular games on a variety"
+  },
+  {
+    "text": "the worlds newest, most popular games on a variety of computers. We test each game at different resolution settings, from 1080p medium and 1080p ultra to 1440p ultra, 4K UHD medium and 4K UHD ultra, pushing each game and computer system to its technical limits. In your retail store, you can explain this performance data and demonstrate the expected frame rates for each gaming computer. Gaming categorization Gamers fear that a new PC wont be able to play the latest games or deliver the experiences they want,"
+  },
+  {
+    "text": "latest games or deliver the experiences they want, but how do they know for sure? Even expert consumers may struggle to understand complex technical speciﬁcations, confusing naming schemes and manufacturer jargon. Measuring and grading computer and game speciﬁcations according to speciﬁc categories can help clear the air. Product categories can help your customers ﬁnd the gaming computers that best meet their needs and budgets. Gaming computer benchmarks slot performance into different categories, from abil"
+  },
+  {
+    "text": "t performance into different categories, from abilities adequate to basic computing needs or full-blown artistic creation to meeting the needs of a casual or elite gamer. Color-coded categories and numbered scores give consumers and sales associates a good idea of which platforms work best for speciﬁc games, enabling improved in- store presentation by grouping products with similar performance. You can guide consumers to what they really need and want rather than what is simply technically possible. Beyond"
+  },
+  {
+    "text": "than what is simply technically possible. Beyond the gaming world We designed our benchmarks to be accurate, neutral and relevant, and they extend beyond gaming to the many uses of both home and office computers. Our benchmarking capabilities include real-world scenario testing on professional applications like Microsoft 365 and Adobe. Our multiplatform Procyon benchmark suite, for example, runs benchmark tests focusing on office productivity, photo and video editing, battery life, AI inference and more. W"
+  },
+  {
+    "text": "eo editing, battery life, AI inference and more. We designed our benchmarks and performance around common activities and real-world applications. We can provide data on everyday device usage as well as gaming-speciﬁc statistics. Our performance data combined with categorization gives your customers a more accessible way to choose a PC or Apple Mac computer. Instead of trying to compare complicated speciﬁcations, consumers can choose a device based on the activities that are most important to them, and its a"
+  },
+  {
+    "text": "ivities that are most important to them, and its all summed up in a simple score. Office Productivity Score Guide Office Productivity Score Level 1  Range  3000 Representative hardware: Low end Celerons and Ryzens Intel Celeron Processor N4500, Intel UHD Graphics Typical usage: Light document editing and web browsing Office Productivity Score Level 2  Range 3000 - 4500 Representative hardware: U and G-CPUs with iGPU AMD Ryzen 3 7320U, AMD Radeon 610M Typical usage: Light office productivity, comfortable web"
+  },
+  {
+    "text": "usage: Light office productivity, comfortable web experience Office Productivity Score Level 3  Range 4500 - 5500 Representative hardware: P-CPUs with lower end dGPUs Intel Core i7-1355U Processor, Intel Iris Xe Graphics Typical usage: Suits most Office productivity needs Office Productivity Score Level 4  Range 5500 - 7000 Representative hardware: desktop and H-CPUs; dGPUs; AMD Ryzen 7 7840HS, AMD Radeon 780M, NVDIA GeForce RTX 4060 Laptop GPU Typical usage: Heavy Excel computations and solvers Office Pro"
+  },
+  {
+    "text": "e: Heavy Excel computations and solvers Office Productivity Score Level 5  Range 7000  Representative hardware: High-end CPU  high-end GPU Intel Core i9-13900KF Processor, NVDIA GeForce RTX 4090 Typical usage: High end workstations Office Productivity MP Score Guide Office Productivity MP Score Level 1  Range  100000 Representative hardware: Low end Celerons and Ryzens Intel Celeron Processor N4500, Intel UHD Graphics Typical usage: Light document editing and web browsing Office Productivity MP Score Level"
+  },
+  {
+    "text": "d web browsing Office Productivity MP Score Level 2  Range 100000 - 150000 Representative hardware: U and G-CPUs with iGPU AMD Ryzen 5 7520U, AMD Radeon 610M Typical usage: Light office productivity, comfortable web experience Office Productivity MP Score Level 3  Range 150000 - 180000 Representative hardware: P-CPUs with lower end dGPUs Intel Core i5-12450H Processor, Intel UHD Graphics Typical usage: Suits most Office productivity needs Office Productivity MP Score Level 4  Range 180000 - 220000 Represent"
+  },
+  {
+    "text": "MP Score Level 4  Range 180000 - 220000 Representative hardware: desktop and H-CPUs; dGPUs; AMD Ryzen 7 7840HS, AMD Radeon 780M, NVDIA GeForce RTX 4060 Laptop GPU Typical usage: Heavy Excel computations and solvers Office Productivity MP Score Level 5  Range 220000  Representative hardware: High-end CPU  high-end GPU Intel Core i9-13900KF Processor, NVDIA GeForce RTX 4090 Typical usage: High end workstations Please note that Procyon scores and categories are not static and will change year-on-year based on"
+  },
+  {
+    "text": "e not static and will change year-on-year based on hardware and the application versions being tested. Four categories for Photo Editing: Level 1  Range 2400 - 4100 Representative hardware: Intel Core i7-1355U Processor, Intel Iris Xe Graphics Typical usage: Simple photo editing - e.g., Image ﬁlters for social media, cropping, color adjustments. Level 2  Range 4101 - 5100 Representative hardware: AMD Ryzen 5 7530U, AMD Radeon Graphics Typical usage: Casual photo editing - e.g., Light photo manipulation, sma"
+  },
+  {
+    "text": "hoto editing - e.g., Light photo manipulation, small-scale batch editing of photos. Level 3  Range 5101 - 6400 Representative hardware: Intel Core i7-13700H Processor, NVDIA GeForce RTX 4050 Laptop GPU Typical usage: Enthusiast content creation - e.g., heavy image manipulation, GPU accelerated image processing, large-scale batch editing of RAW photos. Level 4  Range 6401 - 8000 Representative hardware: Intel Core i7-13700HX Processor, NVDIA GeForce RTX 4070 Laptop GPU Typical usage: Professional content cre"
+  },
+  {
+    "text": "Laptop GPU Typical usage: Professional content creation Level 5  Range 8000 - onwards Representative hardware: AMD Ryzen 7 7700X, AMD Radeon RX 7900 XT Typical usage: Next-generation hardware. Five categories for Video Editing: Level 1  Range 1-2200 Representative hardware: Intel Core i5-1335U Processor, Intel Iris Xe Graphics Typical usage: Light video editing, MP4 editing. Level 2  Range 2201-3500 Representative hardware: AMD Ryzen 7 7840U, AMD Radeon 780M Typical usage: Full HD video editing H.265HEVC ed"
+  },
+  {
+    "text": "Typical usage: Full HD video editing H.265HEVC editing. Level 3  Range 3501-5200 Representative hardware: Intel Core i7-13620H Processor, NVDIA GeForce RTX 4050 Laptop GPU Typical usage: Enthusiast 4K video editing H.265HEVC editing. Level 4  Range 5200-6500 Representative hardware: AMD Ryzen 9 7940HS, NVDIA GeForce RTX 4070 Laptop GPU Typical usage: High-resolution real time video editing up to 8K resolution Level 5  Range 6500 - onwards Representative hardware: Intel Core i9-13900HX Processor, NVDIA GeFo"
+  },
+  {
+    "text": "dware: Intel Core i9-13900HX Processor, NVDIA GeForce RTX 4090 Laptop GPU Typical usage: Movies and professional videography projects up to 12K resolution"
   }
 ]

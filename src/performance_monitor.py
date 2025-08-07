@@ -305,6 +305,78 @@ class PerformanceMonitor:
         
         self.stop_monitoring()
 
+    def get_cpu_usage(self) -> float:
+        """Get current CPU usage percentage"""
+        return psutil.cpu_percent()
+    
+    def get_memory_usage(self) -> float:
+        """Get current memory usage percentage"""
+        return psutil.virtual_memory().percent
+    
+    def get_gpu_usage(self) -> float:
+        """Get current GPU usage percentage"""
+        return self.performance_data.get("gpu_usage", 0.0)
+    
+    def has_gpu(self) -> bool:
+        """Check if GPU is available"""
+        return self.performance_data.get("gpu_usage", 0.0) > 0.0
+    
+    def measure(self, operation_name: str):
+        """
+        Context manager for measuring operation performance.
+        
+        Args:
+            operation_name: Name of the operation being measured
+        """
+        return PerformanceContext(self, operation_name)
+    
+    def benchmark(self, func, iterations: int = 10, *args, **kwargs) -> Dict[str, Any]:
+        """
+        Benchmark a function by running it multiple times.
+        
+        Args:
+            func: Function to benchmark
+            iterations: Number of iterations to run
+            *args, **kwargs: Arguments to pass to the function
+            
+        Returns:
+            Dictionary with benchmark results
+        """
+        times = []
+        for i in range(iterations):
+            start_time = time.time()
+            result = func(*args, **kwargs)
+            end_time = time.time()
+            times.append(end_time - start_time)
+        
+        return {
+            "function": func.__name__,
+            "iterations": iterations,
+            "total_time": sum(times),
+            "average_time": sum(times) / len(times),
+            "min_time": min(times),
+            "max_time": max(times),
+            "std_dev": np.std(times) if len(times) > 1 else 0.0
+        }
+
+class PerformanceContext:
+    """Context manager for measuring operation performance"""
+    
+    def __init__(self, monitor: PerformanceMonitor, operation_name: str):
+        self.monitor = monitor
+        self.operation_name = operation_name
+        self.start_time = None
+    
+    def __enter__(self):
+        self.start_time = time.time()
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.start_time:
+            elapsed = time.time() - self.start_time
+            self.monitor.record_inference_time(elapsed)
+            console.print(f"{self.operation_name} completed in {elapsed:.3f}s", style="green")
+
 def create_performance_monitor(core: Optional[ov.Core] = None) -> PerformanceMonitor:
     """
     Factory function to create a performance monitor

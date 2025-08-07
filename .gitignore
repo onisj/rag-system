@@ -244,5 +244,4 @@ models/
 .cache/
 huggingface
 
-AI-Dev-Coding-task/
-
+ai-dev-coding-task/
