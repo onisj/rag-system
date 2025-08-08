@@ -29,7 +29,7 @@ The module is designed to handle various PDF types including:
 - Large documents requiring efficient memory management
 
 Author: Segun Oni
-Version: 1.0.0
+Version: 1.0.1
 """
 
 import fitz  # PyMuPDF - high-performance PDF processing library

@@ -287,26 +287,26 @@ class PerformanceMonitor:
         table.add_column("Status", style="yellow")
         
         # CPU Usage
-        cpu_status = "Good" if summary["cpu_usage_percent"] < 80 else "High" if summary["cpu_usage_percent"] < 95 else "🔴 Critical"
+        cpu_status = "Good" if summary["cpu_usage_percent"] < 80 else "High" if summary["cpu_usage_percent"] < 95 else "Critical"
         table.add_row("CPU Usage", f"{summary['cpu_usage_percent']:.1f}%", cpu_status)
         
         # Memory Usage
-        mem_status = "Good" if summary["memory_usage_percent"] < 80 else "High" if summary["memory_usage_percent"] < 95 else "🔴 Critical"
+        mem_status = "Good" if summary["memory_usage_percent"] < 80 else "High" if summary["memory_usage_percent"] < 95 else "Critical"
         table.add_row("System Memory", f"{summary['memory_usage_percent']:.1f}%", mem_status)
         
         # GPU Memory
         if summary["gpu_memory_percent"] > 0:
-            gpu_status = "Good" if summary["gpu_memory_percent"] < 80 else "High" if summary["gpu_memory_percent"] < 95 else "🔴 Critical"
+            gpu_status = "Good" if summary["gpu_memory_percent"] < 80 else "High" if summary["gpu_memory_percent"] < 95 else "Critical"
             table.add_row("GPU Memory", f"{summary['gpu_memory_percent']:.1f}% ({summary['gpu_memory_gb']:.1f}GB)", gpu_status)
         else:
             table.add_row("GPU Memory", "N/A", "Not Available")
         
         # Inference Performance
         if summary["inference_latency_ms"] > 0:
-            latency_status = "Fast" if summary["inference_latency_ms"] < 100 else "Normal" if summary["inference_latency_ms"] < 500 else "🔴 Slow"
+            latency_status = "Fast" if summary["inference_latency_ms"] < 100 else "Normal" if summary["inference_latency_ms"] < 500 else "Slow"
             table.add_row("Inference Latency", f"{summary['inference_latency_ms']:.1f}ms", latency_status)
             
-            throughput_status = "High" if summary["throughput_tokens_per_second"] > 10 else "Normal" if summary["throughput_tokens_per_second"] > 5 else "🔴 Low"
+            throughput_status = "High" if summary["throughput_tokens_per_second"] > 10 else "Normal" if summary["throughput_tokens_per_second"] > 5 else "Low"
             table.add_row("Throughput", f"{summary['throughput_tokens_per_second']:.1f} tokens/s", throughput_status)
         else:
             table.add_row("Inference Latency", "N/A", "No Data")
@@ -427,6 +427,38 @@ class PerformanceMonitor:
             "max_time": max(times),
             "std_dev": np.std(times) if len(times) > 1 else 0.0
         }
+
+    def get_stats(self) -> Dict[str, Any]:
+        """Get comprehensive performance statistics"""
+        return {
+            "cpu_usage": self.performance_data["cpu_usage"],
+            "memory_usage": self.performance_data["memory_usage"],
+            "gpu_usage": self.performance_data["gpu_usage"],
+            "gpu_memory": self.performance_data["gpu_memory"],
+            "gpu_memory_gb": self.performance_data["gpu_memory_gb"],
+            "inference_latency": self.performance_data["inference_latency"],
+            "throughput": self.performance_data["throughput"],
+            "total_inference_count": len(self.inference_times),
+            "device": "GPU" if self.performance_data["gpu_memory"] > 0 else "CPU"
+        }
+    
+    def get_current_stats(self) -> Dict[str, float]:
+        """Get current performance statistics"""
+        return {
+            "cpu": self.performance_data["cpu_usage"],
+            "memory": self.performance_data["memory_usage"],
+            "gpu": self.performance_data["gpu_usage"],
+            "gpu_memory": self.performance_data["gpu_memory"],
+            "gpu_memory_gb": self.performance_data["gpu_memory_gb"],
+            "inference_latency": self.performance_data["inference_latency"],
+            "throughput": self.performance_data["throughput"]
+        }
+    
+    def get_average_stats(self) -> Dict[str, float]:
+        """Get average performance statistics (same as current for now)"""
+        # For now, return current stats as averages
+        # In a more sophisticated implementation, this would track historical averages
+        return self.get_current_stats()
 
 class PerformanceContext:
     """Context manager for measuring operation performance"""

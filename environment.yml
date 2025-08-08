@@ -1,16 +1,35 @@
 name: rag-gpu
 channels:
+  - conda-forge
+  - nvidia
+  - pytorch
   - defaults
 dependencies:
   - bzip2=1.0.8=h2bbff1b_6
-  - ca-certificates=2025.2.25=haa95532_0
+  - ca-certificates=2025.8.3=h4c7d964_0
+  - cudatoolkit=11.8.0=h09e9e62_13
   - expat=2.7.1=h8ddb27b_0
+  - faiss=1.9.0=py311cuda118he08421d_0_cuda
+  - faiss-gpu=1.9.0=hef1f8eb_0
+  - intel-openmp=2024.2.1=h57928b3_1083
+  - libblas=3.9.0=32_h641d27c_mkl
+  - libcblas=3.9.0=32_h5e41251_mkl
+  - libfaiss=1.9.0=cuda118h51f90d9_0_cuda
   - libffi=3.4.4=hd77b12b_1
-  - openssl=3.0.17=h35632f6_0
+  - libhwloc=2.12.1=default_h88281d1_1000
+  - libiconv=1.18=h135ad9c_1
+  - liblapack=3.9.0=32_h1aa476e_mkl
+  - libwinpthread=12.0.0.r4.gg4f2fc60ca=h57928b3_9
+  - libxml2=2.13.8=h866ff63_0
+  - mkl=2024.2.2=h66d3029_15
+  - openssl=3.5.2=h725018a_0
+  - packaging=25.0=pyh29332c3_1
   - pip=25.1=pyhc872135_2
   - python=3.11.13=h981015d_0
+  - python_abi=3.11=2_cp311
   - setuptools=78.1.1=py311haa95532_0
   - sqlite=3.50.2=hda9a48d_1
+  - tbb=2021.13.0=h18a62a1_2
   - tk=8.6.14=h5e9d12e_1
   - ucrt=10.0.22621.0=haa95532_0
   - vc=14.3=h2df5915_10
@@ -21,12 +40,14 @@ dependencies:
   - zlib=1.2.13=h8cc25b3_1
   - pip:
       - about-time==4.2.1
+      - accelerate==1.9.0
       - aiohappyeyeballs==2.6.1
       - aiohttp==3.12.15
       - aiosignal==1.4.0
       - alive-progress==3.3.0
       - attrs==25.3.0
       - autograd==1.8.0
+      - bitsandbytes==0.46.1
       - certifi==2025.8.3
       - charset-normalizer==3.4.2
       - click==8.2.1
@@ -37,12 +58,12 @@ dependencies:
       - datasets==4.0.0
       - deprecated==1.2.18
       - dill==0.3.8
-      - faiss-cpu==1.11.0.post1
       - filelock==3.18.0
       - fonttools==4.59.0
       - frozenlist==1.7.0
       - fsspec==2025.3.0
       - graphemeu==0.7.2
+      - hf-xet==1.1.7
       - huggingface-hub==0.34.3
       - idna==3.10
       - iniconfig==2.1.0
@@ -62,7 +83,7 @@ dependencies:
       - networkx==3.4.2
       - ninja==1.11.1.4
       - nncf==2.17.0
-      - numpy==2.2.6
+      - numpy==2.3.2
       - onnx==1.18.0
       - openvino==2025.2.0
       - openvino-genai==2025.2.0.0
@@ -70,7 +91,6 @@ dependencies:
       - openvino-tokenizers==2025.2.0.1
       - optimum==1.27.0
       - optimum-intel==1.25.0
-      - packaging==25.0
       - pandas==2.2.3
       - pillow==11.3.0
       - pluggy==1.6.0
@@ -99,11 +119,13 @@ dependencies:
       - scipy==1.16.1
       - sentence-transformers==5.1.0
       - six==1.17.0
-      - sympy==1.14.0
+      - sympy==1.13.1
       - tabulate==0.9.0
       - threadpoolctl==3.6.0
       - tokenizers==0.21.4
-      - torch==2.8.0
+      - torch==2.5.1+cu121
+      - torchaudio==2.5.1+cu121
+      - torchvision==0.20.1+cu121
       - tqdm==4.67.1
       - transformers==4.53.3
       - typing-extensions==4.14.1

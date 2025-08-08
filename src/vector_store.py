@@ -162,10 +162,14 @@ class VectorStore:
         This method initializes the Sentence Transformer model with optimal
         device placement. It automatically detects CUDA availability and
         configures the model for GPU acceleration when possible, falling back
-        to CPU if no GPU is available.
+        to CPU if no GPU is available. The model is saved locally to avoid
+        re-downloading on subsequent runs.
         """
         try:
             console.print(f"Loading embedding model: {self.model_name}", style="blue")
+            
+            # Define local model path
+            local_model_path = Path(f"models/{self.model_name}")
             
             # Check for CUDA availability for GPU acceleration
             import torch
@@ -176,8 +180,24 @@ class VectorStore:
                 console.print("CUDA not available, using CPU", style="yellow")
                 device = "cpu"
             
-            # Load model with explicit device placement for optimal performance
-            self.embedding_model = SentenceTransformer(self.model_name, device=device)
+            # Check if model exists locally
+            if local_model_path.exists():
+                console.print(f"Loading embedding model from local cache: {local_model_path}", style="green")
+                self.embedding_model = SentenceTransformer(str(local_model_path), device=device)
+            else:
+                console.print(f"Downloading embedding model to local cache: {local_model_path}", style="yellow")
+                
+                # Create models directory if it doesn't exist
+                local_model_path.parent.mkdir(parents=True, exist_ok=True)
+                
+                # Download and save model locally
+                self.embedding_model = SentenceTransformer(self.model_name, device=device)
+                
+                # Save the model locally
+                console.print(f"Saving embedding model to: {local_model_path}", style="blue")
+                self.embedding_model.save(str(local_model_path))
+                console.print(f"Embedding model saved locally", style="green")
+            
             console.print(f"Embedding model loaded on {device}", style="green")
             
         except Exception as e:
@@ -286,16 +306,13 @@ class VectorStore:
                 if gpu_count > 0:
                     console.print(f"FAISS GPU acceleration available: {gpu_count} GPUs", style="green")
                     
-                    # Create GPU resources for FAISS operations
-                    import faiss.contrib.gpu_resources as gpu_resources # type: ignore
-                    gpu_res = gpu_resources.GpuResources()
-                    
-                    # Use the first GPU (NVIDIA RTX 3080) for acceleration
+                    # Use modern FAISS GPU API (no need for gpu_resources in newer versions)
+                    # Create GPU index for accelerated operations
                     gpu_id = 0
                     console.print(f"Moving FAISS index to GPU {gpu_id} (NVIDIA RTX 3080)", style="green")
                     
                     # Create GPU index for accelerated operations
-                    gpu_index = faiss.index_cpu_to_gpu(gpu_res, gpu_id, self.index) # type: ignore[no-untyped-call]
+                    gpu_index = faiss.index_cpu_to_gpu(faiss.StandardGpuResources(), gpu_id, self.index) # type: ignore[no-untyped-call]
                     
                     # Add vectors to GPU index for fast processing
                     gpu_index.add(embeddings)
@@ -360,13 +377,10 @@ class VectorStore:
                 if gpu_count > 0 and self.metadata.get('gpu_accelerated', False):
                     console.print("Using FAISS GPU acceleration for search", style="dim")
                     
-                    # Create GPU resources for accelerated search
-                    import faiss.contrib.gpu_resources as gpu_resources # type: ignore
-                    gpu_res = gpu_resources.GpuResources()
-                    
+                    # Use modern FAISS GPU API (no need for gpu_resources in newer versions)
                     # Move index to GPU for fast similarity search
                     gpu_id = 0
-                    gpu_index = faiss.index_cpu_to_gpu(gpu_res, gpu_id, self.index) # type: ignore[no-untyped-call]
+                    gpu_index = faiss.index_cpu_to_gpu(faiss.StandardGpuResources(), gpu_id, self.index) # type: ignore[no-untyped-call]
                     
                     # Perform search on GPU for optimal performance
                     scores, indices = gpu_index.search(query_embedding, k)

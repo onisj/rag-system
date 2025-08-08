@@ -46,7 +46,7 @@ Requirements:
     - Rich console for enhanced output
 
 Author: Segun Oni
-Version: 1.0.0
+Version: 1.0.1
 """
 
 import os
@@ -64,7 +64,6 @@ sys.path.insert(0, str(project_root))
 # Core dependencies
 import torch
 from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, TextColumn
 
 # OpenVINO GenAI imports
 try:
@@ -530,12 +529,12 @@ class GenAIRAGEngine:
         # Use a structured prompt format optimized for RAG
         prompt = f"""You are a helpful assistant that answers questions based on the provided context. Use only the information from the context to answer the question. If the context doesn't contain enough information to answer the question, say so.
 
-Context:
-{context}
+                Context:
+                {context}
 
-Question: {question}
+                Question: {question}
 
-Answer: """
+                Answer: """
         
         return prompt
     

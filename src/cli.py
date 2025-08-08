@@ -46,7 +46,7 @@ Configuration:
     - TEMPERATURE: Sampling temperature
 
 Author: Segun Oni
-Version: 1.0.0
+Version: 1.0.1
 """
 
 import os
@@ -55,7 +55,7 @@ import time
 import json
 import logging
 from pathlib import Path
-from typing import Optional, Dict, Any, List, Union
+from typing import Optional, Dict, Any, List
 
 # Add project root to Python path for imports
 current_dir = Path(__file__).parent
@@ -70,7 +70,6 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 from rich.prompt import Prompt, Confirm
-from rich.layout import Layout
 from rich.live import Live
 from dotenv import load_dotenv
 

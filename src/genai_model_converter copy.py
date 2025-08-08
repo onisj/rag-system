@@ -164,17 +164,9 @@ class GenAIModelConverter:
             except ImportError as e:
                 logger.warning(f"PyTorch not installed: {e}. Skipping CUDA detection.")
                 console.print(f"PyTorch not installed: {e}. Skipping CUDA detection.", style="yellow")
-            except Exception as e:
-                logger.warning(f"PyTorch CUDA detection failed: {e}. Skipping CUDA detection.")
-                console.print(f"PyTorch CUDA detection failed: {e}. Skipping CUDA detection.", style="yellow")
             if not devices:
                 raise RuntimeError("No compatible devices found for inference")
             return devices
-
-        except Exception as e:
-            logger.error(f"Hardware compatibility check failed: {e}")
-            console.print(f"Hardware compatibility check failed: {e}", style="red")
-            raise RuntimeError(f"Hardware compatibility check failed: {e}")
 
 
     def _authenticate_huggingface(self) -> bool:
@@ -213,44 +205,27 @@ class GenAIModelConverter:
             Tuple[AutoModelForCausalLM, AutoTokenizer]: Model and tokenizer
         """
         try:
-            logger.info(f"Checking model availability: {self.model_name}")
-            console.print(f"Checking model availability: {self.model_name}", style="blue")
+            logger.info(f"Downloading model: {self.model_name}")
+            console.print(f"Downloading model: {self.model_name}", style="blue")
             
             # Check if we have a local model path
             local_model_path = Path(f"./models/{self.model_name.split('/')[-1]}")
+            if skip_if_exists and local_model_path.exists():
+                logger.info(f"Using local model at: {local_model_path}")
+                console.print(f"Using local model at: {local_model_path}", style="green")
+                model = AutoModelForCausalLM.from_pretrained(
+                    str(local_model_path),
+                    torch_dtype=torch.float16,
+                    device_map="auto",
+                    trust_remote_code=True
+                )
+                tokenizer = AutoTokenizer.from_pretrained(
+                    str(local_model_path),
+                    trust_remote_code=True
+                )
+                return model, tokenizer
             
-            # Check if local model exists and has required files
-            if local_model_path.exists():
-                # Check for essential model files
-                config_file = local_model_path / "config.json"
-                tokenizer_file = local_model_path / "tokenizer.json"
-                model_files = list(local_model_path.glob("*.safetensors")) + list(local_model_path.glob("*.bin"))
-                
-                if config_file.exists() and tokenizer_file.exists() and len(model_files) > 0:
-                    logger.info(f"Using existing local model at: {local_model_path}")
-                    console.print(f"Using existing local model at: {local_model_path}", style="green")
-                    console.print(f"   Found {len(model_files)} model files", style="dim")
-                    
-                    model = AutoModelForCausalLM.from_pretrained(
-                        str(local_model_path),
-                        torch_dtype=torch.float16,
-                        device_map="auto",
-                        trust_remote_code=True
-                    )
-                    tokenizer = AutoTokenizer.from_pretrained(
-                        str(local_model_path),
-                        trust_remote_code=True
-                    )
-                    return model, tokenizer
-                else:
-                    logger.warning(f"Local model directory exists but is incomplete: {local_model_path}")
-                    console.print(f"  Local model directory exists but is incomplete: {local_model_path}", style="yellow")
-                    console.print("   Will download from HuggingFace", style="dim")
-            
-            # Download from HuggingFace if local model doesn't exist or is incomplete
-            logger.info(f"Downloading model from HuggingFace: {self.model_name}")
-            console.print(f"Downloading model from HuggingFace: {self.model_name}", style="blue")
-            
+            # Otherwise download from HuggingFace
             model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
                 torch_dtype=torch.float16,
@@ -262,19 +237,8 @@ class GenAIModelConverter:
                 trust_remote_code=True
             )
             
-            # Save the model and tokenizer locally
-            logger.info(f"Saving model to local cache: {local_model_path}")
-            console.print(f"Saving model to local cache: {local_model_path}", style="blue")
-            
-            # Create the local directory
-            local_model_path.mkdir(parents=True, exist_ok=True)
-            
-            # Save model and tokenizer
-            model.save_pretrained(str(local_model_path))
-            tokenizer.save_pretrained(str(local_model_path))
-            
-            logger.info("Model download and local save completed successfully")
-            console.print("Model download and local save completed successfully", style="green")
+            logger.info("Model download completed successfully")
+            console.print("Model download completed successfully", style="green")
             return model, tokenizer
             
         except Exception as e:

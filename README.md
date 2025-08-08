@@ -25,7 +25,7 @@ This system implements a production-ready RAG pipeline that:
 ### Hardware
 
 - **RAM**: Minimum 16GB, Recommended 32GB
-- **Storage**: 20GB free space for models and data
+- **Storage**: 50GB free space for models and data
 - **GPU**: Intel GPU with OpenVINO GenAI support
 
 ### Software
@@ -319,8 +319,365 @@ python rag_cli.py hardware --detailed
 # Run all tests to verify everything works
 python -m pytest tests/ -v
 
-# Expected: 103 tests passed
+# Expected: 83 tests passed
 ```
+
+## Detailed Model Download and Conversion Guide
+
+This section provides comprehensive information about the model downloading and conversion process, including troubleshooting steps for common issues.
+
+### Understanding the Download and Conversion Process
+
+The RAG system uses two main models that need to be downloaded and processed:
+
+1. **Llama-3.1-8B-Instruct**: The main language model for text generation
+2. **all-MiniLM-L6-v2**: The sentence transformer for creating embeddings
+
+### Model Download Process
+
+#### Step 1: Llama-3.1-8B-Instruct Download
+
+```bash
+# Start the model conversion process (includes download)
+python rag_cli.py convert-model
+```
+
+**What happens during download:**
+
+1. **Authentication Check**: Verifies your HuggingFace token
+2. **Hardware Detection**: Checks available GPUs and memory
+3. **Model Download**: Downloads ~16GB of model files from HuggingFace
+4. **Local Storage**: Saves model to `models/Llama-3.1-8B-Instruct/`
+5. **INT4 Conversion**: Converts to OpenVINO GenAI format with INT4 quantization
+6. **Validation**: Tests the converted model
+
+**Expected download progress:**
+
+```
+Loading checkpoint shards: 100%|████████████████████████████████████████| 4/4 [00:07<00:00, 1.98s/it]
+Model download completed successfully
+```
+
+#### Step 2: Sentence Transformer Download
+
+```bash
+# This happens automatically during setup
+python rag_cli.py setup
+```
+
+**What happens during sentence transformer download:**
+
+1. **Model Detection**: Checks if `all-MiniLM-L6-v2` exists locally
+2. **Download**: Downloads ~90MB of embedding model files
+3. **Local Save**: Saves to `models/all-MiniLM-L6-v2/`
+4. **GPU Acceleration**: Configures for CUDA if available
+
+**Expected output:**
+
+```
+Downloading embedding model to local cache: models\all-MiniLM-L6-v2
+Saving embedding model to: models\all-MiniLM-L6-v2
+Embedding model saved locally
+```
+
+### Model Conversion Process (INT4 with OpenVINO GenAI)
+
+#### Understanding INT4 Quantization
+
+The system converts the Llama model to **INT4 format** using OpenVINO GenAI for optimal performance:
+
+- **Original Model**: FP16 (16-bit floating point) - ~16GB
+- **Converted Model**: INT4 (4-bit integer) - ~4GB
+- **Performance**: Faster inference with reduced memory usage
+- **Quality**: Minimal quality loss with INT4 quantization
+
+#### Conversion Process Details
+
+```bash
+# The conversion happens automatically during convert-model
+python rag_cli.py convert-model
+```
+
+**Conversion steps:**
+
+1. **Load Model**: Loads the downloaded Llama model into memory
+2. **INT4 Conversion**: Uses `optimum-cli` to convert to INT4 format
+3. **OpenVINO IR**: Creates `.xml` and `.bin` files for OpenVINO GenAI
+4. **Validation**: Tests the converted model on available hardware
+
+**Expected conversion output:**
+
+```
+Starting INT4 conversion using optimum-cli...
+Executing: optimum-cli export openvino --model models\Llama-3.1-8B-Instruct --task text-generation --weight-format int4 models\Llama-3.1-8B-Instruct-int4-genai
+optimum-cli conversion completed
+Model saved to: models\Llama-3.1-8B-Instruct-int4-genai
+```
+
+### Local Model Storage Structure
+
+After successful download and conversion, your `models/` directory will contain:
+
+```
+models/
+├── Llama-3.1-8B-Instruct/           # Original downloaded model
+│   ├── config.json
+│   ├── tokenizer.json
+│   ├── model-00001-of-00004.safetensors
+│   ├── model-00002-of-00004.safetensors
+│   ├── model-00003-of-00004.safetensors
+│   └── model-00004-of-00004.safetensors
+├── Llama-3.1-8B-Instruct-int4-genai/  # Converted INT4 model
+│   ├── openvino_model.xml
+│   ├── openvino_model.bin
+│   └── tokenizer.json
+└── all-MiniLM-L6-v2/                # Sentence transformer
+    ├── config.json
+    ├── tokenizer.json
+    ├── model.safetensors
+    └── sentence_bert_config.json
+```
+
+### Resume Capability
+
+**Important**: Both models support **automatic resume** if downloads are interrupted:
+
+#### HuggingFace Resume Feature
+
+- **Location**: `~/.cache/huggingface/hub/`
+- **Resume**: Automatically continues from where it left off
+- **Partial Files**: Detects incomplete downloads and resumes
+- **No Redownload**: Skips already downloaded files
+
+#### Example Resume Scenario
+
+```bash
+# If download is interrupted (Ctrl+C), you can resume:
+python rag_cli.py convert-model
+
+# The system will detect partial downloads and continue:
+# "Using existing local model at: models\Llama-3.1-8B-Instruct"
+# "Found 4 model files"
+```
+
+### Disk Space Requirements
+
+**Total space needed:**
+
+- **Llama Model Download**: ~16GB (original format)
+- **Llama Model Conversion**: ~4GB (INT4 format)
+- **Sentence Transformer**: ~90MB
+- **Vector Store**: ~50-100MB (depends on document size)
+- **Total**: ~20-25GB
+
+**Check available space:**
+
+```bash
+# Windows
+dir C:\
+
+# Linux/macOS
+df -h .
+```
+
+### Network Requirements
+
+**Download speeds and time estimates:**
+
+- **Fast Internet** (>50 Mbps): 30-60 minutes total
+- **Medium Internet** (10-50 Mbps): 1-2 hours total
+- **Slow Internet** (<10 Mbps): 2-4 hours total
+
+**Network troubleshooting:**
+
+```bash
+# Test HuggingFace connectivity
+python -c "from huggingface_hub import HfApi; api = HfApi(); print('Connection successful')"
+
+# Check download progress
+# The system shows real-time progress bars during download
+```
+
+### Common Download and Conversion Issues
+
+#### Issue 1: HuggingFace Token Problems
+
+**Symptoms:**
+
+- `401 Unauthorized` errors
+- `Model not found` errors
+- Authentication failures
+
+**Solutions:**
+
+```bash
+# Check token validity
+cat .env
+# Should show: HUGGINGFACE_TOKEN=your_token_here
+
+# Test token manually
+python -c "from huggingface_hub import HfApi; api = HfApi(); print('Token valid:', api.whoami())"
+
+# Get new token from: https://huggingface.co/settings/tokens
+# Request Llama access: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+```
+
+#### Issue 2: Disk Space Problems
+
+**Symptoms:**
+
+- `No space left on device` errors
+- Conversion fails with disk space errors
+
+**Solutions:**
+
+```bash
+# Check available space
+df -h .  # Linux/macOS
+dir C:\  # Windows
+
+# Clear HuggingFace cache (if needed)
+rm -rf ~/.cache/huggingface/hub/
+
+# Free up space and retry
+python rag_cli.py convert-model
+```
+
+#### Issue 3: Network Interruptions
+
+**Symptoms:**
+
+- Download stops mid-way
+- Connection timeout errors
+- Partial downloads
+
+**Solutions:**
+
+```bash
+# Resume download (automatic)
+python rag_cli.py convert-model
+
+# Check partial downloads
+ls -la ~/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B-Instruct/
+
+# Clear cache and restart (if needed)
+rm -rf ~/.cache/huggingface/hub/
+python rag_cli.py convert-model
+```
+
+#### Issue 4: Conversion Failures
+
+**Symptoms:**
+
+- `optimum-cli` errors
+- OpenVINO conversion failures
+- Model validation errors
+
+**Solutions:**
+
+```bash
+# Check OpenVINO installation
+python -c "import openvino_genai; print('OpenVINO GenAI installed')"
+
+# Verify optimum-cli
+optimum-cli --help
+
+# Retry conversion with verbose output
+python rag_cli.py convert-model --verbose
+
+# Check model files
+ls -la models/Llama-3.1-8B-Instruct/
+```
+
+#### Issue 5: Memory Issues During Conversion
+
+**Symptoms:**
+
+- Out of memory errors
+- Process killed during conversion
+- Slow conversion progress
+
+**Solutions:**
+
+```bash
+# Check available RAM
+free -h  # Linux
+wmic computersystem get TotalPhysicalMemory  # Windows
+
+# Use CPU instead of GPU for conversion
+export CUDA_VISIBLE_DEVICES=""
+python rag_cli.py convert-model
+
+# Reduce batch size (if possible)
+# Edit src/genai_model_converter.py to reduce memory usage
+```
+
+### Verification Steps
+
+After download and conversion, verify everything worked:
+
+```bash
+# Check model files exist
+ls -la models/Llama-3.1-8B-Instruct/
+ls -la models/Llama-3.1-8B-Instruct-int4-genai/
+ls -la models/all-MiniLM-L6-v2/
+
+# Test model loading
+python rag_cli.py --query "test"
+
+# Expected output:
+# "GenAI model loaded successfully"
+# "Vector store loaded successfully"
+# "Response: [generated text]"
+```
+
+### Performance Optimization
+
+#### For Faster Downloads
+
+```bash
+# Use faster DNS
+# Windows: Change DNS to 8.8.8.8 or 1.1.1.1
+# Linux: Edit /etc/resolv.conf
+
+# Use download manager (if needed)
+# Consider using a VPN if downloads are slow
+```
+
+#### For Faster Conversions
+
+```bash
+# Use GPU for conversion (if available)
+export CUDA_VISIBLE_DEVICES="0"
+python rag_cli.py convert-model
+
+# Close other applications to free memory
+# Ensure adequate cooling for GPU
+```
+
+### Troubleshooting Checklist
+
+Before reporting issues, check:
+
+- [ ] HuggingFace token is valid and has Llama access
+- [ ] Sufficient disk space (>20GB available)
+- [ ] Stable internet connection
+- [ ] OpenVINO GenAI properly installed
+- [ ] Conda environment activated (`conda activate rag-gpu`)
+- [ ] No firewall blocking HuggingFace
+- [ ] Adequate RAM available (>16GB recommended)
+
+### Getting Help
+
+If you encounter issues:
+
+1. **Check logs**: Look for error messages in the terminal output
+2. **Verify prerequisites**: Ensure all requirements are met
+3. **Try resume**: Restart the download/conversion process
+4. **Check disk space**: Ensure adequate storage
+5. **Test connectivity**: Verify internet and HuggingFace access
+
+**Common error patterns and solutions are documented above. If your issue persists, check the system logs and ensure all prerequisites are properly configured.**
 
 ## Troubleshooting Common Issues
 
