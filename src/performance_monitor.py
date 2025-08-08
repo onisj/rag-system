@@ -347,6 +347,49 @@ class PerformanceMonitor:
         """Check if GPU is available"""
         return self.performance_data.get("gpu_usage", 0.0) > 0.0
     
+    def start_timer(self, operation_name: str) -> float:
+        """
+        Start a timer for a specific operation.
+        
+        Args:
+            operation_name: Name of the operation being timed
+            
+        Returns:
+            float: Start time timestamp
+        """
+        start_time = time.time()
+        if not hasattr(self, '_timers'):
+            self._timers = {}
+        self._timers[operation_name] = start_time
+        return start_time
+    
+    def stop_timer(self, operation_name: str, start_time: float = None) -> float:
+        """
+        Stop a timer for a specific operation and record the elapsed time.
+        
+        Args:
+            operation_name: Name of the operation being timed
+            start_time: Optional start time (if not provided, uses stored start time)
+            
+        Returns:
+            float: Elapsed time in seconds
+        """
+        if start_time is None:
+            if hasattr(self, '_timers') and operation_name in self._timers:
+                start_time = self._timers[operation_name]
+            else:
+                console.print(f"Warning: No start time found for operation '{operation_name}'", style="yellow")
+                return 0.0
+        
+        elapsed_time = time.time() - start_time
+        self.record_inference_time(elapsed_time)
+        
+        # Clean up the timer
+        if hasattr(self, '_timers') and operation_name in self._timers:
+            del self._timers[operation_name]
+        
+        return elapsed_time
+    
     def measure(self, operation_name: str):
         """
         Context manager for measuring operation performance.

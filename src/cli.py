@@ -684,7 +684,12 @@ def _validate_system_prerequisites(config: Dict[str, Any]) -> None:
     
     # Check model path
     console.print(f"Checking model path: {config['model_path']}", style="dim")
-    if not Path(config['model_path']).exists():
+    
+    # Allow HuggingFace model identifiers (containing '/')
+    if '/' in config['model_path']:
+        # This is a HuggingFace model identifier, skip local path check
+        console.print("Using HuggingFace model identifier", style="green")
+    elif not Path(config['model_path']).exists():
         errors.append(f"Model path not found: {config['model_path']}")
     
     # Check vector store path

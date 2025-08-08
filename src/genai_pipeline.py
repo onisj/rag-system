@@ -612,13 +612,15 @@ Answer: """
             source_metadata = []
             
             for result in retrieval_results:
-                text = result.get('text', '').strip()
+                # Unpack the tuple (document_dict, score)
+                document_dict, score = result
+                text = document_dict.get('text', '').strip()
                 if text:  # Only include non-empty chunks
                     context_chunks.append(text)
                     source_metadata.append({
                         'text': text,
-                        'score': result.get('score', 0.0),
-                        'metadata': result.get('metadata', {})
+                        'score': score,
+                        'metadata': document_dict.get('metadata', {})
                     })
             
             # Combine context chunks
