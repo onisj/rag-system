@@ -748,8 +748,9 @@ conda --version
 **General Demo Script Issues:**
 
 ```bash
-# Make shell script executable (Unix/Linux)
+# Make shell scripts executable (Unix/Linux)
 chmod +x run_demo.sh
+chmod +x run_streamlit.sh
 
 # Check if environment.yml exists
 ls -la environment.yml
@@ -825,6 +826,9 @@ rag_system/
 │   └── llama-3.1-8b-int4-genai/  # Converted GenAI INT4 model
 ├── run_demo.sh                   # Demo script (Unix/Linux/macOS)
 ├── run_demo.bat                  # Demo script (Windows)
+├── run_streamlit.sh              # Streamlit launcher (Unix/Linux/macOS)
+├── run_streamlit.bat             # Streamlit launcher (Windows)
+├── streamlit_app.py              # Streamlit web interface
 ├── environment.yml               # Conda environment (pinned dependencies)
 ├── .env                          # Environment variables
 └── README.md                     # This file
@@ -1044,31 +1048,6 @@ For issues or questions:
 3. Ensure all dependencies are properly installed
 4. Verify hardware compatibility
 
-## Project Structure
-
-```
-rag_system/
-├── data/                          # Input documents
-│   └── procyon_guide.pdf         # Source PDF document
-├── models/                        # Downloaded and converted models
-│   └── llama-3.1-8b-int4-genai/  # GenAI INT4 quantized model
-├── vector_store/                  # FAISS index and embeddings
-├── src/                          # Source code
-│   ├── cli.py                    # Command-line interface
-│   ├── genai_pipeline.py         # OpenVINO GenAI RAG engine
-│   ├── genai_model_converter.py  # GenAI model conversion utilities
-│   ├── document_processor.py     # PDF processing
-│   ├── vector_store.py           # Vector database operations
-│   ├── performance_monitor.py    # Performance monitoring
-│   └── warning_config.py         # Warning management
-├── tests/                        # Test suite (103 tests)
-├── scripts/                      # Utility scripts
-├── environment.yml               # Conda environment (pinned dependencies)
-├── Dockerfile                    # Container configuration
-├── rag_cli.py                    # Main CLI entry point
-└── README.md                     # This file
-```
-
 ## Reproducibility & Environment
 
 This project uses a Conda environment with FAISS-GPU and OpenVINO GenAI for optimal performance and complete reproducibility:
@@ -1095,15 +1074,73 @@ conda env export -n rag-gpu > environment.yml
 
 This project **fully complies** with the UL Benchmarks technical test requirements:
 
-✅ **OpenVINO GenAI**: Uses Intel's specialized toolkit for generative AI  
-✅ **Llama-3.1 8B Instruct**: Downloads from HuggingFace with authentication  
-✅ **INT4 Quantization**: Converts model to INT4 using OpenVINO GenAI  
-✅ **Vector Database**: FAISS implementation with sentence-transformers  
-✅ **CLI Application**: Rich command-line interface with interactive mode  
-✅ **Python Implementation**: Complete Python codebase with modular structure  
-✅ **PDF Processing**: Processes procyon_guide.pdf as specified  
-✅ **Reproducible Scripts**: Model conversion and setup scripts  
-✅ **Documentation**: Comprehensive setup and usage instructions  
-✅ **Demo Instructions**: One-command demo scripts for easy testing  
+- **OpenVINO GenAI**: Uses Intel's specialized toolkit for generative AI  
+- **Llama-3.1 8B Instruct**: Downloads from HuggingFace with authentication  
+- **INT4 Quantization**: Converts model to INT4 using OpenVINO GenAI  
+- **Vector Database**: FAISS implementation with sentence-transformers  
+- **CLI Application**: Rich command-line interface with interactive mode  
+- **Python Implementation**: Complete Python codebase with modular structure  
+- **PDF Processing**: Processes procyon_guide.pdf as specified  
+- **Reproducible Scripts**: Model conversion and setup scripts  
+- **Documentation**: Comprehensive setup and usage instructions  
+- **Demo Instructions**: One-command demo scripts for easy testing  
 
 The system demonstrates **excellent software engineering practices** while meeting all specified requirements for the UL Benchmarks technical test.
+
+---
+
+## Additional Feature: Web Interface (Streamlit)
+
+*This section describes an additional web interface feature that was added to enhance user experience. It is not part of the original UL Benchmarks requirements but provides an alternative way to interact with the RAG system.*
+
+The project includes a beautiful web interface built with Streamlit for easy interaction with the RAG system.
+
+### Running the Web Interface
+
+**Windows:**
+
+```batch
+# Run the Windows launcher
+run_streamlit.bat
+```
+
+**Unix/Linux/macOS:**
+
+```bash
+# Make the script executable (if not already done)
+chmod +x run_streamlit.sh
+
+# Run the Unix/Linux launcher
+./run_streamlit.sh
+```
+
+**Manual Start:**
+
+```bash
+# Activate the environment
+conda activate rag-gpu
+
+# Install Streamlit (if not already installed)
+pip install streamlit plotly pandas
+
+# Start the web interface
+streamlit run streamlit_app.py --server.port 8501
+```
+
+### Web Interface Features
+
+- **Interactive Query Interface**: Ask questions through a web form
+- **System Status Dashboard**: Real-time monitoring of model, vector store, and GPU status
+- **Configurable Parameters**: Adjust chunks, tokens, and temperature
+- **Quick Query Buttons**: Pre-defined sample queries for testing
+- **Performance Monitoring**: Built-in performance testing tools
+- **Beautiful UI**: Modern, responsive design with real-time feedback
+
+### Accessing the Web Interface
+
+Once started, the web interface will be available at:
+
+- **Local**: <http://localhost:8501>
+- **Network**: <http://your-ip-address:8501>
+
+The interface provides a user-friendly way to interact with your RAG system without using the command line!
