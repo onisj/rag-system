@@ -11,8 +11,6 @@ import os
 import sys
 from pathlib import Path
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
 
 # Add the src directory to the path to import RAG components
 sys.path.append(str(Path(__file__).parent / "src"))
